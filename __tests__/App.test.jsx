@@ -1,2 +1,2 @@
 import { describe } from 'vitest';
-describe.todo('Create a test cases fo [App.jsx]');
+describe.todo('Create a test cases for [App.jsx]');
