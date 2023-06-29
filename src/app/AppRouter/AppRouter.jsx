@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { publicRoutes } from "app/routes/routes";
 
-export const AppRouter = () => {
+const AppRouter = () => {
   return (
       <Routes>
         {
@@ -10,3 +10,5 @@ export const AppRouter = () => {
       </Routes>
   )
 }
+
+export default AppRouter;
