@@ -11,6 +11,10 @@ export default defineConfig({
       app: path.resolve(__dirname, "src/app"),
       pages: path.resolve(__dirname, "src/pages"),
       store: path.resolve(__dirname, "src/store"),
+      components: path.resolve(__dirname, "src/components"),
+      widgets: path.resolve(__dirname, "src/widgets"),
+      hooks: path.resolve(__dirname, "src/hooks"),
+      config: path.resolve(__dirname, "src/config")
     }
   },
   server: {
