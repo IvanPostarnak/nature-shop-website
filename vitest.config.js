@@ -9,7 +9,8 @@ export default defineConfig({
       src: path.resolve(__dirname, "src"),
       tests: path.resolve(__dirname, "__tests__"),
       app: path.resolve(__dirname, "src/app"),
-      pages: path.resolve(__dirname, "src/pages")
+      pages: path.resolve(__dirname, "src/pages"),
+      store: path.resolve(__dirname, "src/store"),
     }
   },
   test: {

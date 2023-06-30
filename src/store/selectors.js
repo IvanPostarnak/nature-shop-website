@@ -1,0 +1,1 @@
+export { getAuthValue } from 'store/selectors/getAuthValue/getAuthValue';
