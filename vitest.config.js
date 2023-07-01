@@ -16,7 +16,8 @@ export default defineConfig({
       hooks: path.resolve(__dirname, "src/hooks"),
       config: path.resolve(__dirname, "src/config"),
       errors: path.resolve(__dirname, "src/errors"),
-      entity: path.resolve(__dirname, "src/entity")
+      entity: path.resolve(__dirname, "src/entity"),
+      assets: path.resolve(__dirname, "src/assets")
     }
   },
   test: {

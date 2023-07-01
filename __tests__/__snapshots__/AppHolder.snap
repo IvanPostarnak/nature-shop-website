@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppHolder set of tests > Should [match snapshot] on correnct props 1`] = `[Function]`;
+
+exports[`AppHolder set of tests > Should [match snapshot] on correnct render 1`] = `[Function]`;

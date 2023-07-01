@@ -13,7 +13,8 @@
       "hooks/*": ["src/hooks/*"],
       "config/*": ["src/config/*"],
       "errors/*": ["src/errors/*"],
-      "entity/*": ["src/entity/*"]
+      "entity/*": ["src/entity/*"],
+      "assets/*": ["src/assets/*"]
     }
   }
 }

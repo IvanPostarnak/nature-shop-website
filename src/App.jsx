@@ -1,8 +1,10 @@
-import AppRouter from "app/AppRouter/AppRouter";
 import { useMatchMedia } from "./hooks/hooks";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setDevice } from "./store/actions";
+import AppRouter from "app/AppRouter/AppRouter";
+import AppHolder from "app/AppHolder/AppHolder";
+import 'assets/scss/normalize.module.scss';
 
 const App = () => {
   const [device] = useMatchMedia();
@@ -13,7 +15,9 @@ const App = () => {
   }, [device]);
 
   return (
-    <AppRouter/>
+    <AppHolder device={device}>
+      <AppRouter/>
+    </AppHolder>
   )
 };
 
