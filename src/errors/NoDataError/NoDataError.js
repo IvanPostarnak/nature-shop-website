@@ -1,4 +1,4 @@
-import { AppError } from "../errors";
+import AppError from '../AppError/AppError';
 
 class NoDataError extends AppError {
 
