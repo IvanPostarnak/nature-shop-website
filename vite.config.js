@@ -14,7 +14,9 @@ export default defineConfig({
       components: path.resolve(__dirname, "src/components"),
       widgets: path.resolve(__dirname, "src/widgets"),
       hooks: path.resolve(__dirname, "src/hooks"),
-      config: path.resolve(__dirname, "src/config")
+      config: path.resolve(__dirname, "src/config"),
+      errors: path.resolve(__dirname, "src/errors"),
+      entity: path.resolve(__dirname, "src/entity")
     }
   },
   server: {

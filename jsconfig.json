@@ -11,7 +11,9 @@
       "components/*": ["src/components/*"],
       "widgets/*": ["src/widgets/*"],
       "hooks/*": ["src/hooks/*"],
-      "config/*": ["src/config/*"]
+      "config/*": ["src/config/*"],
+      "errors/*": ["src/errors/*"],
+      "entity/*": ["src/entity/*"]
     }
   }
 }

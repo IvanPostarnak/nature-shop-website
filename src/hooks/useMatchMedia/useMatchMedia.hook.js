@@ -1,5 +1,5 @@
 import { useLayoutEffect, useReducer } from "react";
-import { defineDevice } from "config/defineDevice.config";
+import { defineDevice } from "./config/defineDevice.config";
 import { reducer } from "./helpers/reducer";
 import { init } from "./helpers/init";
 

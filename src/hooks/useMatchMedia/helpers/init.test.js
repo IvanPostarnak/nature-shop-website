@@ -15,12 +15,12 @@ describe('init function of useMatchMedia() hook set of tests', () => {
 
   it('Should [throw error] on items without \'device\' property', () => {
     const withoutDevice = [{name: 'Ivan'}, {age: 24}];
-    expect(() => init(withoutDevice)).toThrowError(/should have a 'device' property/i);
+    expect(() => init(withoutDevice)).toThrowError(/.device property/i);
   });
 
   it('Should [throw error] when \'device\' property is not a string', () => {
     const notAString = [{device: 'Ivan'}, {device: 24}];
-    expect(() => init(notAString)).toThrowError(/should be a string/i);
+    expect(() => init(notAString)).toThrowError(/item.device/i);
   });
 
 });

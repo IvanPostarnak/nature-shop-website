@@ -1,12 +1,19 @@
 export const reducer = (state, action) => {
+
+  if (!action.payload) {
+    throw new NoDataError('action.payload property');
+  };
+
   if (action.payload instanceof Array !== true) {
-    throw new Error('action should have \'payload\' propery equals to an array[] (at reducer)');
+    throw new InvalidTypeError('action.payload', 'Array');
   };
+
   if (Object.keys(state).length != action.payload.length) {
-    throw new Error('state object and action.payload have to have the same length (at reducer)');
+    throw new CompareError('state.length', 'action.payload.length')
   };
+
   if (typeof action.type !== 'string') {
-    throw new Error('action.type have to be a string at reducer function of useMatchMedia()');
+    throw new InvalidTypeError('action.type', 'string');
   };
 
   let newState = {};
@@ -19,5 +26,6 @@ export const reducer = (state, action) => {
       return newState;
   };
   
-  throw new Error(`Unknown action at 'reducer' of 'useMatchMedia() hook`);
+  
+  throw new UnknownDataError('action.type');
 };

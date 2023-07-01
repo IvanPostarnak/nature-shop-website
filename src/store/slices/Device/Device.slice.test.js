@@ -12,15 +12,15 @@ describe('Device.slice set of tests', () => {
   });
 
   it('Should [throw Error] on passing non-Object', () => {
-    expect(() => deviceReducer({anyProperty: false}, setDevice("not an object"))).toThrowError(/be an object/i);
+    expect(() => deviceReducer({anyProperty: false}, setDevice("not an object"))).toThrowError(/object/i);
   });
   
   it('Should [throw Error] on passing Object with 2 truths', () => {
-    expect(() => deviceReducer({one: false, two: false}, setDevice({one: true, two: true}))).toThrowError(/only one equal to 'true'/i);
+    expect(() => deviceReducer({one: false, two: false}, setDevice({one: true, two: true}))).toThrowError(/action.payload/i);
   });
 
   it('Should [throw Error] on passing Object with different length', () => {
-    expect(() => deviceReducer({one: false}, setDevice({one: true, two: true}))).toThrowError(/the same length/i);
+    expect(() => deviceReducer({one: false}, setDevice({one: true, two: true}))).toThrowError(/action.payload.length/i);
   });
 
 });
