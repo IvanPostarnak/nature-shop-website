@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 import { memo } from 'react';
 import Header from 'widgets/Header/Header.widget';
 import Background from "components/layout/Background/Background";
+import Column from "src/components/layout/Column/Column";
 
 import styles from './AppHolder.module.scss';
-
 
 const AppHolder = ({children}) => {
   const [device] = useMatchMedia();
@@ -19,16 +19,17 @@ const AppHolder = ({children}) => {
   }, [device]);
 
   return (
-    <Background>
-      <Header device={device} />
-      <div
-        className={`${styles.holder} ${device.isDesktop ? styles.desktop : device.isTablet ? styles.tablet : styles.mobile}`}
-        data-testid="app-holder"
-      >
-        Column
-        {children}
-      </div>
-    </Background>
+    <div
+      className={styles.holder}
+      data-testid="app-holder"
+    >
+      <Background>
+        <Header device={device}/>
+        <Column device={device}>
+          {children}
+        </Column>
+      </Background>
+    </div>
   )
 };
 

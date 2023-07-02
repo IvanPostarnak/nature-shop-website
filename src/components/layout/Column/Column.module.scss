@@ -1,0 +1,12 @@
+.column {
+  width: calc(100% - 5vw);
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+
+  border: 1px solid black;
+}
