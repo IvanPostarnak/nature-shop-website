@@ -1,14 +1,15 @@
 .canvas {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .holder {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -17,17 +18,14 @@
 }
 
 .mobile {
-  width: 100%;
-  margin: 0 5vw;
+  width: calc(100% - 5vw);
 }
 
 .tablet {
-  width: 100%;
-  margin: 0 5vw;
+  width: calc(100% - 5vw);
 }
 
 .desktop {
-  width: 100%;
+  width: calc(100% - 5vw);
   max-width: 1200px;
-  margin: 0 5vw;
 }

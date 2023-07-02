@@ -21,6 +21,7 @@ export default defineConfig({
     }
   },
   test: {
+    bail: 1,
     setupFiles: [path.resolve(__dirname, "__tests__/setup/setup.js")],
     exclude: [
       '**/__tests__/setup/**',

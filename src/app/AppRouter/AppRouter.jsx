@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import { publicRoutes } from "app/routes/routes";
+import { PUBLIC_ROUTES } from "app/routes/routes";
 
 const AppRouter = () => {
   return (
       <Routes>
         {
-          publicRoutes.map(route => <Route {...route}/>)
+          PUBLIC_ROUTES.map(route => <Route {...route}/>)
         }
       </Routes>
   )
