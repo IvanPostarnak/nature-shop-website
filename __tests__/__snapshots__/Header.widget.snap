@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_header_645f0f"
+  data-testid="app-header"
+>
+  Header
+</div>
+`;

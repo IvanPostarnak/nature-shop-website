@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Background set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_background_93aca7"
+  data-testid="app-background"
+/>
+`;
