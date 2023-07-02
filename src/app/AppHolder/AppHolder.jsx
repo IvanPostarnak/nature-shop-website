@@ -5,8 +5,10 @@ import { setDevice } from "store/actions";
 import PropTypes from 'prop-types';
 import { memo } from 'react';
 import Header from 'widgets/Header/Header.widget';
+import Background from "components/layout/Background/Background";
 
 import styles from './AppHolder.module.scss';
+
 
 const AppHolder = ({children}) => {
   const [device] = useMatchMedia();
@@ -17,7 +19,7 @@ const AppHolder = ({children}) => {
   }, [device]);
 
   return (
-    <div className={styles.canvas}>
+    <Background>
       <Header device={device} />
       <div
         className={`${styles.holder} ${device.isDesktop ? styles.desktop : device.isTablet ? styles.tablet : styles.mobile}`}
@@ -26,7 +28,7 @@ const AppHolder = ({children}) => {
         Column
         {children}
       </div>
-    </div>
+    </Background>
   )
 };
 
