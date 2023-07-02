@@ -1,20 +1,20 @@
-import { memo } from "react";
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 
-import styles from './Header.module.scss';
+import styles from './Footer.module.scss';
 
-const Header = ({device}) => {
+const Footer = ({device}) => {
   return (
     <div
-      data-testid="app-header"
-      className={styles.header}
+      className={styles.footer}
+      data-testid="app-footer"
     >
-      Header
+      Footer
     </div>
   )
-}
+};
 
-Header.propTypes = {
+Footer.propTypes = {
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
     isTablet: PropTypes.bool.isRequired,
@@ -22,4 +22,4 @@ Header.propTypes = {
   }).isRequired
 };
 
-export default memo(Header);
+export default memo(Footer);

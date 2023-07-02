@@ -3,10 +3,10 @@ import { memo } from 'react';
 
 import styles from './Shelf.module.scss';
 
-const Shelf = ({device, children}) => {
+const Shelf = ({children, layout="normal"}) => {
   return (
     <div
-      className={styles.shelf}
+      className={`${styles.shelf} ${layout === "bottom" ? styles.bottom : styles.normal}`}
       data-testid="app-shelf"
     >
       {children}
@@ -15,12 +15,7 @@ const Shelf = ({device, children}) => {
 };
 
 Shelf.propTypes = {
-  device: PropTypes.exact({
-    children: PropTypes.element,
-    isMobile: PropTypes.bool.isRequired,
-    isTablet: PropTypes.bool.isRequired,
-    isDesktop: PropTypes.bool.isRequired
-  }).isRequired
+  children: PropTypes.element
 };
 
 export default memo(Shelf);

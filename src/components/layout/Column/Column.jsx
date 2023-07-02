@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Column.module.scss';
 
-const Column = ({children, device}) => {
+const Column = ({children}) => {
   return (
     <div
       className={styles.column}
@@ -16,12 +16,7 @@ const Column = ({children, device}) => {
 };
 
 Column.propTypes = {
-  device: PropTypes.exact({
-    children: PropTypes.element,
-    isMobile: PropTypes.bool.isRequired,
-    isTablet: PropTypes.bool.isRequired,
-    isDesktop: PropTypes.bool.isRequired
-  }).isRequired
+  children: PropTypes.element
 };
 
 export default memo(Column);

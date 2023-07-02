@@ -4,10 +4,11 @@ import { useEffect } from "react";
 import { setDevice } from "store/actions";
 import PropTypes from 'prop-types';
 import { memo } from 'react';
-import Header from 'widgets/Header/Header.widget';
 import Background from "components/layout/Background/Background";
 import Column from "components/layout/Column/Column";
 import Shelf from "components/layout/Shelf/Shelf";
+import Header from 'widgets/Header/Header.widget';
+import Footer from 'widgets/Footer/Footer.widget';
 
 import styles from './AppHolder.module.scss';
 
@@ -28,11 +29,11 @@ const AppHolder = ({children}) => {
         <Shelf>
           <Header device={device}/>
         </Shelf>
-        <Column device={device}>
+        <Column>
           {children}
         </Column>
-        <Shelf>
-
+        <Shelf layout="bottom">
+          <Footer device={device}/>
         </Shelf>
       </Background>
     </div>
