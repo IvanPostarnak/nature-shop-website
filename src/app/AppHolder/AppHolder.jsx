@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import { memo } from 'react';
 import Header from 'widgets/Header/Header.widget';
 import Background from "components/layout/Background/Background";
-import Column from "src/components/layout/Column/Column";
+import Column from "components/layout/Column/Column";
+import Shelf from "components/layout/Shelf/Shelf";
 
 import styles from './AppHolder.module.scss';
 
@@ -24,10 +25,15 @@ const AppHolder = ({children}) => {
       data-testid="app-holder"
     >
       <Background>
-        <Header device={device}/>
+        <Shelf>
+          <Header device={device}/>
+        </Shelf>
         <Column device={device}>
           {children}
         </Column>
+        <Shelf>
+
+        </Shelf>
       </Background>
     </div>
   )
