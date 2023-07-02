@@ -1,36 +1,19 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+import { memo } from "react";
+import PropTypes from 'prop-types';
 
-exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
-<div
-  class="_header_645f0f"
-  data-testid="app-header"
->
-  <nav
-    aria-label="navigation bar"
-    class="_navbar_b440ab"
-    data-testid="navbar"
-  >
-    <a
-      class="_navbar_link_b440ab _underlined_465744 false"
-      data-testid="navbar-link"
-      href="/blog/posts"
+const ReactIcon = ({size = 32, color="#000000"}) => {
+  return (
+    <svg
+      data-testid="react-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      style={{fill: color}}
     >
-      <div
-        class="_icon_wrap_380964"
-        data-testid="icon-wrap"
-      >
-        <svg
-          data-testid="react-icon"
-          height="20"
-          style="fill: #000000;"
-          viewBox="0 0 16 16"
-          width="20"
-          x="0px"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0px"
-        >
-          <path
-            d="M 5.4179688 1.9199219 C 5.1428281 1.9367871 4.8730801 2.0110677 4.625 2.1542969 C 4.1288397 2.4407552 3.8280443
+    <path d="M 5.4179688 1.9199219 C 5.1428281 1.9367871 4.8730801 2.0110677 4.625 2.1542969 C 4.1288397 2.4407552 3.8280443
           2.9434418 3.7070312 3.4921875 C 3.586018 4.0409331 3.615847 4.6519208 3.7363281 5.3066406 C 3.7526006 5.3950689
           3.7830534 5.4900657 3.8027344 5.5800781 C 3.6077337 5.6404857 3.4034082 5.6968562 3.2246094 5.765625 C 2.5967094
           6.0071252 2.0698262 6.2961554 1.6738281 6.65625 C 1.2778301 7.0163446 1 7.4791793 1 8 C 1 8.5208207 1.2778301
@@ -98,18 +81,15 @@ exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
           4.7636719 12.384766 C 4.6838574 12.049782 4.6733024 11.575076 4.7539062 11.015625 C 4.769009 10.910801 4.8029135
           10.790033 4.8242188 10.679688 z M 7.6269531 10.986328 C 7.7528302 10.989 7.8723794 11 8 11 C 8.1189464 11 8.2302198
           10.988651 8.3476562 10.986328 C 8.223793 11.134267 8.1005746 11.262392 7.9765625 11.396484 C 7.8593906 11.263642
-          7.7429529 11.130224 7.6269531 10.986328 z"
-          />
-        </svg>
-      </div>
-      <span
-        class="_span_2cebcc"
-        data-testid="span"
-        style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
-      >
-        Blog
-      </span>
-    </a>
-  </nav>
-</div>
-`;
+          7.7429529 11.130224 7.6269531 10.986328 z">
+      </path>
+    </svg>
+  )
+};
+
+ReactIcon.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
+};
+
+export default memo(ReactIcon);

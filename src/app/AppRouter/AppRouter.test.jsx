@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
-import { renderWithRouter } from 'tests/helpers/renderWithRouter';
+import { renderWithAppRouter } from 'tests/helpers/renderWithAppRouter';
 import { PUBLIC_ROUTES } from '../routes/routes';
 
 describe('<AppRouter/> component set of tests', () => {
@@ -12,12 +12,12 @@ describe('<AppRouter/> component set of tests', () => {
   });
 
   it("Should [render only] 'Posts' page", async () => {
-    const container = renderWithRouter(["/blog/posts"]);
+    const container = renderWithAppRouter(["/blog/posts"]);
     expect(await container.findByTestId("posts-page")).toBeVisible();
   });
 
   it("Should [render only] 'Home' page", () => {
-    const container = renderWithRouter(["/home"]);
+    const container = renderWithAppRouter(["/home"]);
     expect(container.queryByTestId("posts-page")).toBeNull();
   });
   

@@ -3,7 +3,6 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "src/*": ["src/*"],
       "tests/*": ["__tests__/*"],
       "app/*": ["src/app/*"],
       "pages/*": ["src/pages/*"],
@@ -14,7 +13,10 @@
       "config/*": ["src/config/*"],
       "errors/*": ["src/errors/*"],
       "entity/*": ["src/entity/*"],
-      "assets/*": ["src/assets/*"]
+      "assets/*": ["src/assets/*"],
+      "features/*": ["src/features/*"],
+      "modules/*": ["src/modules/*"],
+      "src/*": ["src/*"]
     }
   }
 }

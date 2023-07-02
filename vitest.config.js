@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      src: path.resolve(__dirname, "src"),
       tests: path.resolve(__dirname, "__tests__"),
       app: path.resolve(__dirname, "src/app"),
       pages: path.resolve(__dirname, "src/pages"),
@@ -17,7 +16,10 @@ export default defineConfig({
       config: path.resolve(__dirname, "src/config"),
       errors: path.resolve(__dirname, "src/errors"),
       entity: path.resolve(__dirname, "src/entity"),
-      assets: path.resolve(__dirname, "src/assets")
+      assets: path.resolve(__dirname, "src/assets"),
+      features: path.resolve(__dirname, "src/features"),
+      modules: path.resolve(__dirname, "src/modules"),
+      src: path.resolve(__dirname, "src")
     }
   },
   test: {
