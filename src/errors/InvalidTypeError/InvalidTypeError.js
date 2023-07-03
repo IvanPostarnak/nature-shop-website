@@ -1,4 +1,4 @@
-import AppError from '../AppError/AppError';
+import AppError from '../../entity/AppError/AppError';
 
 class InvalidTypeError extends AppError {
 

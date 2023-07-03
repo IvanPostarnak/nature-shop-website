@@ -5,6 +5,12 @@ import Posts from './Posts.page';
 describe('<Posts/> page set of tests', () => {
 
   afterEach(cleanup);
+
+  it('Should [be in DOM] on render', () => {
+    const container = render(<Posts/>);
+    expect(container.getByTestId("posts-page")).toBeInTheDocument();
+  });
+
   it('Should [be visible] on render', () => {
     const container = render(<Posts/>);
     expect(container.getByTestId("posts-page")).toBeVisible();

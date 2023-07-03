@@ -19,6 +19,8 @@ export default defineConfig({
       assets: path.resolve(__dirname, "src/assets"),
       features: path.resolve(__dirname, "src/features"),
       modules: path.resolve(__dirname, "src/modules"),
+      services: path.resolve(__dirname, "src/services"),
+      lib: path.resolve(__dirname, "src/lib"),
       src: path.resolve(__dirname, "src")
     }
   },

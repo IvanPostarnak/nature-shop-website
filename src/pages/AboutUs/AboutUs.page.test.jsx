@@ -16,7 +16,7 @@ describe('AboutUs.page set of tests', () => {
     expect(container.getByTestId("about-us-page")).toBeVisible();
   });
 
-  it('Should [be visible] on render', () => {
+  it('Should [match snapshot] on render', () => {
     const container = render(<AboutUsPage/>);
     expect(container.getByTestId("about-us-page")).toMatchSnapshot();
   });

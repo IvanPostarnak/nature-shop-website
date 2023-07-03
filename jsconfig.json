@@ -16,6 +16,8 @@
       "assets/*": ["src/assets/*"],
       "features/*": ["src/features/*"],
       "modules/*": ["src/modules/*"],
+      "services/*": ["src/services/*"],
+      "lib/*": ["src/lib/*"],
       "src/*": ["src/*"]
     }
   }
