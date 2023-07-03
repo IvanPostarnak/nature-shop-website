@@ -1,20 +1,28 @@
-import { memo } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { PUBLIC_ROUTES } from "app/routes/routes";
 import IconWrap from "components/UI/IconWrap/IconWrap";
 import ReactIcon from "components/icons/ReactIcon/ReactIcon";
 import Span from "components/UI/Span/Span";
+import { useDispatch } from "react-redux";
+import { setActivePage } from "store/actions";
 
 import styles from './Navbar.module.scss';
 import underlined from './underlined.module.scss';
 
-const Navbar = ({
-  activePage="Blog",
-  changePage,
-  device,
-  ...rest
-}) => {
+const Navbar = ({device, ...rest}) => {
+  const [activePage, changeActivePage] = useState(() => PUBLIC_ROUTES[0].name);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setActivePage(activePage));
+  }, [activePage]);
+
+  const changePage = useCallback((value) => (value) => {
+    changeActivePage(value);
+  }, []);
+
   return (
     <nav
       className={styles.navbar}
@@ -26,11 +34,11 @@ const Navbar = ({
         PUBLIC_ROUTES.map((route) => {
           return (
             <Link
-              className={`${styles.navbar_link} ${underlined.underlined} ${route.name == activePage && underlined.active}`}
+              className={`${styles.navbar_link} ${underlined.default} ${route.name == activePage && underlined.active}`}
               data-testid="navbar-link"
               to={route.path}
               key={route.key}
-              onClick={() => changePage(route.name)}
+              onClick={changePage(route.name)}
             >
               <IconWrap>
                 <ReactIcon size={20}/>
@@ -47,8 +55,6 @@ const Navbar = ({
 };
 
 Navbar.propTypes = {
-  activePage: PropTypes.string,
-  changePage: PropTypes.func,
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
     isTablet: PropTypes.bool.isRequired,

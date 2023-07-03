@@ -1,14 +1,14 @@
-.underlined {
+.default {
   padding: 0 1.5rem 0 1rem;
   line-height: max(3em, 100%);
   position: relative;
 }
 
-.underlined:hover {
+.default:hover {
   background-color: rgba($color: #000000, $alpha: 0.2);
 }
 
-.underlined:hover::after {
+.default:hover::after {
   content: '';
   width: 100%;
   height: 2px;
@@ -40,15 +40,15 @@
   background-color: rgba($color: #000000, $alpha: 0.8);
 }
 
-// .underlined:active {
+// .default:active {
 //   border: 1px solid rgba($color: #000000, $alpha: 1);
 // }
 
-// .underlined:visited {
+// .default:visited {
 //   border: 1px solid rgba($color: #000000, $alpha: 1);
 // }
 
-// .underlined:focus {
+// .default:focus {
 //   border: 1px solid rgba($color: #000000, $alpha: 1);
 //   outline: none;
 // }

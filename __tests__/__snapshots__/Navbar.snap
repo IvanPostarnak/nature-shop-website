@@ -7,7 +7,7 @@ exports[`Navbar component set of tests > Should [match snapshot] 'navbar' on ren
   data-testid="navbar"
 >
   <a
-    class="_navbar_link_b440ab _underlined_465744 _active_465744"
+    class="_navbar_link_b440ab _default_465744 _active_465744"
     data-testid="navbar-link"
     href="/blog/posts"
   >

@@ -11,7 +11,7 @@ exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
     data-testid="navbar"
   >
     <a
-      class="_navbar_link_b440ab _underlined_465744 false"
+      class="_navbar_link_b440ab _default_465744 _active_465744"
       data-testid="navbar-link"
       href="/blog/posts"
     >
