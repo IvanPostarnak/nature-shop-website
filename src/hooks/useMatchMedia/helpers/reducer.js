@@ -1,3 +1,5 @@
+import { CompareError, InvalidTypeError, NoDataError, UnknownDataError } from "errors/errors";
+
 export const reducer = (state, action) => {
 
   if (!action.payload) {

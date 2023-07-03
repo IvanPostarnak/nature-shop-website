@@ -5,8 +5,6 @@ import { Provider } from 'react-redux';
 import { createReduxStore } from './store/store.js';
 import App from './App.jsx';
 
-import 'src/config/errors.setup.js';
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
