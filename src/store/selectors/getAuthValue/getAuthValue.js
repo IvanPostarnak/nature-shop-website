@@ -1,1 +1,0 @@
-export const getAuthValue = (state) => state?.auth?.value || false;

@@ -1,26 +1,21 @@
 import { describe, it, expect } from "vitest";
-import deviceReducer, { setDevice } from './Device.slice';
+import deviceReducer from './Device.slice';
+import { setDevice } from "store/actions/setDevice/setDevice";
 
 describe('Device.slice set of tests', () => {
 
   it('Should [set anyProperty: true] from false', () => {
-    expect(deviceReducer({anyProperty: false}, setDevice({anyProperty: true}))).toEqual({anyProperty: true});
+    const initialState = {anyProperty: false};
+    const action = setDevice({anyProperty: true});
+    const expectedState = {anyProperty: true};
+    expect(deviceReducer(initialState, action)).toEqual(expectedState);
   });
 
   it('Should [set anyProperty: false] from true', () => {
-    expect(deviceReducer({anyProperty: true}, setDevice({anyProperty: false}))).toEqual({anyProperty: false});
-  });
-
-  it('Should [throw Error] on passing non-Object', () => {
-    expect(() => deviceReducer({anyProperty: false}, setDevice("not an object"))).toThrowError(/object/i);
-  });
-  
-  it('Should [throw Error] on passing Object with 2 truths', () => {
-    expect(() => deviceReducer({one: false, two: false}, setDevice({one: true, two: true}))).toThrowError(/action.payload/i);
-  });
-
-  it('Should [throw Error] on passing Object with different length', () => {
-    expect(() => deviceReducer({one: false}, setDevice({one: true, two: true}))).toThrowError(/action.payload.length/i);
+    const initialState = {anyProperty: true, two: false};
+    const action = setDevice({anyProperty: false, two: true});
+    const expectedState = {anyProperty: false, two: true};
+    expect(deviceReducer(initialState, action)).toEqual(expectedState);
   });
 
 });

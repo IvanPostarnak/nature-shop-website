@@ -12,7 +12,7 @@ export const init = (initArray) => {
 
     return {
       ...acc,
-      ['is' + item.device[0].toUpperCase() + item.device.slice(1)]: false
+      ['is' + item.device[0].toUpperCase() + item.device.slice(1)]: item?.default ? true : false
     };
 
   }, {});
