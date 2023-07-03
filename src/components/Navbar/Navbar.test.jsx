@@ -50,7 +50,24 @@ describe('Navbar component set of tests', () => {
       ["/"],
       <Navbar device={device}/>
     );
-    expect(container.getByTestId("navbar-link")).toHaveClass(underlined.default);
+    const atLeastOneDefault = container.getAllByTestId("navbar-link").some((item) => {
+      return item.classList.contains(underlined.default);
+    })
+    expect(atLeastOneDefault).toBe(true);
+  });
+
+  it('Should [have CSS class] \'active\' on render', () => {
+    const device = {isMobile: false, isTablet: false, isDesktop: true};
+    const pages = {acitve: 'Home'};
+    const container = renderWithMemoryRouterAndProvider(
+      {device, pages},
+      ["/"],
+      <Navbar device={device}/>
+    );
+    const atLeastOneActive = container.getAllByTestId("navbar-link").some((item) => {
+      return item.classList.contains(underlined.active);
+    })
+    expect(atLeastOneActive).toBe(true);
   });
 
   it('Should [have at least 1] navbar-link', () => {

@@ -1,10 +1,10 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Footer.widget set of tests > Should [match snapshot] on render 1`] = `
-<div
+<footer
   class="_footer_9eefdf"
   data-testid="app-footer"
 >
   Footer
-</div>
+</footer>
 `;

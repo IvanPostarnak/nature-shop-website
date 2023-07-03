@@ -19,7 +19,7 @@ const Navbar = ({device, ...rest}) => {
     dispatch(setActivePage(activePage));
   }, [activePage]);
 
-  const changePage = useCallback((value) => (value) => {
+  const changePage = useCallback((value) => () => {
     changeActivePage(value);
   }, []);
 

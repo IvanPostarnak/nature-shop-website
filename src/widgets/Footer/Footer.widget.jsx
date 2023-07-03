@@ -5,12 +5,12 @@ import styles from './Footer.module.scss';
 
 const Footer = ({device}) => {
   return (
-    <div
+    <footer
       className={styles.footer}
       data-testid="app-footer"
     >
       Footer
-    </div>
+    </footer>
   )
 };
 

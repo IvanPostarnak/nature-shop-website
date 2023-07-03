@@ -6,12 +6,12 @@ import styles from './Header.module.scss';
 
 const Header = ({device}) => {
   return (
-    <div
+    <header
       data-testid="app-header"
       className={styles.header}
     >
       <Navbar device={device}/>
-    </div>
+    </header>
   )
 }
 
