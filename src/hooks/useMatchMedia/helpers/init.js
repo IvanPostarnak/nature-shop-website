@@ -1,3 +1,5 @@
+import { InvalidTypeError, NoDataError } from "errors/errors";
+
 export const init = (initArray) => {
 
   const initState = initArray.reduce((acc, item) => {

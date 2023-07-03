@@ -27,7 +27,6 @@ export default defineConfig({
   test: {
     bail: 1,
     setupFiles: [
-      path.resolve(__dirname, "__tests__/setup/errors.setup.js"),
       path.resolve(__dirname, "__tests__/setup/expect.setup.js")
     ],
     exclude: [
