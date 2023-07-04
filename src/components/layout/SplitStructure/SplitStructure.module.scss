@@ -1,0 +1,15 @@
+.split_structure {
+  width: 100%;
+  border: 1px solid rgb(4, 19, 221);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.first_item {
+  flex-basis: 66%;
+}
+
+.second_item {
+  flex-basis: 30%;
+}
