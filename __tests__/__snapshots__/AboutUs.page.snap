@@ -5,6 +5,9 @@ exports[`AboutUs.page set of tests > Should [match snapshot] on render 1`] = `
   class="_aboutus_840296"
   data-testid="about-us-page"
 >
-  About Us
+  loading
+  <button>
+     reset 
+  </button>
 </div>
 `;

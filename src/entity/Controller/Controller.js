@@ -11,10 +11,11 @@ class Controller {
     this.#GET = config.GET;
   }
 
-  fetch(url, options) {
+ fetch(url, options={}) {
     if (this.#validateURL(url) && this.#validateOptions(options)) {
       const finalURL = this.#configureURL(url);
-      return this.#GET(finalURL, options);
+      const response = this.#GET(finalURL, options);
+      return response;
     }
   }
 
