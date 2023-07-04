@@ -14,7 +14,7 @@ export const useFetch = (callback) => {
 
     response
     .then(res => {
-      setData(res.data);
+      setData(res.data[0]);
       setIsLoading(false);
     })
     .catch(err => {

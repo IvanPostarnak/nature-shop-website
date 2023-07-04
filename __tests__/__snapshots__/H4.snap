@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`H4 component set of tests > Should [match snapshot] on render 1`] = `
+<h4
+  class="_h4_1a44cd"
+  data-testid="h4"
+/>
+`;

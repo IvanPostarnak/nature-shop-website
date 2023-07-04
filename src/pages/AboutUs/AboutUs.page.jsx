@@ -10,6 +10,7 @@ import Article from "components/Article/Article";
 import Loader from "components/UI/Loader/Loader";
 
 import styles from './AboutUs.module.scss';
+import Paragraph from "components/Paragraph/Paragraph";
 
 const AboutUs = () => {
   const {isLoading, data, reset} = useFetch(() => PagesService.getAboutUs())
@@ -24,10 +25,15 @@ const AboutUs = () => {
           <Main>
           <H2>{"About Us"}</H2>
             {
-              isLoading
+              isLoading || !data
               ? <Loader/>
               : <Article>
-                  {JSON.stringify(data)}
+                  <Paragraph body={data.introduction}/>
+                  <Paragraph title="Vision" body={data.vision}/>
+                  <Paragraph title="Mission" body={data.mission}/>
+                  <Paragraph title="Why Us?" body={data.why_us}/>
+                  <Paragraph title="Thanks" body={data.thanks}/>
+                  <Paragraph title="Afterwords" body={data.afterword}/>
                 </Article>
             }
           </Main>
