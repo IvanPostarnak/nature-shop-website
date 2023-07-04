@@ -21,6 +21,7 @@ export default defineConfig({
       modules: path.resolve(__dirname, "src/modules"),
       services: path.resolve(__dirname, "src/services"),
       lib: path.resolve(__dirname, "src/lib"),
+      helpers: path.resolve(__dirname, "src/helpers"),
       src: path.resolve(__dirname, "src")
     }
   },

@@ -3,28 +3,19 @@ import PropTypes from 'prop-types';
 
 import styles from './Text.module.scss';
 
-const Text = ({
-  children,
-  ff="inherit",
-  fz="inherit",
-  fw="inherit",
-  fs="inherit",
-  c="#000000",
-  cursor='initial',
-  ...rest
-}) => {
+const Text = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (
     <p
       {...rest}
       className={styles.text}
       data-testid="text"
       style={{
-        fontFamily: ff,
-        fontSize: fz,
-        fontWeight: fw,
-        fontStyle: fs,
-        color: c,
-        cursor: cursor
+        fontFamily: ff || "inherit",
+        fontSize: fz || "inherit",
+        fontWeight: fw || "inherit",
+        fontStyle: fs || "inherit",
+        color: c || "#000000",
+        cursor: cursor || 'initial'
       }}
     >
       {typeof children === "string" ? children.trim() : ""}

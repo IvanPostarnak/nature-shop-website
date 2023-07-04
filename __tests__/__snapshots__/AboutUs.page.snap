@@ -1,14 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AboutUs.page set of tests > Should [be visible] on render 1`] = `
-<div
-  class="_aboutus_840296"
-  data-testid="about-us-page"
->
-  About Us
-</div>
-`;
-
 exports[`AboutUs.page set of tests > Should [match snapshot] on render 1`] = `
 <div
   class="_aboutus_840296"

@@ -18,6 +18,7 @@
       "modules/*": ["src/modules/*"],
       "services/*": ["src/services/*"],
       "lib/*": ["src/lib/*"],
+      "helpers/*": ["src/helpers/*"],
       "src/*": ["src/*"]
     }
   }

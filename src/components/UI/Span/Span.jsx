@@ -3,28 +3,19 @@ import PropTypes from 'prop-types';
 
 import styles from './Span.module.scss';
 
-const Span = ({
-  children,
-  ff="inherit",
-  fz="inherit",
-  fw="inherit",
-  fs="inherit",
-  c="#000000",
-  cursor='inherit',
-  ...rest
-}) => {
+const Span = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (
     <span
       {...rest}
       className={styles.span}
       data-testid="span"
       style={{
-        fontFamily: ff,
-        fontSize: fz,
-        fontWeight: fw,
-        fontStyle: fs,
-        color: c,
-        cursor: cursor
+        fontFamily: ff || "inherit",
+        fontSize: fz || "inherit",
+        fontWeight: fw || "inherit",
+        fontStyle: fs || "inherit",
+        color: c || "#000000",
+        cursor: cursor || 'inherit'
       }}
     >
       {typeof children === "string" ? children.trim() : ""}

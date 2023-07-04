@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Modal component set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_modal_cb466e"
+  data-testid="modal"
+  style="width: 100%; border-radius: 0px; background: rgb(255, 255, 255); z-index: 9000; pointer-events: none;"
+/>
+`;
