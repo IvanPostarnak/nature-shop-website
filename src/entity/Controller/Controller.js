@@ -4,17 +4,17 @@ import { fetchData } from "lib/fetchData/fetchData.lib";
 class Controller {
 
   #baseURL = '';
-  #GET;
+  #get;
 
   constructor(config) {
     this.#baseURL = config.baseURL;
-    this.#GET = config.GET;
+    this.#get = config.get;
   }
 
  fetch(url, options={}) {
     if (this.#validateURL(url) && this.#validateOptions(options)) {
       const finalURL = this.#configureURL(url);
-      const response = this.#GET(finalURL, options);
+      const response = this.#get(finalURL, options);
       return response;
     }
   }
@@ -57,8 +57,7 @@ class Controller {
 
 }
 
-export { Controller };
 export default new Controller({
   baseURL: 'http://localhost:5300/',
-  GET: fetchData
+  get: fetchData
 });

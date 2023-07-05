@@ -1,21 +1,17 @@
-import { Controller } from 'entity/Controller/Controller';
-import { fetchData } from 'lib/fetchData/fetchData.lib';
+import Controller from "entity/Controller/Controller";
+import { Service } from "entity/Service/Service";
 
-class PagesService extends Controller {
+class PagesService extends Service {
 
-  constructor(config) {
-    super(config);
+  constructor(controller) {
+    super(controller);
   }
 
   getAboutUs() {
-    const response = this.fetch("/pages/about_us");
+    const response = this.getData("/pages/about_us");
     return response;
   }
   
 }
 
-export { PagesService };
-export default new PagesService({
-  baseURL: 'http://localhost:5300/',
-  GET: fetchData
-});
+export default new PagesService(Controller);
