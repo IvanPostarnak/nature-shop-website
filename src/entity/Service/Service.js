@@ -6,8 +6,8 @@ class Service {
     this.controller = controller;
   }
 
-  getData() {
-    const response = this.controller.fetch("/pages/about_us");
+  getData(url) {
+    const response = this.controller.fetch(url);
     return response;
   }
   

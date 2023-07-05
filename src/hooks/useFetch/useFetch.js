@@ -19,7 +19,7 @@ export const useFetch = (callback) => {
     })
     .catch(err => {
       setError(err);
-      setIsLoading(false)
+      setIsLoading(false);
     });
   };
   
@@ -33,7 +33,7 @@ export const useFetch = (callback) => {
   }, []);
 
   useEffect(() => {
-    sendRequest();
+    callback && sendRequest();
 
     return () => abort();
   }, []);

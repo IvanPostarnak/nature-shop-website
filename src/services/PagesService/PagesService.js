@@ -11,6 +11,11 @@ class PagesService extends Service {
     const response = this.getData("/pages/about_us");
     return response;
   }
+
+  getPrivacyPolicy() {
+    const response = this.getData("/pages/privacy_policy");
+    return response;
+  }
   
 }
 

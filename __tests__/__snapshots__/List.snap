@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`List component set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_list_fcb5d7"
+  data-testid="list"
+>
+  <h4
+    class="_h4_1a44cd"
+    data-testid="h4"
+  />
+  <ul
+    class="_unordered_list_be7d17"
+    data-testid="unordered-list"
+  />
+</div>
+`;

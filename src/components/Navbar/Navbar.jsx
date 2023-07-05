@@ -1,7 +1,7 @@
 import { memo, useCallback, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import { PUBLIC_ROUTES } from "app/routes/routes";
+import { NAVBAR } from "app/routes/routes";
 import IconWrap from "components/UI/IconWrap/IconWrap";
 import ReactIcon from "components/icons/ReactIcon/ReactIcon";
 import Span from "components/UI/Span/Span";
@@ -12,7 +12,7 @@ import styles from './Navbar.module.scss';
 import underlined from './underlined.module.scss';
 
 const Navbar = ({device, ...rest}) => {
-  const [activePage, changeActivePage] = useState(() => PUBLIC_ROUTES[0].name);
+  const [activePage, changeActivePage] = useState(() => NAVBAR[0].name);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Navbar = ({device, ...rest}) => {
       {...rest}
     >
       {
-        PUBLIC_ROUTES.map((route) => {
+        NAVBAR.map((route) => {
           return (
             <Link
               className={`${styles.navbar_link} ${underlined.default} ${route.name == activePage && underlined.active}`}

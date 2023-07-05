@@ -1,29 +1,29 @@
 import { memo } from "react";
 import PropTypes from 'prop-types';
 
-import styles from './Text.module.scss';
+import styles from './Strong.module.scss';
 
-const Text = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
+const Strong = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (
-    <p
-      className={styles.text}
-      data-testid="text"
+    <strong
+      className={styles.strong}
+      data-testid="strong"
       style={{
         fontFamily: ff || "inherit",
         fontSize: fz || "inherit",
         fontWeight: fw || "inherit",
         fontStyle: fs || "inherit",
         color: c || "#000000",
-        cursor: cursor || 'initial'
+        cursor: cursor || 'inherit'
       }}
       {...rest}
     >
       {typeof children === "string" ? children.trim() : ""}
-    </p>
+    </strong>
   )
 };
 
-Text.propTypes = {
+Strong.propTypes = {
   children: PropTypes.string.isRequired,
   ff: PropTypes.string,
   fz: PropTypes.string,
@@ -33,4 +33,4 @@ Text.propTypes = {
   cursor: PropTypes.string
 };
 
-export default memo(Text);
+export default memo(Strong);

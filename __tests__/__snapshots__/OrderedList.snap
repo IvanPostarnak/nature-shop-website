@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`OrderedList component set of tests > Should [match snapshot] on render 1`] = `
+<ol
+  class="_ordered_list_a6d616"
+  data-testid="ordered-list"
+/>
+`;

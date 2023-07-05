@@ -6,7 +6,6 @@ import styles from './Span.module.scss';
 const Span = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (
     <span
-      {...rest}
       className={styles.span}
       data-testid="span"
       style={{
@@ -17,6 +16,7 @@ const Span = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
         color: c || "#000000",
         cursor: cursor || 'inherit'
       }}
+      {...rest}
     >
       {typeof children === "string" ? children.trim() : ""}
     </span>

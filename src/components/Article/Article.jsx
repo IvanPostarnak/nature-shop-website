@@ -24,7 +24,10 @@ const Article = ({children, title}) => {
 };
 
 Article.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
   title: PropTypes.string
 }
 

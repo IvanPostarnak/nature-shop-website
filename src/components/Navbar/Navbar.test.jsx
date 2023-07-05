@@ -4,10 +4,15 @@ import { renderWithMemoryRouterAndProvider } from 'tests/helpers/renderWithMemor
 import Navbar from './Navbar';
 import styles from './Navbar.module.scss';
 import underlined from './underlined.module.scss';
+import { NAVBAR } from 'app/routes/routes';
 
 describe('Navbar component set of tests', () => {
 
   afterEach(cleanup);
+
+  it('Should [have at least 1] navbar route', () => {
+    expect(NAVBAR.length).toBeGreaterThanOrEqual(1);
+  });
 
   it('Should [be in DOM] on render', () => {
     const device = {isMobile: false, isTablet: false, isDesktop: true};
