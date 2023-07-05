@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header component set of tests > Should [match snapshot] on render 1`] = `
+<header
+  class="_header_a05500"
+  data-testid="header"
+/>
+`;

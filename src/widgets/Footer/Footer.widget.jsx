@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import { memo } from 'react';
+import Footer from 'components/UI/Footer/Footer';
 
 import styles from './Footer.module.scss';
 
-const Footer = ({device}) => {
+const FooterWidget = ({device, ...rest}) => {
   return (
-    <footer
-      className={styles.footer}
-      data-testid="app-footer"
+    <div
+      className={styles.footer_widget}
+      data-testid="footer-widget"
     >
-      Footer
-    </footer>
+      <Footer {...rest}>
+        Footer
+      </Footer>
+    </div>
   )
 };
 
-Footer.propTypes = {
+FooterWidget.propTypes = {
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
     isTablet: PropTypes.bool.isRequired,
@@ -22,4 +25,4 @@ Footer.propTypes = {
   }).isRequired
 };
 
-export default memo(Footer);
+export default memo(FooterWidget);

@@ -4,7 +4,5 @@ exports[`Sidebar component set of tests > Should [match snapshot] on render 1`] 
 <aside
   class="_sidebar_273ffd"
   data-testid="sidebar"
->
-  Sidebar
-</aside>
+/>
 `;

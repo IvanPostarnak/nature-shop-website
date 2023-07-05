@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Aside component set of tests > Should [match snapshot] on render 1`] = `
+<aside
+  class="_aside_412e12"
+  data-testid="aside"
+/>
+`;

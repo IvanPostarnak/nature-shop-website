@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
-import Header from './Header.widget';
+import HeaderWidget from './Header.widget';
 import styles from './Header.module.scss';
 import { renderWithMemoryRouterAndProvider } from 'tests/helpers/renderWithMemoryRouterAndProvider';
 
@@ -14,9 +14,9 @@ describe('Header.widget set of tests', () => {
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
       ["/"],
-      <Header device={device}/>
+      <HeaderWidget device={device}/>
     );
-    expect(container.getByTestId("app-header")).toBeInTheDocument();
+    expect(container.getByTestId("header-widget")).toBeInTheDocument();
   });
 
   it('Should [be visible] on render', () => {
@@ -25,20 +25,20 @@ describe('Header.widget set of tests', () => {
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
       ["/"],
-      <Header device={device}/>
+      <HeaderWidget device={device}/>
     );
-    expect(container.getByTestId("app-header")).toBeVisible();
+    expect(container.getByTestId("header-widget")).toBeVisible();
   });
 
-  it('Should [have CSS class] \'header\' on render', () => {
+  it('Should [have CSS class] \'header_widget\' on render', () => {
     const device = {isMobile: false, isTablet: false, isDesktop: true};
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
       ["/"],
-      <Header device={device}/>
+      <HeaderWidget device={device}/>
     );
-    expect(container.getByTestId("app-header")).toHaveClass(styles.header);
+    expect(container.getByTestId("header-widget")).toHaveClass(styles.header_widget);
   });
 
   it('Should [match snapshot] on render', () => {
@@ -47,9 +47,9 @@ describe('Header.widget set of tests', () => {
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
       ["/"],
-      <Header device={device}/>
+      <HeaderWidget device={device}/>
     );
-    expect(container.getByTestId("app-header")).toMatchSnapshot();
+    expect(container.getByTestId("header-widget")).toMatchSnapshot();
   });
 
 });

@@ -1,6 +1,7 @@
 import { memo } from "react";
 import PropTypes from 'prop-types';
 import H3 from "components/UI/H3/H3";
+import Header from "components/UI/Header/Header";
 
 import styles from './Article.module.scss';
 
@@ -11,14 +12,14 @@ const Article = ({children, title, ...rest}) => {
       data-testid="article"
       {...rest}
     >
-      <header
+      <Header
         className={styles.article__header}
         data-testid="article-header"
       >
         {
           title && <H3>{title}</H3>
         }
-      </header>
+      </Header>
       {children}
     </article>
   )

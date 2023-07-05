@@ -1,21 +1,24 @@
 import { memo } from "react";
 import PropTypes from 'prop-types';
 import Navbar from "components/Navbar/Navbar";
+import Header from "components/UI/Header/Header";
 
 import styles from './Header.module.scss';
 
-const Header = ({device}) => {
+const HeaderWidget = ({device, ...rest}) => {
   return (
-    <header
-      data-testid="app-header"
-      className={styles.header}
+    <div
+      data-testid="header-widget"
+      className={styles.header_widget}
     >
-      <Navbar device={device}/>
-    </header>
+      <Header {...rest}>
+        <Navbar device={device}/>
+      </Header>
+    </div>
   )
 }
 
-Header.propTypes = {
+HeaderWidget.propTypes = {
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
     isTablet: PropTypes.bool.isRequired,
@@ -23,4 +26,4 @@ Header.propTypes = {
   }).isRequired
 };
 
-export default memo(Header);
+export default memo(HeaderWidget);

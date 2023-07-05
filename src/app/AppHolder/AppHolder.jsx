@@ -7,8 +7,8 @@ import { memo } from 'react';
 import Background from "components/layout/Background/Background";
 import Column from "components/layout/Column/Column";
 import Shelf from "components/layout/Shelf/Shelf";
-import Header from 'widgets/Header/Header.widget';
-import Footer from 'widgets/Footer/Footer.widget';
+import HeaderWidget from 'widgets/Header/Header.widget';
+import FooterWidget from 'widgets/Footer/Footer.widget';
 
 import styles from './AppHolder.module.scss';
 
@@ -27,13 +27,13 @@ const AppHolder = ({children}) => {
     >
       <Background>
         <Shelf>
-          <Header device={device}/>
+          <HeaderWidget device={device}/>
         </Shelf>
         <Column>
           {children}
         </Column>
         <Shelf layout="bottom">
-          <Footer device={device}/>
+          <FooterWidget device={device}/>
         </Shelf>
       </Background>
     </div>

@@ -2,21 +2,25 @@ import { memo } from "react";
 import PropTypes from 'prop-types';
 
 import styles from './Sidebar.module.scss';
+import Aside from "components/UI/Aside/Aside";
 
-const Sidebar = ({children}) => {
+const Sidebar = ({children, ...rest}) => {
   return (
-    <aside
+    <Aside
       className={styles.sidebar}
       data-testid="sidebar"
+      {...rest}
     >
-      Sidebar
       {children}
-    </aside>
+    </Aside>
   )
 };
 
 Sidebar.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element)
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
+  ]).isRequired
 }
 
 export default memo(Sidebar);
