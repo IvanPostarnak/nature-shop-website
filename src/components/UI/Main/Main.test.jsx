@@ -17,7 +17,7 @@ describe('Main component set of tests', () => {
     expect(container.getByTestId("main")).toBeVisible();
   });
 
-  it('Should [have CSS class] \'single-structure\' on render', () => {
+  it('Should [have CSS class] \'main\' on render', () => {
     const container = render(<Main/>);
     expect(container.getByTestId("main")).toHaveClass(styles.main);
   });

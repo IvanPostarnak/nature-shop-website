@@ -4,7 +4,7 @@ import { reducer } from "./helpers/reducer";
 import { init } from "./helpers/init";
 
 export const useMatchMedia = () => {
-  const [state, dispatch] = useReducer(reducer, defineDevice, init);
+  const [device, dispatch] = useReducer(reducer, defineDevice, init);
 
   const mediaQueryLists = defineDevice.map(item => {
     return window.matchMedia(item.mediaQuery);
@@ -35,5 +35,5 @@ export const useMatchMedia = () => {
     };
   }, []);
 
-  return [state];
+  return {device};
 };

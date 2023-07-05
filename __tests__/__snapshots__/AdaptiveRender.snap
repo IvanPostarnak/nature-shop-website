@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AdaptiveRender set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_adaptive_render_648c2e"
+  data-testid="adaptive-render"
+>
+  <div
+    class="_split_structure_d78199"
+    data-testid="split-structure"
+  >
+    <div
+      class="_first_item_d78199"
+      data-testid="split-structure-first-item"
+    />
+    <div
+      class="_second_item_d78199"
+      data-testid="split-structure-second-item"
+    />
+  </div>
+</div>
+`;

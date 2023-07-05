@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import styles from './Main.module.scss';
 
-const Main = ({children}) => {
+const Main = ({children, ...rest}) => {
   return (
     <main
       className={styles.main}
       data-testid="main"
+      {...rest}
     >
       {children}
     </main>
@@ -15,7 +16,10 @@ const Main = ({children}) => {
 };
 
 Main.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element)
-}
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ])
+};
 
 export default memo(Main);

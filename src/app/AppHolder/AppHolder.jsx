@@ -13,7 +13,7 @@ import Footer from 'widgets/Footer/Footer.widget';
 import styles from './AppHolder.module.scss';
 
 const AppHolder = ({children}) => {
-  const [device] = useMatchMedia();
+  const {device} = useMatchMedia();
   const dispatch = useDispatch();
 
   useEffect(() => {

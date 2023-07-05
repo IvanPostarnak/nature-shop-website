@@ -2,15 +2,15 @@ import { memo } from "react";
 import { useFetch } from "hooks/hooks";
 import PagesService from "services/PagesService/PagesService";
 import Content from "widgets/Content/Content.widget";
-import PropTypes from "prop-types";
-import SingleStructure from "components/layout/SingleStructure/SingleStructure";
-import Main from "components/Main/Main";
+import Main from "components/UI/Main/Main";
 import H2 from "components/UI/H2/H2";
 import Article from "components/Article/Article";
 import Loader from "components/UI/Loader/Loader";
+import AdaptiveRender from "components/layout/AdaptiveRender/AdaptiveRender";
+import Paragraph from "components/Paragraph/Paragraph";
+import PropTypes from "prop-types";
 
 import styles from './AboutUs.module.scss';
-import Paragraph from "components/Paragraph/Paragraph";
 
 const AboutUs = () => {
   const {isLoading, data, reset} = useFetch(() => PagesService.getAboutUs())
@@ -18,9 +18,9 @@ const AboutUs = () => {
   return (
     <div
       data-testid="about-us-page"
-      className={`${styles.aboutus}`}
+      className={styles.about_us}
     >
-      <SingleStructure>
+      <AdaptiveRender>
         <Content>
           <Main>
           <H2>{"About Us"}</H2>
@@ -28,17 +28,17 @@ const AboutUs = () => {
               isLoading || !data
               ? <Loader/>
               : <Article>
-                  <Paragraph body={data.introduction}/>
-                  <Paragraph title="Vision" body={data.vision}/>
-                  <Paragraph title="Mission" body={data.mission}/>
-                  <Paragraph title="Why Us?" body={data.why_us}/>
-                  <Paragraph title="Thanks" body={data.thanks}/>
-                  <Paragraph title="Afterwords" body={data.afterword}/>
+                  <Paragraph body={data?.introduction}/>
+                  <Paragraph title="Vision" body={data?.vision}/>
+                  <Paragraph title="Mission" body={data?.mission}/>
+                  <Paragraph title="Why Us?" body={data?.why_us}/>
+                  <Paragraph title="Thanks" body={data?.thanks}/>
+                  <Paragraph title="Afterwords" body={data?.afterword}/>
                 </Article>
             }
           </Main>
         </Content>
-      </SingleStructure>
+      </AdaptiveRender>
     </div>
   )
 };

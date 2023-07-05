@@ -1,9 +1,69 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Posts/> page set of tests > Should [match snapshot] on render 1`] = `
+exports[`Posts page set of tests > Should [match snapshot] on render 1`] = `
 <div
+  class="_posts_e5ec46"
   data-testid="posts-page"
 >
-  Posts Page
+  <div
+    class="_adaptive_render_648c2e"
+    data-testid="adaptive-render"
+  >
+    <div
+      class="_split_structure_d78199"
+      data-testid="split-structure"
+    >
+      <div
+        class="_first_item_d78199"
+        data-testid="split-structure-first-item"
+      >
+        <div
+          class="_content_ce19df"
+          data-testid="content"
+        >
+          Content
+          <main
+            class="_main_9694fd"
+            data-testid="main"
+          >
+            <h2
+              class="_h2_d6c748"
+              data-testid="h2"
+            >
+              Posts
+            </h2>
+            <section
+              class="_section_59d44d"
+              data-testid="section"
+            >
+              <div
+                class="_post_card_0985db"
+                data-testid="post-card"
+              >
+                <p
+                  class="_text_866a1a"
+                  data-testid="text"
+                  style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
+                >
+                  Post Card
+                </p>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+      <div
+        class="_second_item_d78199"
+        data-testid="split-structure-second-item"
+      >
+        <aside
+          class="_sidebar_273ffd"
+          data-testid="sidebar"
+        >
+          Sidebar
+        </aside>
+      </div>
+    </div>
+  </div>
 </div>
 `;

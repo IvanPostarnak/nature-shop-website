@@ -2,7 +2,7 @@
 
 exports[`Main component set of tests > Should [match snapshot] on render 1`] = `
 <main
-  class="_main_7a8146"
+  class="_main_9694fd"
   data-testid="main"
 />
 `;

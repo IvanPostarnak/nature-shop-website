@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button component set of tests > Should [match snapshot] on render 1`] = `
+<button
+  class="_button_e7dbe0"
+  data-testid="button"
+/>
+`;

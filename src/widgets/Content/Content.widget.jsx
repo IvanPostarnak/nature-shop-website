@@ -16,7 +16,10 @@ const Content = ({children}) => {
 };
 
 Content.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element)
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
+  ])
 }
 
 export default memo(Content);

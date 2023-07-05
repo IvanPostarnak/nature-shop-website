@@ -2,37 +2,51 @@
 
 exports[`AboutUs.page set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_aboutus_840296"
+  class="_about_us_840296"
   data-testid="about-us-page"
 >
-  <aside
-    class="_single_structure_2107ce"
-    data-testid="single-structure"
+  <div
+    class="_adaptive_render_648c2e"
+    data-testid="adaptive-render"
   >
     <div
-      class="_content_ce19df"
-      data-testid="content"
+      class="_split_structure_d78199"
+      data-testid="split-structure"
     >
-      Content
-      <main
-        class="_main_7a8146"
-        data-testid="main"
+      <div
+        class="_first_item_d78199"
+        data-testid="split-structure-first-item"
       >
-        <h2
-          class="_h2_d6c748"
-          data-testid="h2"
-        >
-          About Us
-        </h2>
         <div
-          class="_loader_68fe6b"
-          data-testid="loader"
-          style="z-index: 9010;"
+          class="_content_ce19df"
+          data-testid="content"
         >
-          Loading...
+          Content
+          <main
+            class="_main_9694fd"
+            data-testid="main"
+          >
+            <h2
+              class="_h2_d6c748"
+              data-testid="h2"
+            >
+              About Us
+            </h2>
+            <div
+              class="_loader_68fe6b"
+              data-testid="loader"
+              style="z-index: 9010;"
+            >
+              Loading...
+            </div>
+          </main>
         </div>
-      </main>
+      </div>
+      <div
+        class="_second_item_d78199"
+        data-testid="split-structure-second-item"
+      />
     </div>
-  </aside>
+  </div>
 </div>
 `;
