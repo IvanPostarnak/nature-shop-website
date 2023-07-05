@@ -26,7 +26,7 @@ const Modal = ({children, w, h, br, bc, bw, bs, bgc, bgo, events, z}) => {
 };
 
 Modal.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
   w: PropTypes.string,
   h: PropTypes.string,
   pos: PropTypes.string,

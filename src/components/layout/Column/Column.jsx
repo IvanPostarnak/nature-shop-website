@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import styles from './Column.module.scss';
 
-const Column = ({children}) => {
+const Column = ({children, ...rest}) => {
   return (
     <div
       className={styles.column}
       data-testid="app-column"
+      {...rest}
     >
       Column
       {children}
@@ -16,7 +17,10 @@ const Column = ({children}) => {
 };
 
 Column.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.element
+  ]).isRequired
 };
 
 export default memo(Column);

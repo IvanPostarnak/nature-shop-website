@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './IconWrap.module.scss';
 
-const IconWrap = ({children, animation, ...rest}) => {
+const IconWrap = ({children, ...rest}) => {
   return (
     <div
       className={styles.icon_wrap}
@@ -16,7 +16,7 @@ const IconWrap = ({children, animation, ...rest}) => {
 };
 
 IconWrap.propTypes = {
-  size: PropTypes.element
+  children: PropTypes.element.isRequired
 };
 
 export default memo(IconWrap);

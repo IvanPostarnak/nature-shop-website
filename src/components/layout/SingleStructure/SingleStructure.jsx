@@ -3,19 +3,23 @@ import PropTypes from 'prop-types';
 
 import styles from './SingleStructure.module.scss';
 
-const SingleStructure = ({children}) => {
+const SingleStructure = ({children, ...rest}) => {
   return (
-    <aside
+    <div
       className={styles.single_structure}
       data-testid="single-structure"
+      {...rest}
     >
       {children}
-    </aside>
+    </div>
   )
 };
 
 SingleStructure.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.element
+  ]).isRequired
 }
 
 export default memo(SingleStructure);

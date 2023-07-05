@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 
 import styles from './Background.module.scss';
 
-const Background = ({children}) => {
+const Background = ({children, ...rest}) => {
   return (
     <div
       className={styles.background}
       data-testid="app-background"
+      {...rest}
     >
       {children}
     </div>
@@ -15,7 +16,10 @@ const Background = ({children}) => {
 };
 
 Background.propType = {
-  children: PropTypes.element
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.element
+  ]).isRequired
 };
 
 export default memo(Background);

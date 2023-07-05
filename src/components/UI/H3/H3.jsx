@@ -16,7 +16,7 @@ const H3 = ({children, ...rest}) => {
 };
 
 H3.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.string.isRequired
 }
 
 export default memo(H3);

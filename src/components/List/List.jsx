@@ -13,7 +13,9 @@ const List = ({children, type="unordered", title, ...rest}) => {
       className={styles.list}
       data-testid="list"
     >
-      <H4>{title}</H4>
+      {
+        title && <H4>{title}</H4>
+      }
       {
         type === "unordered"
         ? <UnorderedList {...rest}>

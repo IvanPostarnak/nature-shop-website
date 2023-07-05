@@ -13,7 +13,7 @@ import PropTypes from "prop-types";
 import styles from './AboutUs.module.scss';
 
 const AboutUs = () => {
-  const {isLoading, data, reset} = useFetch(() => PagesService.getAboutUs())
+  const {isLoading, data } = useFetch(() => PagesService.getAboutUs())
 
   return (
     <div

@@ -25,7 +25,7 @@ ListItem.propTypes = {
   body: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
-  ])
+  ]).isRequired
 };
 
 export default memo(ListItem);

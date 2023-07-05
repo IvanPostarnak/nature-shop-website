@@ -4,11 +4,12 @@ import { Children } from "react";
 
 import styles from './SplitStructure.module.scss';
 
-const SplitStructure = ({children}) => {
+const SplitStructure = ({children, ...rest}) => {
   return (
     <div
       className={styles.split_structure}
       data-testid="split-structure"
+      {...rest}
     >
       <div
         className={styles.first_item}
@@ -30,7 +31,7 @@ SplitStructure.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.element
-  ])
+  ]).isRequired
 }
 
 export default memo(SplitStructure);

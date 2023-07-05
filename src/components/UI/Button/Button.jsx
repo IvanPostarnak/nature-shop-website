@@ -18,9 +18,8 @@ const Button = ({children, ...rest}) => {
 Button.propTypes = {
   children: PropTypes.oneOf([
     PropTypes.node,
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
-  ])
+    PropTypes.arrayOf(PropTypes.node)
+  ]).isRequired
 };
 
 export default memo(Button);

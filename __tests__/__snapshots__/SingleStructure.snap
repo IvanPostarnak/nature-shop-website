@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`SingleStructure component set of tests > Should [match snapshot] on render 1`] = `
-<aside
+<div
   class="_single_structure_2107ce"
   data-testid="single-structure"
 />

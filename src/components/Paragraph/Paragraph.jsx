@@ -5,7 +5,7 @@ import Text from "components/UI/Text/Text";
 
 import styles from './Paragraph.module.scss';
 
-const Paragraph = ({title, body}) => {
+const Paragraph = ({title, body, ...rest}) => {
   return (
     <div
       className={styles.paragraph}
@@ -15,7 +15,7 @@ const Paragraph = ({title, body}) => {
         title && <H4>{title}</H4>
       }
       {
-        body && <Text>{body}</Text>
+        body && <Text {...rest}>{body}</Text>
       }
     </div>
   )
@@ -23,7 +23,7 @@ const Paragraph = ({title, body}) => {
 
 Paragraph.propTypes = {
   title: PropTypes.string,
-  body: PropTypes.string
+  body: PropTypes.string.isRequired
 }
 
 export default memo(Paragraph);

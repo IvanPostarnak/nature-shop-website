@@ -4,11 +4,12 @@ import H3 from "components/UI/H3/H3";
 
 import styles from './Article.module.scss';
 
-const Article = ({children, title}) => {
+const Article = ({children, title, ...rest}) => {
   return (
     <article
       className={styles.article}
       data-testid="article"
+      {...rest}
     >
       <header
         className={styles.article__header}
@@ -27,7 +28,7 @@ Article.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
-  ]),
+  ]).isRequired,
   title: PropTypes.string
 }
 
