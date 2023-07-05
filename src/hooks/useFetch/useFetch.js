@@ -1,6 +1,7 @@
+import { prepareData } from "helpers/prepareData/prepareData";
 import { useCallback, useEffect, useRef, useState } from "react"
 
-export const useFetch = (callback) => {
+export const useFetch = (callback, options) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -14,7 +15,7 @@ export const useFetch = (callback) => {
 
     response
     .then(res => {
-      setData(res.data[0]);
+      setData(prepareData(res.data, options?.expect));
       setIsLoading(false);
     })
     .catch(err => {
