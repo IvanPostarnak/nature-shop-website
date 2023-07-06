@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Name component set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_name_bf10d7"
+  data-testid="name"
+>
+  <p
+    class="_text_866a1a"
+    data-testid="text"
+    style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
+  >
+    undefined undefined
+  </p>
+</div>
+`;

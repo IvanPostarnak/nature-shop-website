@@ -4,5 +4,11 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
 <div
   class="_post_card_0985db"
   data-testid="post-card"
-/>
+>
+  <a
+    href="/blog/posts/undefined"
+  >
+    Read more
+  </a>
+</div>
 `;

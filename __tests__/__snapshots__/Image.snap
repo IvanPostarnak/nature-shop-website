@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Image component set of tests > Should [match snapshot] on render 1`] = `
+<img
+  class="_image_fa6dc1"
+  data-testid="image"
+/>
+`;

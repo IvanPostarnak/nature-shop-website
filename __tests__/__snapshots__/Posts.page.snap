@@ -26,29 +26,41 @@ exports[`Posts page set of tests > Should [match snapshot] on render 1`] = `
             class="_main_9694fd"
             data-testid="main"
           >
-            <h2
-              class="_h2_d6c748"
-              data-testid="h2"
+            <header
+              class="_header_a05500"
+              data-testid="header"
             >
-              Posts (...)
-            </h2>
-            <section
-              class="_section_59d44d"
-              data-testid="section"
+              <h2
+                class="_h2_d6c748"
+                data-testid="h2"
+              >
+                Posts
+              </h2>
+            </header>
+            <div
+              class="_post_list_498e7f"
+              data-testid="post-list"
             >
               <div
-                class="_post_card_0985db"
-                data-testid="post-card"
+                class="_loader_68fe6b"
+                data-testid="loader"
+                style="z-index: 9010;"
               >
-                <p
-                  class="_text_866a1a"
-                  data-testid="text"
-                  style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
-                >
-                  Post Card
-                </p>
+                Loading...
               </div>
-            </section>
+              <section
+                class="_section_59d44d"
+                data-testid="section"
+              >
+                <div
+                  class="_loader_68fe6b"
+                  data-testid="loader"
+                  style="z-index: 9010;"
+                >
+                  Loading...
+                </div>
+              </section>
+            </div>
           </main>
         </div>
       </div>

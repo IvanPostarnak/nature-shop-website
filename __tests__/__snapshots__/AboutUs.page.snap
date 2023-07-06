@@ -26,12 +26,17 @@ exports[`AboutUs.page set of tests > Should [match snapshot] on render 1`] = `
             class="_main_9694fd"
             data-testid="main"
           >
-            <h2
-              class="_h2_d6c748"
-              data-testid="h2"
+            <header
+              class="_header_a05500"
+              data-testid="header"
             >
-              About Us
-            </h2>
+              <h2
+                class="_h2_d6c748"
+                data-testid="h2"
+              >
+                About Us
+              </h2>
+            </header>
             <div
               class="_loader_68fe6b"
               data-testid="loader"

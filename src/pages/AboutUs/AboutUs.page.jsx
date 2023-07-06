@@ -8,12 +8,12 @@ import Article from "components/Article/Article";
 import Loader from "components/UI/Loader/Loader";
 import AdaptiveRender from "components/layout/AdaptiveRender/AdaptiveRender";
 import Paragraph from "components/Paragraph/Paragraph";
-import PropTypes from "prop-types";
+import Header from "components/UI/Header/Header";
 
 import styles from './AboutUs.module.scss';
 
 const AboutUs = () => {
-  const {isLoading, data } = useFetch(() => PagesService.getAboutUs())
+  const {isLoading, data } = useFetch(() => PagesService.getAboutUs());
 
   return (
     <div
@@ -23,7 +23,9 @@ const AboutUs = () => {
       <AdaptiveRender>
         <Content>
           <Main>
-          <H2>{"About Us"}</H2>
+            <Header>
+              <H2>{"About Us"}</H2>
+            </Header>
             {
               isLoading || !data
               ? <Loader/>
@@ -42,9 +44,5 @@ const AboutUs = () => {
     </div>
   )
 };
-
-AboutUs.propTypes = {
-
-}
 
 export default memo(AboutUs);

@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AuthorBadge component set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_author_badge_b4e4ec"
+  data-testid="author-badge"
+/>
+`;

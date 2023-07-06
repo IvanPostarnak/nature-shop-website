@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Avatar component set of tests > Should [match snapshot] on render 1`] = `
+<img
+  class="_avatar_d11481"
+  data-testid="avatar"
+/>
+`;

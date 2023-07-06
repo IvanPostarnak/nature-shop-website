@@ -8,14 +8,14 @@ import Article from "components/Article/Article";
 import Loader from "components/UI/Loader/Loader";
 import AdaptiveRender from "components/layout/AdaptiveRender/AdaptiveRender";
 import Paragraph from "components/Paragraph/Paragraph";
-import PropTypes from "prop-types";
-
-import styles from './PrivacyPolicy.module.scss';
 import List from "components/List/List";
 import ListItem from "components/UI/ListItem/ListItem";
+import Header from "components/UI/Header/Header";
+
+import styles from './PrivacyPolicy.module.scss';
 
 const PrivacyPolicy = () => {
-  const {isLoading, data } = useFetch(() => PagesService.getPrivacyPolicy())
+  const {isLoading, data} = useFetch(() => PagesService.getPrivacyPolicy());
 
   return (
     <div
@@ -25,7 +25,9 @@ const PrivacyPolicy = () => {
       <AdaptiveRender>
         <Content>
           <Main>
-          <H2>{"Privacy Policy"}</H2>
+            <Header>
+              <H2>{"Privacy Policy"}</H2>
+            </Header>
             {
               isLoading || !data
               ? <Loader/>
@@ -47,9 +49,5 @@ const PrivacyPolicy = () => {
     </div>
   )
 };
-
-PrivacyPolicy.propTypes = {
-
-}
 
 export default memo(PrivacyPolicy);

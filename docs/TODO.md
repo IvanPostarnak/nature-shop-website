@@ -9,4 +9,5 @@
   - [ ] useFetch() hook
   - [ ] fetchData() lib function
   - [ ] Controller API class
-  - [ ] PageService API class
+  - [ ] PagesService API class
+  - [ ] PostsService API class
