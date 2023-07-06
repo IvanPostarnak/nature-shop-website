@@ -1,4 +1,4 @@
-import { Children, memo, useMemo } from "react";
+import { memo } from "react";
 import PropTypes from 'prop-types'
 import H4 from "components/UI/H4/H4";
 import Text from "components/UI/Text/Text";
@@ -6,44 +6,60 @@ import Image from "components/UI/Image/Image";
 import { Link } from "react-router-dom";
 import AuthorBadge from "components/AuthorBadge/AuthorBadge";
 import LanguageBadge from "components/LanguageBadge/LanguageBadge";
+import Avatar from "components/UI/Avatar/Avatar";
+import Name from "components/UI/Name/Name";
 
 import styles from './PostCard.module.scss';
 
-const PostCard = ({children, device, id, title, description}) => {
-  const components = useMemo(() => Children.toArray(children), [children]);
-  
+const PostCard = ({data, device, ...rest}) => {
   return (
     <div
       className={styles.post_card}
       data-testid="post-card"
+      {...rest}
     >
-      <Link to={`/blog/posts/${id}`}>
-        {components[0]}
-        {title && <H4>{title}</H4>}
-        {description && <Text>{description}</Text>}
+      <Link to={`/blog/posts/${data?.post_id}`}>
+        <Image
+          src="/src/assets/images/post-placeholder-480-320.jpg"
+          width="280"
+        />
+        {data?.title && <H4>{data?.title}</H4>}
+        {data?.content && <Text>{data?.content}</Text>}
       </Link>
-      {components[1]}
-      {components[2]}
+      <AuthorBadge
+        device={device}
+        authorId={data?.author?.employee_id}
+      >
+        <Avatar
+          src="/src/assets/images/avatar-placeholder.jpg"
+          size={32}
+        />
+        <Name
+          first={data?.author?.first_name}
+          last={data?.author?.last_name}
+        />
+      </AuthorBadge>
+      <LanguageBadge
+        device={device}
+        langId={data?.language?.language_id}
+      >
+        <Image
+          src="/src/assets/images/usa-flag.png"
+          width={28}
+        />
+        <Text>{data?.language?.name}</Text>
+      </LanguageBadge>
     </div>
   )
 };
 
 PostCard.propTypes = {
-  children: PropTypes.arrayOf(
-    PropTypes.oneOf([
-      PropTypes.instanceOf(Image),
-      PropTypes.instanceOf(AuthorBadge),
-      PropTypes.instanceOf(LanguageBadge)
-    ])
-  ).isRequired,
+  data: PropTypes.object.isRequired,
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
-    isTable: PropTypes.bool.isRequired,
+    isTablet: PropTypes.bool.isRequired,
     isDesktop: PropTypes.bool.isRequired
-  }).isRequired,
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  }).isRequired
 };
 
 export default memo(PostCard);

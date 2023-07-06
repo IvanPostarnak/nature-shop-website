@@ -26,7 +26,7 @@ AuthorBadge.propTypes = {
   ).isRequired,
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
-    isTable: PropTypes.bool.isRequired,
+    isTablet: PropTypes.bool.isRequired,
     isDesktop: PropTypes.bool.isRequired
   }).isRequired,
   authorId: PropTypes.number
