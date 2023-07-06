@@ -12,6 +12,8 @@ import Avatar from "components/UI/Avatar/Avatar";
 import Name from "components/UI/Name/Name";
 
 import styles from './PostList.module.scss';
+import LanguageBadge from "components/LanguageBadge/LanguageBadge";
+import Text from "components/UI/Text/Text";
 
 const PostList = () => {
   const {device} = useSelector(getDevice);
@@ -56,6 +58,16 @@ const PostList = () => {
                       last={post.author.last_name}
                     />
                   </AuthorBadge>
+                  <LanguageBadge
+                    device={device}
+                    langId={post.language.language_id}
+                  >
+                    <Image
+                      src="/src/assets/images/usa-flag.png"
+                      width={28}
+                    />
+                    <Text>{post.language.name}</Text>
+                  </LanguageBadge>
                 </PostCard>
               )
             })

@@ -5,12 +5,11 @@ exports[`Name component set of tests > Should [match snapshot] on render 1`] = `
   class="_name_bf10d7"
   data-testid="name"
 >
-  <p
-    class="_text_866a1a"
-    data-testid="text"
-    style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
+  <h5
+    class="_h5_9da68e"
+    data-testid="h5"
   >
     undefined undefined
-  </p>
+  </h5>
 </div>
 `;
