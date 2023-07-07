@@ -16,6 +16,16 @@ class PostsService extends Service {
     const response = this.getData("/posts/total_count");
     return response;
   }
+
+  getOnePage(startFrom, howMany) {
+    const response = this.getData("/posts/", {
+      params: {
+        start: startFrom,
+        limit: howMany
+      }
+    });
+    return response;
+  }
   
 }
 

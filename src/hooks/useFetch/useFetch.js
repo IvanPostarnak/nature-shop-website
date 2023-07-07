@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 export const useFetch = (callback, options) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
+  const [headers, setHeaders] = useState(null);
   const [error, setError] = useState(null);
   const aborter = useRef();
 
@@ -16,6 +17,7 @@ export const useFetch = (callback, options) => {
     response
     .then(res => {
       setData(prepareData(res.data, options?.expect));
+      setHeaders(res.headers);
       setIsLoading(false);
     })
     .catch(err => {
@@ -39,5 +41,5 @@ export const useFetch = (callback, options) => {
     return () => abort();
   }, []);
 
-  return {isLoading, data, error, abort, reset};
+  return {isLoading, data, headers, error, abort, reset};
 }

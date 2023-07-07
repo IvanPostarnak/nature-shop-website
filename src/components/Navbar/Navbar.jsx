@@ -7,6 +7,7 @@ import ReactIcon from "components/icons/ReactIcon/ReactIcon";
 import Span from "components/UI/Span/Span";
 import { useDispatch } from "react-redux";
 import { setActivePage } from "store/actions";
+import Nav from "components/UI/Nav/Nav";
 
 import styles from './Navbar.module.scss';
 import underlined from './underlined.module.scss';
@@ -24,7 +25,7 @@ const Navbar = ({device, ...rest}) => {
   }, []);
 
   return (
-    <nav
+    <Nav
       className={styles.navbar}
       aria-label="navigation bar"
       data-testid="navbar"
@@ -50,7 +51,7 @@ const Navbar = ({device, ...rest}) => {
           )
         })
       }
-    </nav>
+    </Nav>
   )
 };
 

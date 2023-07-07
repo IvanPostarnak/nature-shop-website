@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 import { useFetch } from "hooks/hooks";
 import PostsService from "services/PostsService/PostsService";
 import { useSelector } from "react-redux";
@@ -10,9 +10,15 @@ import PostCard from "components/PostCard/PostCard";
 import styles from './PostList.module.scss';
 
 const PostList = () => {
+  const [start, setStart] = useState(0);
+  const [howMuch, setHowMuch] = useState(10);
+
   const device = useSelector(getDevice);
-  const totalCount = useFetch(() => PostsService.getTotalCount());
-  const {isLoading, data } = useFetch(() => PostsService.getAll(), {expect: "array"});
+  const {isLoading, data, headers, reset} = useFetch(() => PostsService.getOnePage(start, howMuch), {expect: "array"});
+
+  useEffect(() => {
+    !isLoading && reset();
+  }, [start, howMuch]);
 
   return (
     <div
@@ -20,9 +26,9 @@ const PostList = () => {
       data-testid="post-list"
     >
       {
-        totalCount.isLoading || !totalCount.data
+        isLoading || !headers
         ? <Loader/>
-        : totalCount.data.total_count
+        : `Presented ${headers['x-current-amount']} out of ${headers['x-total-amount']}`
       }
       <Section>
         {

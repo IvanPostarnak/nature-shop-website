@@ -6,8 +6,8 @@ class Service {
     this.controller = controller;
   }
 
-  getData(url) {
-    const response = this.controller.fetch(url);
+  getData(url, options) {
+    const response = this.controller.fetch(url, options);
     return response;
   }
   
