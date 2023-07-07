@@ -13,6 +13,7 @@ import IconWrap from "components/UI/IconWrap/IconWrap";
 import EyeIcon from "components/icons/EyeIcon/EyeIcon";
 import RatingBadge from "components/RatingBadge/RatingBadge";
 import AccurateRating from "components/AccurateRating/AccurateRating";
+import TimeAgoBadge from "components/TimeAgoBadge/TimeAgoBadge";
 
 import styles from './PostCard.module.scss';
 
@@ -68,6 +69,15 @@ const PostCard = ({data, device, ...rest}) => {
       >
         <AccurateRating value={data?.rating}/>
       </RatingBadge>
+      <TimeAgoBadge
+        device={device}
+        created={data?.created}
+        edited={data?.created}
+      >
+        <IconWrap>
+          <EyeIcon />
+        </IconWrap>
+      </TimeAgoBadge>
     </div>
   )
 };

@@ -9,6 +9,8 @@ exports[`RatingBadge component set of tests > Should [match snapshot] on render 
     class="_text_866a1a"
     data-testid="text"
     style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
-  />
+  >
+    undefined
+  </p>
 </div>
 `;

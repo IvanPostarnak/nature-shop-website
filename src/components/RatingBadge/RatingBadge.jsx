@@ -13,7 +13,7 @@ const RatingBadge = ({children, device, votes, ...rest}) => {
       {...rest}
     >
       {children}
-      <Text>{votes}</Text>
+      <Text>{`${votes}`}</Text>
     </div>
   )
 };

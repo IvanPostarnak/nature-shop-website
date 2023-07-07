@@ -1,4 +1,5 @@
 # TODOs
+- [ ] create 'O'Clock Icon' for <TimeAgoBadge> component 
 - [X] create <AdaptiveRender/> component that accepts other components and render them in different structures (in single- or in split- one) based on the device app is hosted
 - [ ] fix useFetch() (or whatever, that sends request second time we visit our page)
 - [ ] make app read PORT and hostname params out of environment (add environment variables for app)

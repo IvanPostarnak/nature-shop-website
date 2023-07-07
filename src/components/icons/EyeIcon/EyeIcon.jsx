@@ -1,7 +1,7 @@
 import { memo } from "react";
 import PropTypes from 'prop-types';
 
-const ReactIcon = ({size = 32, color="#000000"}) => {
+const EyeIcon = ({size = 32, color="#000000"}) => {
   return (
     <svg
       data-testid="eye-icon"
@@ -29,9 +29,9 @@ const ReactIcon = ({size = 32, color="#000000"}) => {
   )
 };
 
-ReactIcon.propTypes = {
+EyeIcon.propTypes = {
   size: PropTypes.number,
   color: PropTypes.string
 };
 
-export default memo(ReactIcon);
+export default memo(EyeIcon);
