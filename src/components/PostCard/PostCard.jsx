@@ -10,6 +10,9 @@ import Avatar from "components/UI/Avatar/Avatar";
 import Name from "components/UI/Name/Name";
 
 import styles from './PostCard.module.scss';
+import VisitedBadge from "components/VisitedBadge/VisitedBadge";
+import IconWrap from "components/UI/IconWrap/IconWrap";
+import EyeIcon from "components/icons/EyeIcon/EyeIcon";
 
 const PostCard = ({data, device, ...rest}) => {
   return (
@@ -49,6 +52,14 @@ const PostCard = ({data, device, ...rest}) => {
         />
         <Text>{data?.language?.name}</Text>
       </LanguageBadge>
+      <VisitedBadge
+        device={device}
+      >
+        <IconWrap>
+          <EyeIcon/>
+        </IconWrap>
+        <Text>{"text"}</Text>
+      </VisitedBadge>
     </div>
   )
 };

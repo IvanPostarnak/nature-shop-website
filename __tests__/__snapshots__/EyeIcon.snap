@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EyeIcon component set of tests > Should [match snapshot] on render 1`] = `
+<svg
+  data-testid="eye-icon"
+  height="32"
+  style="fill: #000000;"
+  viewBox="0 0 16 16"
+  width="32"
+  x="0px"
+  xmlns="http://www.w3.org/2000/svg"
+  y="0px"
+>
+  <g
+    fill="#000000"
+    stroke="none"
+    transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
+  >
+    <path
+      d="M293 711 c-85 -40 -168 -99 -228 -160 l-49 -51 49 -51 c147 -151 344
+                -229 508 -201 122 21 262 99 362 201 l49 51 -49 51 c-73 75 -204 159 -285 184
+                l-25 8 28 -29 c107 -107 79 -281 -55 -348 -220 -110 -426 173 -253 347 35 34
+                25 34 -52 -2z"
+    />
+    <path
+      d="M451 646 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"
+    />
+  </g>
+</svg>
+`;

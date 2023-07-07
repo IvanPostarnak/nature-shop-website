@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VisitedBadge component set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_visited_badge_48188f"
+  data-testid="visited-badge"
+/>
+`;
