@@ -8,11 +8,13 @@ import AuthorBadge from "components/AuthorBadge/AuthorBadge";
 import LanguageBadge from "components/LanguageBadge/LanguageBadge";
 import Avatar from "components/UI/Avatar/Avatar";
 import Name from "components/UI/Name/Name";
-
-import styles from './PostCard.module.scss';
 import VisitedBadge from "components/VisitedBadge/VisitedBadge";
 import IconWrap from "components/UI/IconWrap/IconWrap";
 import EyeIcon from "components/icons/EyeIcon/EyeIcon";
+import RatingBadge from "components/RatingBadge/RatingBadge";
+import AccurateRating from "components/AccurateRating/AccurateRating";
+
+import styles from './PostCard.module.scss';
 
 const PostCard = ({data, device, ...rest}) => {
   return (
@@ -58,8 +60,14 @@ const PostCard = ({data, device, ...rest}) => {
         <IconWrap>
           <EyeIcon/>
         </IconWrap>
-        <Text>{"text"}</Text>
+        <Text>{data?.visited_total}</Text>
       </VisitedBadge>
+      <RatingBadge
+        device={device}
+        votes={data?.votes_count}
+      >
+        <AccurateRating value={data?.rating}/>
+      </RatingBadge>
     </div>
   )
 };

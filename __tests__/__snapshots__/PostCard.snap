@@ -66,7 +66,7 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
         data-testid="eye-icon"
         height="32"
         style="fill: #000000;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 100 100"
         width="32"
         x="0px"
         xmlns="http://www.w3.org/2000/svg"
@@ -89,6 +89,78 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
         </g>
       </svg>
     </div>
+    <p
+      class="_text_866a1a"
+      data-testid="text"
+      style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
+    />
+  </div>
+  <div
+    class="_rating_badge_4d7ffa"
+    data-testid="rating-badge"
+  >
+    <form
+      action="#"
+      data-testid="accurate-rating-form"
+    >
+      <div
+        class="_accurate_rating_ea8456"
+        data-testid="accurate-rating"
+      >
+        <div
+          class="_accurate_rating__body_ea8456"
+        >
+          <div
+            class="_accurate_rating__active_ea8456"
+            style="width: 92%;"
+          />
+          <div
+            class="_accurate_rating__items_ea8456"
+          >
+            <input
+              class="_accurate_rating__item_ea8456"
+              data-testid="accurate-rating-item"
+              id="5"
+              name="accurate-rating-item"
+              type="radio"
+              value="5"
+            />
+            <input
+              class="_accurate_rating__item_ea8456"
+              data-testid="accurate-rating-item"
+              id="4"
+              name="accurate-rating-item"
+              type="radio"
+              value="4"
+            />
+            <input
+              class="_accurate_rating__item_ea8456"
+              data-testid="accurate-rating-item"
+              id="3"
+              name="accurate-rating-item"
+              type="radio"
+              value="3"
+            />
+            <input
+              class="_accurate_rating__item_ea8456"
+              data-testid="accurate-rating-item"
+              id="2"
+              name="accurate-rating-item"
+              type="radio"
+              value="2"
+            />
+            <input
+              class="_accurate_rating__item_ea8456"
+              data-testid="accurate-rating-item"
+              id="1"
+              name="accurate-rating-item"
+              type="radio"
+              value="1"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
     <p
       class="_text_866a1a"
       data-testid="text"

@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AccurateRating component set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_accurate_rating_ea8456"
+  data-testid="accurate-rating"
+>
+  <div
+    class="_accurate_rating__body_ea8456"
+  >
+    <div
+      class="_accurate_rating__active_ea8456"
+      style="width: 0%;"
+    />
+    <div
+      class="_accurate_rating__items_ea8456"
+    >
+      <input
+        class="_accurate_rating__item_ea8456"
+        data-testid="accurate-rating-item"
+        id="5"
+        name="accurate-rating-item"
+        type="radio"
+        value="5"
+      />
+      <input
+        class="_accurate_rating__item_ea8456"
+        data-testid="accurate-rating-item"
+        id="4"
+        name="accurate-rating-item"
+        type="radio"
+        value="4"
+      />
+      <input
+        class="_accurate_rating__item_ea8456"
+        data-testid="accurate-rating-item"
+        id="3"
+        name="accurate-rating-item"
+        type="radio"
+        value="3"
+      />
+      <input
+        class="_accurate_rating__item_ea8456"
+        data-testid="accurate-rating-item"
+        id="2"
+        name="accurate-rating-item"
+        type="radio"
+        value="2"
+      />
+      <input
+        class="_accurate_rating__item_ea8456"
+        data-testid="accurate-rating-item"
+        id="1"
+        name="accurate-rating-item"
+        type="radio"
+        value="1"
+      />
+    </div>
+  </div>
+</div>
+`;

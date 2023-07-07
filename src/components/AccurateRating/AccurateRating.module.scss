@@ -1,0 +1,54 @@
+.accurate_rating {
+  display: flex;
+  align-items: flex-end;
+  font-size: 4em;
+}
+
+.accurate_rating__body {
+  position: relative;
+}
+
+.accurate_rating__body::before {
+  content: '★★★★★';
+  display: block;
+  color: rgb(200, 200, 200);
+}
+
+.accurate_rating__active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; /* управляющий параметр */
+  height: 100%;
+  overflow: hidden;
+}
+
+.accurate_rating__active::before {
+  content: '★★★★★';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffc800;
+}
+
+.accurate_rating__items {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+.accurate_rating__item {
+  flex-basis: 20%;
+  height: 100%;
+  opacity: 0;
+}
+
+.accurate_rating__value {
+  font-size: 1em;
+  padding: 0 0 0 10px;
+}

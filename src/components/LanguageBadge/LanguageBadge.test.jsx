@@ -17,7 +17,7 @@ describe('LanguageBadge component set of tests', () => {
     expect(container.getByTestId("language-badge")).toBeVisible();
   });
 
-  it('Should [have CSS class] \'author_badge\' on render', () => {
+  it('Should [have CSS class] \'language_badge\' on render', () => {
     const container = render(<LanguageBadge/>);
     expect(container.getByTestId("language-badge")).toHaveClass(styles.language_badge);
   });

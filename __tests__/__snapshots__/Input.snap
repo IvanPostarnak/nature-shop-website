@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input component set of tests > Should [match snapshot] on render 1`] = `
+<input
+  class="_input_d5cc80"
+  data-testid="input"
+/>
+`;

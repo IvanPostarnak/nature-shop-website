@@ -5,7 +5,7 @@ exports[`EyeIcon component set of tests > Should [match snapshot] on render 1`] 
   data-testid="eye-icon"
   height="32"
   style="fill: #000000;"
-  viewBox="0 0 16 16"
+  viewBox="0 0 100 100"
   width="32"
   x="0px"
   xmlns="http://www.w3.org/2000/svg"
