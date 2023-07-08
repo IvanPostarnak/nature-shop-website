@@ -1,1 +1,0 @@
-export const getPostsStatus = (state) => state?.posts?.status || 'idle';

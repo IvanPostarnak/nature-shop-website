@@ -1,7 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 import { InvalidTypeError, NoDataError, ValidationError } from "errors/errors";
 
-export const setPostsActivePage = createAction("posts/setActivePage", (payload) => {
+export const setPostsLastActivePage = createAction("posts/setLastActivePage", (payload) => {
   if (payload == undefined) {
     throw new NoDataError(`payload: ${payload}`);
   };

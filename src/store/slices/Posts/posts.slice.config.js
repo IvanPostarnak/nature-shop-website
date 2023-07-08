@@ -1,7 +1,28 @@
 export const initialState = {
-  amount: 0,
-  start: 0,
-  step: 10,
-  activePage: 1,
-  status: 'idle'
+  amount: {
+    value: 0,
+    status: 'idle'
+  },
+  pagination: {
+    start: 0,
+    step: 10,
+    lastActivePage: 1,
+  },
+  trident: {
+    active: {
+      id: null,
+      title: null,
+      entries: {}
+    },
+    next: {
+      id: null,
+      title: null,
+      entries: {}
+    },
+    prev: {
+      id: null,
+      title: null,
+      entries: {}
+    }
+  }
 }

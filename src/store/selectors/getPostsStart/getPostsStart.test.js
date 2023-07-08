@@ -11,9 +11,13 @@ describe('getPostsStart() selector set of tests', () => {
     expect(getPostsStart({posts: {}})).toBe(0);
   });
 
-  it('Should [return any value] on state.posts.start', () => {
-    expect(getPostsStart({posts: {start: 1}})).toBe(1);
-    expect(getPostsStart({posts: {start: '1'}})).toBe('1');
+  it('Should [return 0] on empty state.posts.pagination', () => {
+    expect(getPostsStart({posts: {pagination: {}}})).toBe(0);
+  });
+
+  it('Should [return any value] on state.posts.pagination.start', () => {
+    expect(getPostsStart({posts: {pagination: {start: 1}}})).toBe(1);
+    expect(getPostsStart({posts: {pagination: {start: '1'}}})).toBe('1');
   });
 
 });

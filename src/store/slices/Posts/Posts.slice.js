@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { setPostsStart } from "store/actions/setPostsStart/setPostsStart";
 import { setPostsStep } from "store/actions/setPostsStep/setPostsStep";
 import { setPostsAmount } from "store/actions/setPostsAmount/setPostsAmount";
-import { setPostsActivePage } from "store/actions/setPostsActivePage/setPostsActivePage";
+import { setPostsLastActivePage } from "store/actions/setPostsLastActivePage/setPostsLastActivePage";
 import { fetchPostsAmount } from "store/asyncThunks/fetchPostsAmount/fetchPostsAmount";
 import { initialState } from "./posts.slice.config";
 
@@ -17,39 +17,56 @@ const postsSlice = createSlice({
       .addCase(setPostsAmount, (state, action) => {
         return {
           ...state,
-          amount: action.payload
+          amount: {
+            value: action.payload,
+            status: 'success'
+          }
         };
       })
       .addCase(setPostsStart, (state, action) => {
         return {
           ...state,
-          start: action.payload
+          pagination: {
+            ...state.pagination,
+            start: action.payload
+          }
         };
       })
       .addCase(setPostsStep, (state, action) => {
         return {
           ...state,
-          step: action.payload
+          pagination: {
+            ...state.pagination,
+            step: action.payload
+          }
         };
       })
-      .addCase(setPostsActivePage, (state, action) => {
+      .addCase(setPostsLastActivePage, (state, action) => {
         return {
           ...state,
-          activePage: action.payload
+          pagination: {
+            ...state.pagination,
+            lastActivePage: action.payload
+          }
         };
       })
       .addCase(fetchPostsAmount.pending, (state, action) => {
         return {
           ...state,
-          status: 'loading'
-        }
+          amount: {
+            ...state.amount,
+            status: 'pending'
+          }
+        };
       })
       .addCase(fetchPostsAmount.fulfilled, (state, action) => {
         return {
           ...state,
-          status: 'idle',
-          amount: action.payload
-        }
+          amount: {
+            value: action.payload,
+            status: 'success'
+          }
+        };
       })
   }
 });
