@@ -17,7 +17,7 @@ import TimeAgoBadge from "components/TimeAgoBadge/TimeAgoBadge";
 
 import styles from './PostCard.module.scss';
 
-const PostCard = ({data, device, ...rest}) => {
+const PostCard = ({device, data, ...rest}) => {
   return (
     <div
       className={styles.post_card}
@@ -83,12 +83,12 @@ const PostCard = ({data, device, ...rest}) => {
 };
 
 PostCard.propTypes = {
-  data: PropTypes.object.isRequired,
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
     isTablet: PropTypes.bool.isRequired,
     isDesktop: PropTypes.bool.isRequired
-  }).isRequired
+  }).isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default memo(PostCard);

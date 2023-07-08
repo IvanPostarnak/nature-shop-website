@@ -5,9 +5,9 @@ import Button from "components/UI/Button/Button";
 
 import styles from './Pagination.module.scss';
 
-const Pagination = ({device, totalAmount, step, onChangePage, ...rest}) => {
+const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) => {
   const [pages, setPages] = useState([]);
-  const [activePage, setActivePage] = useState(1);
+  const [activePage, setActivePage] = useState(active);
 
   const resolvePages = () => {
     const pagesAmount = Math.ceil(totalAmount / step);
@@ -20,7 +20,7 @@ const Pagination = ({device, totalAmount, step, onChangePage, ...rest}) => {
 
   const handleClick = (activeId) => {
     setActivePage(activeId);
-    onChangePage(step * (activeId - 1));
+    onChangePage(activeId, step * (activeId - 1));
   }
 
   useEffect(() => {
@@ -58,9 +58,10 @@ Pagination.propTypes = {
     isTablet: PropTypes.bool.isRequired,
     isDesktop: PropTypes.bool.isRequired
   }).isRequired,
-  totalAmount: PropTypes.number,
-  step: PropTypes.number,
-  onChangePage: PropTypes.func
+  totalAmount: PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired,
+  onChangePage: PropTypes.func.isRequired,
+  active: PropTypes.number.isRequired
 };
 
 export default memo(Pagination);

@@ -1,19 +1,28 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import PostsService from "services/PostsService/PostsService";
 import { useSelector } from "react-redux";
-import { getDevice, getPostsAmount } from "store/selectors";
+import { getDevice, getPostsAmount, getPostsLastActivePage } from "store/selectors";
+import { setPostsLastActivePage } from "store/actions";
 import Loader from "components/UI/Loader/Loader";
 import Section from "components/UI/Section/Section";
 import PostCard from "components/PostCard/PostCard";
 import Pagination from "components/Pagination/Pagination";
 import { usePagination } from "hooks/hooks";
+import { useDispatch } from "react-redux";
 
 import styles from './PostList.module.scss';
 
 const PostList = () => {
-  const {step, setStart, isLoading, data, headers} = usePagination(PostsService.getOnePage.bind(PostsService))
   const device = useSelector(getDevice);
   const postsAmount = useSelector(getPostsAmount);
+  const lastActivePage = useSelector(getPostsLastActivePage);
+  const {step, setStart, isLoading, data, headers} = usePagination(PostsService.getOnePage.bind(PostsService));
+  const dispatch = useDispatch();
+
+  const handleChange = useCallback((pageId, newStart) => {
+    dispatch(setPostsLastActivePage(pageId));
+    setStart(newStart);
+  }, []);
 
   return (
     <div
@@ -29,7 +38,15 @@ const PostList = () => {
         {
           isLoading || !data
           ? <Loader/>
-          : data.map((post) => <PostCard data={post} device={device} key={post.post_id}/>)
+          : data.map((post) => {
+              return (
+                <PostCard
+                  data={post}
+                  device={device}
+                  key={post.post_id}
+                />
+              )
+            })
         }
       </Section>
       {
@@ -39,7 +56,8 @@ const PostList = () => {
             device={device}
             totalAmount={postsAmount.value}
             step={step}
-            onChangePage={setStart}
+            active={lastActivePage}
+            onChangePage={handleChange}
           />
       }
     </div>
