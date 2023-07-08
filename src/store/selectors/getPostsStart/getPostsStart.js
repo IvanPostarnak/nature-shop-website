@@ -1,0 +1,1 @@
+export const getPostsStart = (state) => state?.posts?.start || 0;

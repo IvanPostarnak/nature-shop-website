@@ -1,0 +1,1 @@
+export const getPostsStep = (state) => state?.posts?.step || 10;

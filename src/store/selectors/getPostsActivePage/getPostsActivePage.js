@@ -1,0 +1,1 @@
+export const getPostsActivePage = (state) => state?.posts?.activePage || 1;
