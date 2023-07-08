@@ -1,17 +1,23 @@
 import { prepareData } from "helpers/prepareData/prepareData";
 import { useCallback, useEffect, useRef, useState } from "react"
 
-export const useFetch = (callback, options) => {
+export const useFetch = (initialCallback, options) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
   const [headers, setHeaders] = useState(null);
   const [error, setError] = useState(null);
+
+  const callback = useRef(initialCallback);
   const aborter = useRef();
+
+  useEffect(() => {
+    callback.current = initialCallback;
+  }, options?.deps || []);
 
   const sendRequest = () => {
     setIsLoading(true);
 
-    const {response, cancel} = callback();
+    const {response, cancel} = callback.current();
     aborter.current = cancel;
 
     response
@@ -36,7 +42,7 @@ export const useFetch = (callback, options) => {
   }, []);
 
   useEffect(() => {
-    callback && sendRequest();
+    callback.current && sendRequest();
 
     return () => abort();
   }, []);

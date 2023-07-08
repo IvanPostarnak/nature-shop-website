@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pagination component set of tests > Should [match snapshot] on render 1`] = `
+<nav
+  aria-label="pages navigation"
+  class="_pagination_08165b"
+  data-testid="pagination"
+/>
+`;

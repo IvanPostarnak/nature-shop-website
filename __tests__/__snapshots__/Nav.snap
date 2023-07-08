@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Nav component set of tests > Should [match snapshot] on render 1`] = `
+<nav
+  class="_nav_7b0c73"
+  data-testid="nav"
+/>
+`;

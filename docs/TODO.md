@@ -8,6 +8,7 @@
   - [ ] <AppHolder/> component (asynchronus logic)
   - [ ] useMathMedia() hook
   - [ ] useFetch() hook
+  - [ ] usePagination() hook
   - [ ] fetchData() lib function
   - [ ] Controller API class
   - [ ] PagesService API class

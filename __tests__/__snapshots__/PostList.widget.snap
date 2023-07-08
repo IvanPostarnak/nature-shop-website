@@ -24,5 +24,12 @@ exports[`PostList component set of tests > Should [match snapshot] on render 1`]
       Loading...
     </div>
   </section>
+  <div
+    class="_loader_68fe6b"
+    data-testid="loader"
+    style="z-index: 9010;"
+  >
+    Loading...
+  </div>
 </div>
 `;

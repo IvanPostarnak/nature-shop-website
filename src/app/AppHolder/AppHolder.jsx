@@ -32,7 +32,7 @@ const AppHolder = ({children}) => {
         <Column>
           {children}
         </Column>
-        <Shelf layout="bottom">
+        <Shelf>
           <FooterWidget device={device}/>
         </Shelf>
       </Background>

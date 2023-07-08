@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { renderHook, cleanup, act } from "@testing-library/react";
-import { useToggle } from "./useToggle";
+import { useToggle } from "./useToggle.hook";
 
 describe('useToggle() hook set of tests', () => {
 
