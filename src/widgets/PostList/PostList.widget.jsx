@@ -1,7 +1,7 @@
-import { memo } from "react";
+import { memo, useRef } from "react";
 import PostsService from "services/PostsService/PostsService";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/selectors";
+import { getDevice, getPostsAmount } from "store/selectors";
 import Loader from "components/UI/Loader/Loader";
 import Section from "components/UI/Section/Section";
 import PostCard from "components/PostCard/PostCard";
@@ -13,6 +13,7 @@ import styles from './PostList.module.scss';
 const PostList = () => {
   const {step, setStart, isLoading, data, headers} = usePagination(PostsService.getOnePage.bind(PostsService))
   const device = useSelector(getDevice);
+  const totalAmount = useSelector(getPostsAmount);
 
   return (
     <div
@@ -22,7 +23,7 @@ const PostList = () => {
       {
         !headers
         ? <Loader/>
-        : `Presented ${headers['x-current-amount']} out of ${headers['x-total-amount']}`
+        : `Presented ${headers['x-current-amount']} out of ${totalAmount}`
       }
       <Section>
         {
@@ -36,7 +37,7 @@ const PostList = () => {
         ? <Loader/>
         : <Pagination
             device={device}
-            totalAmount={Number(headers['x-total-amount'])}
+            totalAmount={totalAmount}
             step={step}
             onChangePage={setStart}
           />

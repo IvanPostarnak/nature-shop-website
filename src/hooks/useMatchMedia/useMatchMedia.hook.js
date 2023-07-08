@@ -35,5 +35,5 @@ export const useMatchMedia = () => {
     };
   }, []);
 
-  return {device};
+  return device;
 };

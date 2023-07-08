@@ -9,12 +9,17 @@ import Column from "components/layout/Column/Column";
 import Shelf from "components/layout/Shelf/Shelf";
 import HeaderWidget from 'widgets/Header/Header.widget';
 import FooterWidget from 'widgets/Footer/Footer.widget';
+import { fetchPostsAmount } from "store/asyncThunks";
 
 import styles from './AppHolder.module.scss';
 
 const AppHolder = ({children}) => {
-  const {device} = useMatchMedia();
+  const device = useMatchMedia();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPostsAmount());
+  }, []);
 
   useEffect(() => {
     dispatch(setDevice(device));
