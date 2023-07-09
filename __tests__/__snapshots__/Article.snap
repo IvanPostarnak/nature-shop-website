@@ -1,20 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Article <header> component set of tests > Should [match snapshot] on render 1`] = `
-<header
-  class="_article__header_af8bf2"
-  data-testid="article-header"
-/>
-`;
-
 exports[`Article <parent> component set of tests > Should [match snapshot] on render 1`] = `
 <article
-  class="_article_af8bf2"
+  class="_article_eb4ee4"
   data-testid="article"
->
-  <header
-    class="_article__header_af8bf2"
-    data-testid="article-header"
-  />
-</article>
+/>
 `;

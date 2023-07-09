@@ -12,7 +12,7 @@ import Loader from "components/UI/Loader/Loader";
 import PostCredentials from "components/PostCredentials/PostCredentials";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/selectors";
-import Article from "components/Article/Article";
+import Article from "components/UI/Article/Article";
 import Image from "components/UI/Image/Image";
 
 import styles from './SinglePost.module.scss';

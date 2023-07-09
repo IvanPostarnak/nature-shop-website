@@ -28,29 +28,3 @@ describe('Article <parent> component set of tests', () => {
   });
 
 });
-
-describe('Article <header> component set of tests', () => {
-
-  afterEach(cleanup);
-
-  it('Should [be in DOM] on render', () => {
-    const container = render(<Article/>);
-    expect(container.getByTestId("article-header")).toBeInTheDocument();
-  });
-
-  it('Should [be visible] on render', () => {
-    const container = render(<Article/>);
-    expect(container.getByTestId("article-header")).toBeVisible();
-  });
-
-  it('Should [have CSS class] \'article\' on render', () => {
-    const container = render(<Article/>);
-    expect(container.getByTestId("article-header")).toHaveClass(styles.article__header);
-  });
-
-  it('Should [match snapshot] on render', () => {
-    const container = render(<Article/>);
-    expect(container.getByTestId("article-header")).toMatchSnapshot();
-  });
-
-});
