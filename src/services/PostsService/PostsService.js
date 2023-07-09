@@ -26,6 +26,11 @@ class PostsService extends Service {
     });
     return response;
   }
+
+  getOneById(id) {
+    const response = this.getData(`/posts/${id}`);
+    return response;
+  }
   
 }
 

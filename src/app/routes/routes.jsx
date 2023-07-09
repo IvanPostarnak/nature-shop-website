@@ -1,6 +1,7 @@
 import { lazy } from "react";
 
 const Posts = lazy(() => import("pages/Posts/Posts.page"));
+const SinglePost = lazy(() => import("pages/SinglePost/SinglePost.page"));
 const AboutUs = lazy(() => import("pages/AboutUs/AboutUs.page"));
 const PrivacyPolicy = lazy(() => import("pages/PrivacyPolicy/PrivacyPolicy.page"));
 
@@ -10,12 +11,13 @@ export const NAVBAR = [
 ]
 
 export const FOOTER = [
-  {name: "Privacy Policy", path: "/privacy-policy", element: <PrivacyPolicy/>, key: "privacy-policy-page"},
+  {name: "Privacy Policy", path: "/privacy-policy", element: <PrivacyPolicy/>, key: "privacy-policy-page"}
 ]
 
 export const PUBLIC_ROUTES = [
   ...NAVBAR,
-  ...FOOTER
+  ...FOOTER,
+  {name: "", path: "/blog/posts/:id", element: <SinglePost/>, key: "single-post-page"}
 ];
 
 export const PRIVATE_ROUTES = [

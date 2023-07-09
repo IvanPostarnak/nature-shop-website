@@ -1,8 +1,8 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
+import { renderWithMemoryRouter } from 'tests/helpers/renderWithMemoryRouter';
 import PostCard from './PostCard';
 import styles from './PostCard.module.scss';
-import { renderWithMemoryRouter } from 'tests/helpers/renderWithMemoryRouter';
 
 describe('PostCard component set of tests', () => {
 

@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SinglePost page set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_single_post_d5676d"
+  data-testid="single-post-page"
+>
+  <div
+    class="_adaptive_render_648c2e"
+    data-testid="adaptive-render"
+  >
+    <div
+      class="_split_structure_d78199"
+      data-testid="split-structure"
+    >
+      <div
+        class="_first_item_d78199"
+        data-testid="split-structure-first-item"
+      >
+        <div
+          class="_content_ce19df"
+          data-testid="content"
+        >
+          Content
+          <main
+            class="_main_9694fd"
+            data-testid="main"
+          >
+            <div
+              class="_loader_68fe6b"
+              data-testid="loader"
+              style="z-index: 9010;"
+            >
+              Loading...
+            </div>
+          </main>
+        </div>
+      </div>
+      <div
+        class="_second_item_d78199"
+        data-testid="split-structure-second-item"
+      >
+        <aside
+          class="_sidebar_273ffd"
+          data-testid="sidebar"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

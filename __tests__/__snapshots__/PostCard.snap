@@ -16,193 +16,198 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
     />
   </a>
   <div
-    class="_author_badge_b4e4ec"
-    data-testid="author-badge"
-  >
-    <img
-      class="_avatar_d11481"
-      data-testid="avatar"
-      height="32"
-      src="/src/assets/images/avatar-placeholder.jpg"
-      width="32"
-    />
-    <div
-      class="_name_bf10d7"
-      data-testid="name"
-    >
-      <h5
-        class="_h5_9da68e"
-        data-testid="h5"
-      >
-        undefined undefined
-      </h5>
-    </div>
-  </div>
-  <div
-    class="_language_badge_85c315"
-    data-testid="language-badge"
-  >
-    <img
-      class="_image_fa6dc1"
-      data-testid="image"
-      src="/src/assets/images/usa-flag.png"
-      width="28"
-    />
-    <p
-      class="_text_866a1a"
-      data-testid="text"
-      style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
-    />
-  </div>
-  <div
-    class="_visited_badge_48188f"
-    data-testid="visited-badge"
+    class="_post_credentials_2acf8c"
+    data-testid="post-credentials"
   >
     <div
-      class="_icon_wrap_380964"
-      data-testid="icon-wrap"
+      class="_author_badge_b4e4ec"
+      data-testid="author-badge"
     >
-      <svg
-        data-testid="eye-icon"
+      <img
+        class="_avatar_d11481"
+        data-testid="avatar"
         height="32"
-        style="fill: #000000;"
-        viewBox="0 0 100 100"
+        src="/src/assets/images/avatar-placeholder.jpg"
         width="32"
-        x="0px"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0px"
+      />
+      <div
+        class="_name_bf10d7"
+        data-testid="name"
       >
-        <g
-          fill="#000000"
-          stroke="none"
-          transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
+        <h5
+          class="_h5_9da68e"
+          data-testid="h5"
         >
-          <path
-            d="M293 711 c-85 -40 -168 -99 -228 -160 l-49 -51 49 -51 c147 -151 344
-                -229 508 -201 122 21 262 99 362 201 l49 51 -49 51 c-73 75 -204 159 -285 184
-                l-25 8 28 -29 c107 -107 79 -281 -55 -348 -220 -110 -426 173 -253 347 35 34
-                25 34 -52 -2z"
-          />
-          <path
-            d="M451 646 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"
-          />
-        </g>
-      </svg>
+          undefined undefined
+        </h5>
+      </div>
     </div>
-    <p
-      class="_text_866a1a"
-      data-testid="text"
-      style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
-    />
-  </div>
-  <div
-    class="_rating_badge_4d7ffa"
-    data-testid="rating-badge"
-  >
-    <form
-      action="#"
-      data-testid="accurate-rating-form"
+    <div
+      class="_language_badge_85c315"
+      data-testid="language-badge"
+    >
+      <img
+        class="_image_fa6dc1"
+        data-testid="image"
+        src="/src/assets/images/usa-flag.png"
+        width="28"
+      />
+      <p
+        class="_text_866a1a"
+        data-testid="text"
+        style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
+      />
+    </div>
+    <div
+      class="_visited_badge_48188f"
+      data-testid="visited-badge"
     >
       <div
-        class="_accurate_rating_ea8456"
-        data-testid="accurate-rating"
+        class="_icon_wrap_380964"
+        data-testid="icon-wrap"
       >
-        <div
-          class="_accurate_rating__body_ea8456"
+        <svg
+          data-testid="eye-icon"
+          height="32"
+          style="fill: #000000;"
+          viewBox="0 0 100 100"
+          width="32"
+          x="0px"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0px"
         >
-          <div
-            class="_accurate_rating__active_ea8456"
-            style="width: 0%;"
-          />
-          <div
-            class="_accurate_rating__items_ea8456"
+          <g
+            fill="#000000"
+            stroke="none"
+            transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
           >
-            <input
-              class="_accurate_rating__item_ea8456"
-              data-testid="accurate-rating-item"
-              id="5"
-              name="accurate-rating-item"
-              type="radio"
-              value="5"
-            />
-            <input
-              class="_accurate_rating__item_ea8456"
-              data-testid="accurate-rating-item"
-              id="4"
-              name="accurate-rating-item"
-              type="radio"
-              value="4"
-            />
-            <input
-              class="_accurate_rating__item_ea8456"
-              data-testid="accurate-rating-item"
-              id="3"
-              name="accurate-rating-item"
-              type="radio"
-              value="3"
-            />
-            <input
-              class="_accurate_rating__item_ea8456"
-              data-testid="accurate-rating-item"
-              id="2"
-              name="accurate-rating-item"
-              type="radio"
-              value="2"
-            />
-            <input
-              class="_accurate_rating__item_ea8456"
-              data-testid="accurate-rating-item"
-              id="1"
-              name="accurate-rating-item"
-              type="radio"
-              value="1"
-            />
-          </div>
-        </div>
-      </div>
-    </form>
-    <p
-      class="_text_866a1a"
-      data-testid="text"
-      style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
-    >
-      undefined
-    </p>
-  </div>
-  <div
-    class="_time_ago_badge_4304f5"
-    data-testid="time-ago-badge"
-  >
-    <div
-      class="_icon_wrap_380964"
-      data-testid="icon-wrap"
-    >
-      <svg
-        data-testid="eye-icon"
-        height="32"
-        style="fill: #000000;"
-        viewBox="0 0 100 100"
-        width="32"
-        x="0px"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0px"
-      >
-        <g
-          fill="#000000"
-          stroke="none"
-          transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
-        >
-          <path
-            d="M293 711 c-85 -40 -168 -99 -228 -160 l-49 -51 49 -51 c147 -151 344
+            <path
+              d="M293 711 c-85 -40 -168 -99 -228 -160 l-49 -51 49 -51 c147 -151 344
                 -229 508 -201 122 21 262 99 362 201 l49 51 -49 51 c-73 75 -204 159 -285 184
                 l-25 8 28 -29 c107 -107 79 -281 -55 -348 -220 -110 -426 173 -253 347 35 34
                 25 34 -52 -2z"
-          />
-          <path
-            d="M451 646 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"
-          />
-        </g>
-      </svg>
+            />
+            <path
+              d="M451 646 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"
+            />
+          </g>
+        </svg>
+      </div>
+      <p
+        class="_text_866a1a"
+        data-testid="text"
+        style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
+      />
+    </div>
+    <div
+      class="_rating_badge_4d7ffa"
+      data-testid="rating-badge"
+    >
+      <form
+        action="#"
+        data-testid="accurate-rating-form"
+      >
+        <div
+          class="_accurate_rating_ea8456"
+          data-testid="accurate-rating"
+        >
+          <div
+            class="_accurate_rating__body_ea8456"
+          >
+            <div
+              class="_accurate_rating__active_ea8456"
+              style="width: 0%;"
+            />
+            <div
+              class="_accurate_rating__items_ea8456"
+            >
+              <input
+                class="_accurate_rating__item_ea8456"
+                data-testid="accurate-rating-item"
+                id="5"
+                name="accurate-rating-item"
+                type="radio"
+                value="5"
+              />
+              <input
+                class="_accurate_rating__item_ea8456"
+                data-testid="accurate-rating-item"
+                id="4"
+                name="accurate-rating-item"
+                type="radio"
+                value="4"
+              />
+              <input
+                class="_accurate_rating__item_ea8456"
+                data-testid="accurate-rating-item"
+                id="3"
+                name="accurate-rating-item"
+                type="radio"
+                value="3"
+              />
+              <input
+                class="_accurate_rating__item_ea8456"
+                data-testid="accurate-rating-item"
+                id="2"
+                name="accurate-rating-item"
+                type="radio"
+                value="2"
+              />
+              <input
+                class="_accurate_rating__item_ea8456"
+                data-testid="accurate-rating-item"
+                id="1"
+                name="accurate-rating-item"
+                type="radio"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+      <p
+        class="_text_866a1a"
+        data-testid="text"
+        style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
+      >
+        undefined
+      </p>
+    </div>
+    <div
+      class="_time_ago_badge_4304f5"
+      data-testid="time-ago-badge"
+    >
+      <div
+        class="_icon_wrap_380964"
+        data-testid="icon-wrap"
+      >
+        <svg
+          data-testid="eye-icon"
+          height="32"
+          style="fill: #000000;"
+          viewBox="0 0 100 100"
+          width="32"
+          x="0px"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0px"
+        >
+          <g
+            fill="#000000"
+            stroke="none"
+            transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
+          >
+            <path
+              d="M293 711 c-85 -40 -168 -99 -228 -160 l-49 -51 49 -51 c147 -151 344
+                -229 508 -201 122 21 262 99 362 201 l49 51 -49 51 c-73 75 -204 159 -285 184
+                l-25 8 28 -29 c107 -107 79 -281 -55 -348 -220 -110 -426 173 -253 347 35 34
+                25 34 -52 -2z"
+            />
+            <path
+              d="M451 646 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"
+            />
+          </g>
+        </svg>
+      </div>
     </div>
   </div>
 </div>

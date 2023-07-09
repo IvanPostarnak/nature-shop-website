@@ -5,7 +5,6 @@ import Main from "components/UI/Main/Main";
 import Sidebar from "widgets/Sidebar/Sidebar.widget";
 import Header from "components/UI/Header/Header";
 import PostList from "widgets/PostList/PostList.widget";
-
 import H2 from "components/UI/H2/H2";
 
 import styles from './Posts.module.scss';
