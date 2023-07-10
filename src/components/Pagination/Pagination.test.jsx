@@ -22,4 +22,14 @@ describe('Pagination component set of tests', () => {
     expect(container.getByTestId("pagination")).toMatchSnapshot();
   });
 
+  it('Should [have prev] button on render', () => {
+    const container = render(<Pagination/>);
+    expect(container.getByTestId("pagination-button-prev")).toBeVisible();
+  });
+
+  it('Should [have next] button on render', () => {
+    const container = render(<Pagination/>);
+    expect(container.getByTestId("pagination-button-next")).toBeVisible();
+  });
+
 });

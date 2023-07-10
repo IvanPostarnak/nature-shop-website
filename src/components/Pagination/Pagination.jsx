@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import Nav from "components/UI/Nav/Nav";
 import Button from "components/UI/Button/Button";
@@ -18,10 +18,10 @@ const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) 
     setPages(array);
   };
 
-  const handleClick = (activeId) => {
+  const handleClick = useCallback((activeId) => () => {
     setActivePage(activeId);
     onChangePage(activeId, step * (activeId - 1));
-  }
+  }, []);
 
   useEffect(() => {
     resolvePages();
@@ -34,20 +34,32 @@ const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) 
       data-testid="pagination"
       {...rest}
     >
+      <Button
+        data-testid='pagination-button-prev'
+        onClick={handleClick(activePage - 1)}
+      >
+        {'<- Prev'}
+      </Button>
       {
         pages.map((page) => {
           return(
             <Button
               key={page}
               data-testid="pagination-button"
-              onClick={() => handleClick(page)}
+              onClick={handleClick(page)}
               className={page === activePage && styles.active}
             >
-              {page}
+              {`${page}`}
             </Button>
           )
         })
       }
+      <Button
+        data-testid='pagination-button-next'
+        onClick={handleClick(activePage + 1)}
+      >
+        {'Next ->'}
+      </Button>
     </Nav>
   )
 };
