@@ -10,10 +10,6 @@ export const useFetch = (initialCallback, options) => {
   const callback = useRef(initialCallback);
   const aborter = useRef();
 
-  useEffect(() => {
-    callback.current = initialCallback;
-  }, options?.deps || []);
-
   const sendRequest = () => {
     setIsLoading(true);
 
@@ -42,10 +38,11 @@ export const useFetch = (initialCallback, options) => {
   }, []);
 
   useEffect(() => {
+    callback.current = initialCallback;
     callback.current && sendRequest();
 
     return () => abort();
-  }, []);
+  }, options?.deps || []);
 
   return {isLoading, data, headers, error, abort, reset};
 }

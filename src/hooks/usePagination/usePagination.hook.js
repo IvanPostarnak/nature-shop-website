@@ -18,10 +18,12 @@ export const usePagination = (initialCallback, options) => {
   });
 
   useEffect(() => {
-    dispatch(setPostsStart(start));
     dispatch(setPostsStep(step));
-    fetchObj.reset();
-  }, [start, step]);
+  }, [step]);
+
+  useEffect(() => {
+    dispatch(setPostsStart(start));
+  }, [start]);
 
   return {start, step, setStart, setStep, ...fetchObj}
 }
