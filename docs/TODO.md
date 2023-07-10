@@ -11,6 +11,7 @@
   - [ ] useMathMedia() hook
   - [ ] useFetch() hook
   - [ ] usePagination() hook
+  - [ ] useШтзге() hook: test case of changin value
   - [ ] fetchData() lib function
   - [ ] Controller API class
   - [ ] PagesService API class

@@ -6,7 +6,7 @@ import Sidebar from "widgets/Sidebar/Sidebar.widget";
 import Header from "components/UI/Header/Header";
 import PostList from "widgets/PostList/PostList.widget";
 import H2 from "components/UI/H2/H2";
-import Pagination from "components/Pagination/Pagination";
+import Pagination from "widgets/Pagination/Pagination.widget";
 import { useSelector } from "react-redux";
 import { getDevice, getPostsAmount, getPostsLastActivePage } from "store/selectors";
 import { usePagination } from "hooks/hooks";
@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 import PostsService from "services/PostsService/PostsService";
 import { setPostsLastActivePage } from "store/actions";
 import Loader from "components/UI/Loader/Loader";
+import PostFilter from "widgets/PostFilter/PostFilter.widget";
 
 import styles from './Posts.module.scss';
 
@@ -62,7 +63,10 @@ const Posts = () => {
             />
           </Main>
         </Content>
-        <Sidebar/>
+        <Sidebar>
+          {'Filter'}
+          <PostFilter/>
+        </Sidebar>
       </AdaptiveRender>
     </div>
   )

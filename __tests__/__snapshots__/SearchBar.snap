@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchBar component set of tests > Should [match snapshot] on render 1`] = `
+<div
+  class="_search_bar_3bb1d7"
+  data-testid="search-bar"
+>
+  <input
+    class="_input_d5cc80"
+    data-testid="input"
+  />
+</div>
+`;

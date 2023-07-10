@@ -45,6 +45,21 @@ exports[`Posts page set of tests > Should [match snapshot] on render 1`] = `
               </div>
             </header>
             <div
+              class="_filter_1051df"
+              data-testid="filter"
+            >
+              <div
+                class="_search_bar_3bb1d7"
+                data-testid="search-bar"
+              >
+                <input
+                  class="_input_d5cc80"
+                  data-testid="input"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
               class="_loader_68fe6b"
               data-testid="loader"
               style="z-index: 9010;"
@@ -53,9 +68,22 @@ exports[`Posts page set of tests > Should [match snapshot] on render 1`] = `
             </div>
             <nav
               aria-label="pages navigation"
-              class="_pagination_08165b"
+              class="_pagination_f06b2e"
               data-testid="pagination"
-            />
+            >
+              <button
+                class="_button_e7dbe0"
+                data-testid="pagination-button-prev"
+              >
+                &lt;- Prev
+              </button>
+              <button
+                class="_button_e7dbe0"
+                data-testid="pagination-button-next"
+              >
+                Next -&gt;
+              </button>
+            </nav>
           </main>
         </div>
       </div>

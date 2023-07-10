@@ -3,7 +3,7 @@
 exports[`Pagination component set of tests > Should [match snapshot] on render 1`] = `
 <nav
   aria-label="pages navigation"
-  class="_pagination_08165b"
+  class="_pagination_f06b2e"
   data-testid="pagination"
 >
   <button

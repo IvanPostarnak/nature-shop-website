@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, cleanup } from "@testing-library/react";
-import Pagination from './Pagination';
+import Pagination from './Pagination.widget';
 import styles from './Pagination.module.scss';
 
 describe('Pagination component set of tests', () => {
