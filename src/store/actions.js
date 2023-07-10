@@ -9,3 +9,7 @@ export { setPostsStep } from 'store/actions/setPostsStep/setPostsStep';
 export { setPostsStart } from 'store/actions/setPostsStart/setPostsStart';
 export { setPostsAmount } from 'store/actions/setPostsAmount/setPostsAmount';
 export { setPostsLastActivePage } from 'store/actions/setPostsLastActivePage/setPostsLastActivePage';
+export { setActivePost } from 'store/actions/setActivePost/setActivePost';
+export { setNextPost } from 'store/actions/setNextPost/setNextPost';
+export { setPrevPost } from 'store/actions/setPrevPost/setPrevPost';
+export { setPostsLastVisited } from 'store/actions/setPostsLastVisited/setPostsLastVisited';

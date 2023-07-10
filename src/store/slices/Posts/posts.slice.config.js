@@ -24,5 +24,8 @@ export const initialState = {
       title: null,
       entries: {}
     }
+  },
+  session: {
+    lastVisited: []
   }
 }

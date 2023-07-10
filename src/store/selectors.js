@@ -12,3 +12,4 @@ export { getPostsLastActivePage } from 'store/selectors/getPostsLastActivePage/g
 export { getPostsActive } from 'store/selectors/getPostsActive/getPostsActive';
 export { getPostsPrev } from 'store/selectors/getPostsPrev/getPostsPrev';
 export { getPostsNext } from 'store/selectors/getPostsNext/getPostsNext';
+export { getPostsLastVisited } from 'store/selectors/getPostsLastVisited/getPostsLastVisited';

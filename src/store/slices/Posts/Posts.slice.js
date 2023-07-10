@@ -4,6 +4,11 @@ import { setPostsStep } from "store/actions/setPostsStep/setPostsStep";
 import { setPostsAmount } from "store/actions/setPostsAmount/setPostsAmount";
 import { setPostsLastActivePage } from "store/actions/setPostsLastActivePage/setPostsLastActivePage";
 import { fetchPostsAmount } from "store/asyncThunks/fetchPostsAmount/fetchPostsAmount";
+import { setActivePost } from "store/actions/setActivePost/setActivePost";
+import { setNextPost } from "store/actions/setNextPost/setNextPost";
+import { setPrevPost } from "store/actions/setPrevPost/setPrevPost";
+import { setPostsLastVisited } from "store/actions/setPostsLastVisited/setPostsLastVisited";
+
 import { initialState } from "./posts.slice.config";
 
 const postsSlice = createSlice({
@@ -65,6 +70,54 @@ const postsSlice = createSlice({
           amount: {
             value: action.payload,
             status: 'success'
+          }
+        };
+      })
+      .addCase(setActivePost, (state, action) => {
+        return {
+          ...state,
+          trident: {
+            ...state.trident,
+            active: {
+              id: action.payload.id,
+              title: action.payload.title,
+              entries: action.payload
+            }
+          }
+        };
+      })
+      .addCase(setNextPost, (state, action) => {
+        return {
+          ...state,
+          trident: {
+            ...state.trident,
+            next: {
+              id: action.payload.id,
+              title: action.payload.title,
+              entries: action.payload
+            }
+          }
+        };
+      })
+      .addCase(setPrevPost, (state, action) => {
+        return {
+          ...state,
+          trident: {
+            ...state.trident,
+            prev: {
+              id: action.payload.id,
+              title: action.payload.title,
+              entries: action.payload
+            }
+          }
+        };
+      })
+      .addCase(setPostsLastVisited, (state, action) => {
+        return {
+          ...state,
+          session: {
+            ...state.session,
+            lastVisited: [action.payload, ...state.session.lastVisited]
           }
         };
       })
