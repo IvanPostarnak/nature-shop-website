@@ -11,18 +11,15 @@ export const initialState = {
   trident: {
     active: {
       id: null,
-      title: null,
-      entries: {}
+      title: null
     },
     next: {
       id: null,
-      title: null,
-      entries: {}
+      title: null
     },
     prev: {
       id: null,
-      title: null,
-      entries: {}
+      title: null
     }
   },
   session: {

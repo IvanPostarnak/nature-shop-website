@@ -80,8 +80,7 @@ const postsSlice = createSlice({
             ...state.trident,
             active: {
               id: action.payload.id,
-              title: action.payload.title,
-              entries: action.payload
+              title: action.payload.title
             }
           }
         };
@@ -93,8 +92,7 @@ const postsSlice = createSlice({
             ...state.trident,
             next: {
               id: action.payload.id,
-              title: action.payload.title,
-              entries: action.payload
+              title: action.payload.title
             }
           }
         };
@@ -106,8 +104,7 @@ const postsSlice = createSlice({
             ...state.trident,
             prev: {
               id: action.payload.id,
-              title: action.payload.title,
-              entries: action.payload
+              title: action.payload.title
             }
           }
         };

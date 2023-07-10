@@ -7,9 +7,9 @@ import { setPostsLastActivePage } from 'store/actions/setPostsLastActivePage/set
 import { setActivePost } from 'store/actions/setActivePost/setActivePost';
 import { setNextPost } from 'store/actions/setNextPost/setNextPost';
 import { setPrevPost } from 'store/actions';
+import { setPostsLastVisited } from 'store/actions/setPostsLastVisited/setPostsLastVisited';
 
 import { initialState } from './posts.slice.config';
-import { setPostsLastVisited } from 'store/actions/setPostsLastVisited/setPostsLastVisited';
 
 describe('Posts.slice set of tests', () => {
 
@@ -42,8 +42,7 @@ describe('Posts.slice set of tests', () => {
     const action = setActivePost({id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.active).toEqual({
       id: action.payload.id,
-      title: action.payload.title,
-      entries: action.payload
+      title: action.payload.title
     });
   });
 
@@ -52,8 +51,7 @@ describe('Posts.slice set of tests', () => {
     const action = setNextPost({id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.next).toEqual({
       id: action.payload.id,
-      title: action.payload.title,
-      entries: action.payload
+      title: action.payload.title
     });
   });
 
@@ -62,8 +60,7 @@ describe('Posts.slice set of tests', () => {
     const action = setPrevPost({id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.prev).toEqual({
       id: action.payload.id,
-      title: action.payload.title,
-      entries: action.payload
+      title: action.payload.title
     });
   });
 

@@ -6,24 +6,21 @@ describe('getPostsNext() selector set of tests', () => {
   it('Should [return default state] on empty state', () => {
     expect(getPostsNext({})).toEqual({
       id: null,
-      title: null,
-      entries: {}
+      title: null
     });
   });
 
   it('Should [return default state] on empty state.posts', () => {
     expect(getPostsNext({posts: {}})).toEqual({
       id: null,
-      title: null,
-      entries: {}
+      title: null
     });
   });
 
   it('Should [return default state] on empty state.posts.trident', () => {
     expect(getPostsNext({posts: {trident: {}}})).toEqual({
       id: null,
-      title: null,
-      entries: {}
+      title: null
     });
   });
 
