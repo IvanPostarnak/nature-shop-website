@@ -4,7 +4,7 @@ import { setActivePost } from './setActivePost';
 describe('setActivePost() redux-action set of tests', () => {
 
   it('Shoud [succeed] on payload={id: title: } object', () => {
-    const payload = {id: 1, title: 'title'};
+    const payload = {post_id: 1, title: 'title'};
     expect(setActivePost(payload)).toEqual({
       type: 'posts/setActivePost',
       payload: payload

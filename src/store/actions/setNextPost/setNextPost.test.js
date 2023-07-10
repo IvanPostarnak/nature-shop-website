@@ -4,7 +4,7 @@ import { setNextPost } from './setNextPost';
 describe('setNextPost() redux-action set of tests', () => {
 
   it('Shoud [succeed] on payload={id: title: } object', () => {
-    const payload = {id: 1, title: 'title'};
+    const payload = {post_id: 1, title: 'title'};
     expect(setNextPost(payload)).toEqual({
       type: 'posts/setNextPost',
       payload: payload

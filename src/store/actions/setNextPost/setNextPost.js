@@ -13,7 +13,7 @@ export const setNextPost = createAction("posts/setNextPost", (payload) => {
     throw new InvalidTypeError(`payload: ${payload}`, 'object')
   };
 
-  if (!payload.id || !payload.title) {
+  if (!payload.post_id || !payload.title) {
     throw new ValidationError(`payload: ${payload}`);
   }
 

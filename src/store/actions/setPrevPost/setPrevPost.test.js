@@ -4,7 +4,7 @@ import { setPrevPost } from './setPrevPost';
 describe('setPrevPost() redux-action set of tests', () => {
 
   it('Shoud [succeed] on payload={id: title: } object', () => {
-    const payload = {id: 1, title: 'title'};
+    const payload = {post_id: 1, title: 'title'};
     expect(setPrevPost(payload)).toEqual({
       type: 'posts/setPrevPost',
       payload: payload

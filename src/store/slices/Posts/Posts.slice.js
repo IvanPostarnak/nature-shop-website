@@ -79,7 +79,7 @@ const postsSlice = createSlice({
           trident: {
             ...state.trident,
             active: {
-              id: action.payload.id,
+              id: action.payload.post_id,
               title: action.payload.title
             }
           }
@@ -91,7 +91,7 @@ const postsSlice = createSlice({
           trident: {
             ...state.trident,
             next: {
-              id: action.payload.id,
+              id: action.payload.post_id,
               title: action.payload.title
             }
           }
@@ -103,20 +103,27 @@ const postsSlice = createSlice({
           trident: {
             ...state.trident,
             prev: {
-              id: action.payload.id,
+              id: action.payload.post_id,
               title: action.payload.title
             }
           }
         };
       })
       .addCase(setPostsLastVisited, (state, action) => {
-        return {
-          ...state,
-          session: {
-            ...state.session,
-            lastVisited: [action.payload, ...state.session.lastVisited]
+        const isInArray = state.session.lastVisited.includes(action.payload);
+        if (isInArray) {
+          return state;
+        } else {
+          const currentLength = state.session.lastVisited.length;
+          const savedArray = currentLength === 10 ? state.session.lastVisited.slice(0, -1) : state.session.lastVisited;
+          return {
+            ...state,
+            session: {
+              ...state.session,
+              lastVisited: [action.payload, ...savedArray]
+            }
           }
-        };
+        }
       })
   }
 });

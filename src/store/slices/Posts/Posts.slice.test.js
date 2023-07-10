@@ -39,7 +39,7 @@ describe('Posts.slice set of tests', () => {
 
   it('Should [succeed] on setActivePost', () => {
     const state = initialState;
-    const action = setActivePost({id: 1, title: 'title'});
+    const action = setActivePost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.active).toEqual({
       id: action.payload.id,
       title: action.payload.title
@@ -48,7 +48,7 @@ describe('Posts.slice set of tests', () => {
 
   it('Should [succeed] on setNextPost', () => {
     const state = initialState;
-    const action = setNextPost({id: 1, title: 'title'});
+    const action = setNextPost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.next).toEqual({
       id: action.payload.id,
       title: action.payload.title
@@ -57,7 +57,7 @@ describe('Posts.slice set of tests', () => {
 
   it('Should [succeed] on setPrevPost', () => {
     const state = initialState;
-    const action = setPrevPost({id: 1, title: 'title'});
+    const action = setPrevPost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.prev).toEqual({
       id: action.payload.id,
       title: action.payload.title
