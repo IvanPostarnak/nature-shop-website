@@ -34,6 +34,16 @@ exports[`SinglePost page set of tests > Should [match snapshot] on render 1`] = 
               Loading...
             </div>
           </main>
+          <a
+            href="/blog/posts/NaN"
+          >
+            &lt;--- prev
+          </a>
+          <a
+            href="/blog/posts/NaN"
+          >
+            next ---&gt;
+          </a>
         </div>
       </div>
       <div

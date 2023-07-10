@@ -41,7 +41,7 @@ describe('Posts.slice set of tests', () => {
     const state = initialState;
     const action = setActivePost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.active).toEqual({
-      id: action.payload.id,
+      id: action.payload.post_id,
       title: action.payload.title
     });
   });
@@ -50,7 +50,7 @@ describe('Posts.slice set of tests', () => {
     const state = initialState;
     const action = setNextPost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.next).toEqual({
-      id: action.payload.id,
+      id: action.payload.post_id,
       title: action.payload.title
     });
   });
@@ -59,7 +59,7 @@ describe('Posts.slice set of tests', () => {
     const state = initialState;
     const action = setPrevPost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.prev).toEqual({
-      id: action.payload.id,
+      id: action.payload.post_id,
       title: action.payload.title
     });
   });
