@@ -48,7 +48,7 @@ class UniversalService extends Service {
   }
 
   getAllGenders() {
-    const response = this.getData("/universal/family_statuses");
+    const response = this.getData("/universal/genders");
     return response;
   }
 

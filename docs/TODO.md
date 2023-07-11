@@ -9,6 +9,19 @@
   - [ ] Posts.slice fetchPostsAmount() async thunk
     - [ ] fetchPostsAmount() async thunk (function itself)
   - [ ] Universal.slice redux reducer
+    - [ ] fetchUniversalBrands() async thunk
+    - [ ] fetchUniversalCities() async thunk
+    - [ ] fetchUniversalColorSchemas() async thunk
+    - [ ] fetchUniversalCompanies() async thunk
+    - [ ] fetchUniversalCountries() async thunk
+    - [ ] fetchUniversalCurrency() async thunk
+    - [ ] fetchUniversalExchangeRates() async thunk
+    - [ ] fetchUniversalFamilyStatuses() async thunk
+    - [ ] fetchUniversalGenders() async thunk
+    - [ ] fetchUniversalLanguages() async thunk
+    - [ ] fetchUniversalMeasureUnits() async thunk
+    - [ ] fetchUniversalPackingMaterials() async thunk
+    - [ ] fetchUniversalPaymentTypes() async thunk
   - [ ] useMathMedia() hook
   - [ ] useFetch() hook
   - [ ] usePagination() hook
