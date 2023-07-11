@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, cleanup } from "@testing-library/react";
-import PostFilter from './PostPostFilter.widget';
+import PostFilter from './PostFilter.widget';
 import styles from './PostFilter.module.scss';
 
 describe('PostFilter component set of tests', () => {

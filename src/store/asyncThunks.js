@@ -1,2 +1,5 @@
 // posts
-export { fetchPostsAmount } from 'store/asyncThunks/fetchPostsAmount/fetchPostsAmount';
+export { fetchPostsAmount } from './asyncThunks/fetchPostsAmount/fetchPostsAmount';
+
+// universal
+export { fetchUniversalBrands } from './asyncThunks/fetchUniversalBrands/fetchUniversalBrands';

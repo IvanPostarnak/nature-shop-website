@@ -8,6 +8,7 @@
   - [ ] <AppHolder/> component (asynchronus logic)
   - [ ] Posts.slice fetchPostsAmount() async thunk
     - [ ] fetchPostsAmount() async thunk (function itself)
+  - [ ] Universal.slice redux reducer
   - [ ] useMathMedia() hook
   - [ ] useFetch() hook
   - [ ] usePagination() hook
