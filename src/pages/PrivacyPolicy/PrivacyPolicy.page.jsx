@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { useFetch } from "hooks/hooks";
-import PagesService from "services/PagesService/PagesService";
+import { PagesService } from "services/services";
 import Content from "widgets/Content/Content.widget";
 import Main from "components/UI/Main/Main";
 import H2 from "components/UI/H2/H2";

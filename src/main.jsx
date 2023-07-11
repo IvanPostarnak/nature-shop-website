@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { createReduxStore } from './store/store.js';
 import App from './App.jsx';
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={createReduxStore()}>

@@ -6,7 +6,7 @@ import Sidebar from "widgets/Sidebar/Sidebar.widget";
 import Header from "components/UI/Header/Header";
 import H2 from "components/UI/H2/H2";
 import { useFetch } from "hooks/hooks";
-import PostsService from "services/PostsService/PostsService";
+import { PostsService } from "services/services";
 import { Link, useParams } from "react-router-dom";
 import Loader from "components/UI/Loader/Loader";
 import PostCredentials from "components/PostCredentials/PostCredentials";

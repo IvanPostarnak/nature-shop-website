@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { getDevice, getPostsAmount, getPostsLastActivePage } from "store/selectors";
 import { usePagination } from "hooks/hooks";
 import { useDispatch } from "react-redux";
-import PostsService from "services/PostsService/PostsService";
+import { PostsService } from "services/services";
 import { setPostsLastActivePage } from "store/actions";
 import Loader from "components/UI/Loader/Loader";
 import PostFilter from "widgets/PostFilter/PostFilter.widget";

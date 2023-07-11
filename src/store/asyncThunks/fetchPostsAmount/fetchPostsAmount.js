@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import PostsService from "services/PostsService/PostsService";
+import { PostsService } from "services/services";
 
 export const fetchPostsAmount = createAsyncThunk('posts/fetchAmount', async () => {
   const {response} = await PostsService.getTotalCount();

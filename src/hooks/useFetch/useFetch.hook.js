@@ -1,5 +1,5 @@
-import { prepareData } from "helpers/prepareData/prepareData";
 import { useCallback, useEffect, useRef, useState } from "react"
+import { prepareData } from "helpers/helpers";
 
 export const useFetch = (initialCallback, options) => {
   const [isLoading, setIsLoading] = useState(true);

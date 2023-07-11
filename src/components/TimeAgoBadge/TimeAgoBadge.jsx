@@ -2,7 +2,7 @@ import { memo } from "react";
 import PropTypes from 'prop-types';
 import Text from "components/UI/Text/Text";
 import IconWrap from "components/UI/IconWrap/IconWrap";
-import { getTimeAgo } from "helpers/getTimeAgo/getTimeAgo";
+import { getTimeAgo } from "helpers/helpers";
 
 import styles from './TimeAgoBadge.module.scss';
 

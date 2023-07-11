@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { setInitialValue } from "helpers/setInitialValue/setInitialValue";
+import { setInitialValue } from "helpers/helpers";
 
 export const useToggle = (initialValue) => {
   const [value, setValue] = useState(() => {

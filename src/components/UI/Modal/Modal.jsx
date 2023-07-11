@@ -1,6 +1,6 @@
 import { memo } from "react";
 import PropTypes from 'prop-types';
-import { parseColorCode } from "helpers/parseColorCode/parseColorCode";
+import { parseColorCode } from "helpers/helpers";
 
 import styles from './Modal.module.scss';
 
