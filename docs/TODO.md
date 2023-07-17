@@ -25,7 +25,10 @@
   - [ ] useMathMedia() hook
   - [ ] useFetch() hook
   - [ ] usePagination() hook
-  - [ ] useInput() hook: test case of changin value
+  - [ ] useTimeout() hook
+  - [ ] useDebounce() hook
+  - [ ] useUpdateEffect() hook
+  - [ ] useInput() hook: test case of changing value
   - [ ] fetchData() lib function
   - [ ] API classes
     - [ ] Controller API class

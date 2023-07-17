@@ -31,6 +31,19 @@ class PostsService extends Service {
     const response = this.getData(`/posts/${id}`);
     return response;
   }
+
+  getBySearchQuery(titleQuery, contentQuery) {
+    if (!titleQuery) {
+      return this.getAll();
+    }
+    const response = this.getData("/posts/search", {
+      params: {
+        title: titleQuery,
+        content: contentQuery || titleQuery
+      }
+    });
+    return response;
+  }
   
 }
 

@@ -1,5 +1,5 @@
 export const initialState = {
-  brangitds: {
+  brands: {
     status: 'idle',
     isInLocalStorage: false,
     key: 'brands',

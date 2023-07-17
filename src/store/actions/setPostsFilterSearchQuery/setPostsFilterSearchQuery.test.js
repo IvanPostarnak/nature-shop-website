@@ -5,7 +5,7 @@ describe('setPostsFilterSearchQuery() redux-action set of tests', () => {
 
   it('Should [succeed] on payload=\'asdasdasdasd\' string', () => {
     expect(setPostsFilterSearchQuery('asdasdasdasd')).toEqual({
-      type: 'pages/setSearchQuery',
+      type: 'posts/setSearchQuery',
       payload: 'asdasdasdasd'
     });
   });
