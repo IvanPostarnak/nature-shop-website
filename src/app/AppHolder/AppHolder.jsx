@@ -1,4 +1,4 @@
-import { useMatchMedia } from "hooks/hooks";
+import { useMatchMedia, useReduxSetup } from "hooks/hooks";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setDevice } from "store/actions";
@@ -9,30 +9,13 @@ import Column from "components/layout/Column/Column";
 import Shelf from "components/layout/Shelf/Shelf";
 import HeaderWidget from 'widgets/Header/Header.widget';
 import FooterWidget from 'widgets/Footer/Footer.widget';
-import { fetchPostsAmount, fetchUniversalBrands, fetchUniversalCities, fetchUniversalColorSchemas, fetchUniversalCompanies, fetchUniversalCountries, fetchUniversalCurrency, fetchUniversalExchangeRates, fetchUniversalFamilyStatuses, fetchUniversalGenders, fetchUniversalLanguages, fetchUniversalMeasureUnits, fetchUniversalPackingMaterials, fetchUniversalPaymentTypes } from "store/asyncThunks";
 
 import styles from './AppHolder.module.scss';
 
 const AppHolder = ({children}) => {
   const device = useMatchMedia();
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchPostsAmount());
-    dispatch(fetchUniversalBrands());
-    dispatch(fetchUniversalCities());
-    dispatch(fetchUniversalColorSchemas());
-    dispatch(fetchUniversalCompanies());
-    dispatch(fetchUniversalCountries());
-    dispatch(fetchUniversalCurrency());
-    dispatch(fetchUniversalExchangeRates());
-    dispatch(fetchUniversalFamilyStatuses());
-    dispatch(fetchUniversalGenders());
-    dispatch(fetchUniversalLanguages());
-    dispatch(fetchUniversalMeasureUnits());
-    dispatch(fetchUniversalPackingMaterials());
-    dispatch(fetchUniversalPaymentTypes());
-  }, []);
+  useReduxSetup();
 
   useEffect(() => {
     dispatch(setDevice(device));

@@ -1,4 +1,8 @@
 # TODOs
+- [ ] fix pagination issues:
+  - [ ] buttons 'prev' and 'next' should be disabled on the edges
+  - [ ] each time we uses filtering it should reset last active page to 1
+  - [ ] it should scroll upward once we change page
 - [ ] create 'O'Clock Icon' for <TimeAgoBadge> component 
 - [X] create <AdaptiveRender/> component that accepts other components and render them in different structures (in single- or in split- one) based on the device app is hosted
 - [ ] fix useFetch() (or whatever, that sends request second time we visit our page)
