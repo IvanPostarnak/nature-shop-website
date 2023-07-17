@@ -13,6 +13,7 @@ export { getPostsActive } from 'store/selectors/getPostsActive/getPostsActive';
 export { getPostsPrev } from 'store/selectors/getPostsPrev/getPostsPrev';
 export { getPostsNext } from 'store/selectors/getPostsNext/getPostsNext';
 export { getPostsLastVisited } from 'store/selectors/getPostsLastVisited/getPostsLastVisited';
+export { getPostsFilterSearchQuery } from 'store/selectors/getPostsFilterSearchQuery/getPostsFilterSearchQuery';
 
 // universal
 export { getUniversalBrands } from './selectors/getUniversalBrands/getUniversalBrands';

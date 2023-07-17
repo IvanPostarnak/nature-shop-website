@@ -3,29 +3,29 @@ import { setActivePage } from './setActivePage';
 
 describe('setActivePage() redux-action set of tests', () => {
 
-  it('Shoud [succeed] on payload=\'proper\' string', () => {
+  it('Should [succeed] on payload=\'proper\' string', () => {
     expect(setActivePage('Proper')).toEqual({
       type: 'pages/setActivePage',
       payload: 'Proper'
     });
   });
 
-  it('Shoud [capitalize] payload string', () => {
+  it('Should [capitalize] payload string', () => {
     expect(setActivePage('proper')).toEqual({
       type: 'pages/setActivePage',
       payload: 'Proper'
     });
   });
 
-  it('Shoud [throw error] on empty payload', () => {
+  it('Should [throw error] on empty payload', () => {
     expect(() => setActivePage()).toThrowError(/setActivePage/i);
   });
 
-  it('Shoud [throw error] on payload != \'string\'', () => {
+  it('Should [throw error] on payload != \'string\'', () => {
     expect(() => setActivePage(123)).toThrowError(/string/i);
   });
 
-  it('Shoud [throw error] on payload=\'\' empty string', () => {
+  it('Should [throw error] on payload=\'\' empty string', () => {
     expect(() => setActivePage('')).toThrowError(/payload/i);
   });
 

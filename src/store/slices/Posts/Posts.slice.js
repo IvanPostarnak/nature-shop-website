@@ -8,6 +8,7 @@ import { setActivePost } from "store/actions/setActivePost/setActivePost";
 import { setNextPost } from "store/actions/setNextPost/setNextPost";
 import { setPrevPost } from "store/actions/setPrevPost/setPrevPost";
 import { setPostsLastVisited } from "store/actions/setPostsLastVisited/setPostsLastVisited";
+import { setPostsFilterSearchQuery } from "store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery";
 
 import { initialState } from "./posts.slice.config";
 
@@ -19,6 +20,7 @@ const postsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      // pagination.amount
       .addCase(setPostsAmount, (state, action) => {
         return {
           ...state,
@@ -28,6 +30,8 @@ const postsSlice = createSlice({
           }
         };
       })
+      
+      // paginations.start
       .addCase(setPostsStart, (state, action) => {
         return {
           ...state,
@@ -37,6 +41,8 @@ const postsSlice = createSlice({
           }
         };
       })
+
+      // pagination.step
       .addCase(setPostsStep, (state, action) => {
         return {
           ...state,
@@ -46,6 +52,8 @@ const postsSlice = createSlice({
           }
         };
       })
+
+      // pagination.lastActivePage
       .addCase(setPostsLastActivePage, (state, action) => {
         return {
           ...state,
@@ -55,6 +63,8 @@ const postsSlice = createSlice({
           }
         };
       })
+
+      // pagination amount
       .addCase(fetchPostsAmount.pending, (state, action) => {
         return {
           ...state,
@@ -73,6 +83,8 @@ const postsSlice = createSlice({
           }
         };
       })
+
+      // active post
       .addCase(setActivePost, (state, action) => {
         return {
           ...state,
@@ -85,6 +97,8 @@ const postsSlice = createSlice({
           }
         };
       })
+
+      // next post
       .addCase(setNextPost, (state, action) => {
         return {
           ...state,
@@ -97,6 +111,8 @@ const postsSlice = createSlice({
           }
         };
       })
+
+      // prev post
       .addCase(setPrevPost, (state, action) => {
         return {
           ...state,
@@ -109,6 +125,8 @@ const postsSlice = createSlice({
           }
         };
       })
+
+      // last visited
       .addCase(setPostsLastVisited, (state, action) => {
         const isInArray = state.session.lastVisited.includes(action.payload);
         if (isInArray) {
@@ -122,6 +140,17 @@ const postsSlice = createSlice({
               ...state.session,
               lastVisited: [action.payload, ...savedArray]
             }
+          }
+        }
+      })
+
+      // filter.searchQuery
+      .addCase(setPostsFilterSearchQuery, (state, action) => {
+        return {
+          ...state,
+          filter: {
+            ...state.filter,
+            searchQuery: action.payload
           }
         }
       })

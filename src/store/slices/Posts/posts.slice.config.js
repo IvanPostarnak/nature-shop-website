@@ -24,5 +24,8 @@ export const initialState = {
   },
   session: {
     lastVisited: []
+  },
+  filter: {
+    searchQuery: ''
   }
 }

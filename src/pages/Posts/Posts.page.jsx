@@ -1,4 +1,4 @@
-import { memo, useCallback } from "react";
+import { memo, useCallback, useDeferredValue, useMemo } from "react";
 import AdaptiveRender from "components/layout/AdaptiveRender/AdaptiveRender";
 import Content from "widgets/Content/Content.widget";
 import Main from "components/UI/Main/Main";
@@ -8,13 +8,18 @@ import PostList from "widgets/PostList/PostList.widget";
 import H2 from "components/UI/H2/H2";
 import Pagination from "widgets/Pagination/Pagination.widget";
 import { useSelector } from "react-redux";
-import { getDevice, getPostsAmount, getPostsLastActivePage } from "store/selectors";
 import { usePagination } from "hooks/hooks";
 import { useDispatch } from "react-redux";
 import { PostsService } from "services/services";
 import { setPostsLastActivePage } from "store/actions";
 import Loader from "components/UI/Loader/Loader";
 import PostFilter from "widgets/PostFilter/PostFilter.widget";
+import {
+  getDevice,
+  getPostsAmount,
+  getPostsFilterSearchQuery,
+  getPostsLastActivePage
+} from "store/selectors";
 
 import styles from './Posts.module.scss';
 
@@ -22,8 +27,18 @@ const Posts = () => {
   const device = useSelector(getDevice);
   const lastActivePage = useSelector(getPostsLastActivePage);
   const postsAmount = useSelector(getPostsAmount);
+  const searchQuery = useSelector(getPostsFilterSearchQuery);
   const {step, setStart, isLoading, data, headers} = usePagination(PostsService.getOnePage.bind(PostsService));
   const dispatch = useDispatch();
+
+  const filteredData = useMemo(() => {
+    if (!data) return;
+    return data.filter((post) => {
+      return post.content.includes(searchQuery)
+    });
+  }, [data, searchQuery]);
+
+  const deferred = useDeferredValue(filteredData);
 
   const handleChange = useCallback((pageId, newStart) => {
     dispatch(setPostsLastActivePage(pageId));
@@ -47,10 +62,10 @@ const Posts = () => {
               }
             </Header>
             {
-              isLoading || !data
+              isLoading || !deferred
               ? <Loader/>
               : <PostList
-                  data={data}
+                  data={deferred}
                   device={device}
                 />
             }
