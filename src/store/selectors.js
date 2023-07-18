@@ -13,7 +13,9 @@ export { getPostsActive } from 'store/selectors/getPostsActive/getPostsActive';
 export { getPostsPrev } from 'store/selectors/getPostsPrev/getPostsPrev';
 export { getPostsNext } from 'store/selectors/getPostsNext/getPostsNext';
 export { getPostsLastVisited } from 'store/selectors/getPostsLastVisited/getPostsLastVisited';
+//posts.filter
 export { getPostsFilterSearchQuery } from 'store/selectors/getPostsFilterSearchQuery/getPostsFilterSearchQuery';
+export { getPostsFilterLanguageId } from 'store/selectors/getPostsFilterLanguageId/getPostsFilterLanguageId';
 
 // universal
 export { getUniversalBrands } from './selectors/getUniversalBrands/getUniversalBrands';

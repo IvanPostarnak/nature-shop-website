@@ -9,6 +9,7 @@ import { setNextPost } from "store/actions/setNextPost/setNextPost";
 import { setPrevPost } from "store/actions/setPrevPost/setPrevPost";
 import { setPostsLastVisited } from "store/actions/setPostsLastVisited/setPostsLastVisited";
 import { setPostsFilterSearchQuery } from "store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery";
+import { setPostsFilterLanguageId } from "store/actions/setPostsFilterLanguageId/setPostsFilterLanguageId";
 
 import { initialState } from "./posts.slice.config";
 
@@ -151,6 +152,17 @@ const postsSlice = createSlice({
           filter: {
             ...state.filter,
             searchQuery: action.payload
+          }
+        }
+      })
+
+      // filter.languageId
+      .addCase(setPostsFilterLanguageId, (state, action) => {
+        return {
+          ...state,
+          filter: {
+            ...state.filter,
+            languageId: action.payload
           }
         }
       })

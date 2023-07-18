@@ -26,6 +26,7 @@ export const initialState = {
     lastVisited: []
   },
   filter: {
-    searchQuery: ''
+    searchQuery: '',
+    languageId: 1
   }
 }

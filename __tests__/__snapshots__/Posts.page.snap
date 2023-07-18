@@ -85,6 +85,12 @@ exports[`Posts page set of tests > Should [match snapshot] on render 1`] = `
             class="_post_filter_741cf5"
             data-testid="post-filter"
           >
+            <h3
+              class="_h3_339a15"
+              data-testid="h3"
+            >
+              Search
+            </h3>
             <div
               class="_search_bar_3bb1d7"
               data-testid="search-bar"
@@ -95,6 +101,20 @@ exports[`Posts page set of tests > Should [match snapshot] on render 1`] = `
                 value=""
               />
             </div>
+            <br
+              class="_br_dca9fa"
+              data-testid="br"
+            />
+            <h3
+              class="_h3_339a15"
+              data-testid="h3"
+            >
+              Language
+            </h3>
+            <select
+              class="_select_1deec2"
+              data-testid="select"
+            />
           </div>
         </aside>
       </div>

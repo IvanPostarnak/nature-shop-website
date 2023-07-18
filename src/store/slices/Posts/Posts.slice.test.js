@@ -6,8 +6,10 @@ import { setPostsStep } from 'store/actions/setPostsStep/setPostsStep';
 import { setPostsLastActivePage } from 'store/actions/setPostsLastActivePage/setPostsLastActivePage';
 import { setActivePost } from 'store/actions/setActivePost/setActivePost';
 import { setNextPost } from 'store/actions/setNextPost/setNextPost';
-import { setPrevPost } from 'store/actions';
 import { setPostsLastVisited } from 'store/actions/setPostsLastVisited/setPostsLastVisited';
+import { setPostsFilterSearchQuery } from 'store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery';
+import { setPrevPost } from 'store/actions/setPrevPost/setPrevPost';
+import { setPostsFilterLanguageId } from 'store/actions/setPostsFilterLanguageId/setPostsFilterLanguageId';
 
 import { initialState } from './posts.slice.config';
 
@@ -73,5 +75,21 @@ describe('Posts.slice set of tests', () => {
   });
 
   it.todo('Add test case for sync thunk fetchPostsAmount');
+
+  it('Should [succeed] on setPostsFilterSearchQuery', () => {
+    const state = initialState;
+    const action1 = setPostsFilterSearchQuery('abc');
+    expect(postsReducer(state, action1).filter.searchQuery).toEqual('abc');
+    const action2 = setPostsFilterSearchQuery('abcde');
+    expect(postsReducer(state, action2).filter.searchQuery).toEqual('abcde');
+  });
+
+  it('Should [succeed] on setPostsFilterLanguageId', () => {
+    const state = initialState;
+    const action1 = setPostsFilterLanguageId(10);
+    expect(postsReducer(state, action1).filter.languageId).toEqual(10);
+    const action2 = setPostsFilterLanguageId(12);
+    expect(postsReducer(state, action2).filter.languageId).toEqual(12);
+  });
 
 });

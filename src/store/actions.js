@@ -13,4 +13,7 @@ export { setActivePost } from 'store/actions/setActivePost/setActivePost';
 export { setNextPost } from 'store/actions/setNextPost/setNextPost';
 export { setPrevPost } from 'store/actions/setPrevPost/setPrevPost';
 export { setPostsLastVisited } from 'store/actions/setPostsLastVisited/setPostsLastVisited';
+// posts.filter
 export { setPostsFilterSearchQuery } from 'store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery';
+export { setPostsFilterLanguageId } from 'store/actions/setPostsFilterLanguageId/setPostsFilterLanguageId';
+
