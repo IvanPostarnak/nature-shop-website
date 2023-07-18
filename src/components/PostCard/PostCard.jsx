@@ -17,7 +17,7 @@ const PostCard = ({device, data, ...rest}) => {
     >
       <Link to={`/blog/posts/${data?.post_id}`}>
         <Image
-          src="/src/assets/images/post-placeholder-480-320.jpg"
+          src={`/src/assets/images/posts/${data?.post_id}, ${data?.title}.webp`}
           width="280"
         />
         {data?.title && <H4>{data?.title}</H4>}

@@ -52,7 +52,7 @@ const SinglePost = () => {
               : (
                   <Article>
                     <Image
-                      src="/src/assets/images/post-placeholder-480-320.jpg"
+                      src={`/src/assets/images/posts/${data?.post_id}, ${data?.title}.webp`}
                       width="100%"
                     />
                     <Header>
