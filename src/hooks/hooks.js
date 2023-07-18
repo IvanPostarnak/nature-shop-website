@@ -7,3 +7,4 @@ export { useTimeout } from './useTimeout/useTimeout.hook';
 export { useDebounce } from './useDebounce/useDebounce.hook';
 export { useUpdateEffect } from './useUpdateEffect/useUpdateEffect.hook';
 export { useReduxSetup } from './useReduxSetup/useReduxSetup.hook';
+export { useFilter } from './useFilter/useFilter.hook';

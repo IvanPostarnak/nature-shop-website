@@ -32,6 +32,7 @@
   - [ ] useTimeout() hook
   - [ ] useDebounce() hook
   - [ ] useUpdateEffect() hook
+  - [ ] useFilter() hook
   - [ ] useInput() hook: test case of changing value
   - [ ] fetchData() lib function
   - [ ] API classes
