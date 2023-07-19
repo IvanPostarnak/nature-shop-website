@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './SingleStructure.module.scss';
+import styles from './SingleStructure.module.css';
 
 const SingleStructure = ({children, ...rest}) => {
   return (

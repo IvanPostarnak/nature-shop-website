@@ -2,7 +2,7 @@ import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithMemoryRouterAndProvider} from 'tests/helpers/renderWithMemoryRouterAndProvider';
 import SinglePost from './SinglePost.page';
-import styles from './SinglePost.module.scss';
+import styles from './SinglePost.module.css';
 
 describe('SinglePost page set of tests', () => {
   afterEach(cleanup);

@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Header.module.scss';
+import styles from './Header.module.css';
 
 const Header = ({children, ...rest}) => {
   return (

@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import Input from 'components/UI/Input/Input';
 
-import styles from './SearchBar.module.scss';
+import styles from './SearchBar.module.css';
 
 const SearchBar = ({...rest}) => {
   return (

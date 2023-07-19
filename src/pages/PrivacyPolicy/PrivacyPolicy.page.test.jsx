@@ -2,7 +2,7 @@ import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithProvider} from 'tests/helpers/renderWithProvider';
 import PrivacyPolicy from './PrivacyPolicy.page';
-import styles from './PrivacyPolicy.module.scss';
+import styles from './PrivacyPolicy.module.css';
 
 describe('PrivacyPolicy.page set of tests', () => {
   afterEach(cleanup);

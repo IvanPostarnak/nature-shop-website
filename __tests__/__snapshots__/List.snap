@@ -2,11 +2,11 @@
 
 exports[`List component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_list_fcb5d7"
+  class="_list_4f9591"
   data-testid="list"
 >
   <ul
-    class="_unordered_list_be7d17"
+    class="_unordered_list_8525fe"
     data-testid="unordered-list"
   />
 </div>

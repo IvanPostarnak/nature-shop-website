@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import SingleStructure from 'components/layout/SingleStructure/SingleStructure';
 import SplitStructure from 'components/layout/SplitStructure/SplitStructure';
 
-import styles from './AdaptiveRender.module.scss';
+import styles from './AdaptiveRender.module.css';
 
 const AdaptiveRender = ({children, ...rest}) => {
   const device = useSelector(getDevice);

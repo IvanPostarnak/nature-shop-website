@@ -2,7 +2,7 @@
 
 exports[`Sidebar component set of tests > Should [match snapshot] on render 1`] = `
 <aside
-  class="_sidebar_273ffd"
+  class="_sidebar_648748"
   data-testid="sidebar"
 />
 `;

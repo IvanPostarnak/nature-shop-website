@@ -2,7 +2,7 @@
 
 exports[`Aside component set of tests > Should [match snapshot] on render 1`] = `
 <aside
-  class="_aside_412e12"
+  class="_aside_c9b81f"
   data-testid="aside"
 />
 `;

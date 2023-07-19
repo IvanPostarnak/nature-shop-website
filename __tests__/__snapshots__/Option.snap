@@ -2,7 +2,7 @@
 
 exports[`Option component set of tests > Should [match snapshot] on render 1`] = `
 <option
-  class="_option_ebfea4"
+  class="_option_b0a6e5"
   data-testid="option"
 />
 `;

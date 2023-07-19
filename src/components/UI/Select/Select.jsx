@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Select.module.scss';
+import styles from './Select.module.css';
 
 const Select = ({children, ...rest}) => {
   return (

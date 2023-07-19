@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Text from 'components/UI/Text/Text';
 import Image from 'components/UI/Image/Image';
 
-import styles from './LanguageBadge.module.scss';
+import styles from './LanguageBadge.module.css';
 
 const LanguageBadge = ({children, device, langId, ...rest}) => {
   return (

@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './H2.module.scss';
+import styles from './H2.module.css';
 
 const H2 = ({children, ...rest}) => {
   return (

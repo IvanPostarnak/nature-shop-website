@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import ListItem from 'components/UI/ListItem/ListItem';
 
-import styles from './OrderedList.module.scss';
+import styles from './OrderedList.module.css';
 
 const OrderedList = ({children, ...rest}) => {
   return (

@@ -2,7 +2,7 @@ import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithProvider} from 'tests/helpers/renderWithProvider';
 import Posts from './Posts.page';
-import styles from './Posts.module.scss';
+import styles from './Posts.module.css';
 
 describe('Posts page set of tests', () => {
   afterEach(cleanup);

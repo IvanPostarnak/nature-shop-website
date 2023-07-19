@@ -20,7 +20,7 @@ import {
   getPostsLastActivePage,
 } from 'store/selectors';
 
-import styles from './Posts.module.scss';
+import styles from './Posts.module.css';
 
 const Posts = () => {
   const device = useSelector(getDevice);

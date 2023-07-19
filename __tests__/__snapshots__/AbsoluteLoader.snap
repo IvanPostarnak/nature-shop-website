@@ -2,16 +2,16 @@
 
 exports[`AbsoluteLoader component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_absolute_loader_f1fef5"
+  class="_absolute_loader_c7fc81"
   data-testid="absolute-loader"
 >
   <div
-    class="_modal_cb466e"
+    class="_modal_7a7e8d"
     data-testid="modal"
     style="width: 100%; border-radius: 0px; background: rgba(255, 255, 255, 0.2); z-index: 9000; pointer-events: none;"
   >
     <div
-      class="_loader_68fe6b"
+      class="_loader_0519e8"
       data-testid="loader"
       style="z-index: 9001;"
     >

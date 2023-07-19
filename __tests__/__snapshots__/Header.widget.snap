@@ -2,25 +2,25 @@
 
 exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_header_widget_645f0f"
+  class="_header_widget_6069c2"
   data-testid="header-widget"
 >
   <header
-    class="_header_a05500"
+    class="_header_8dbb83"
     data-testid="header"
   >
     <nav
       aria-label="navigation bar"
-      class="_navbar_b440ab"
+      class="_navbar_278c00"
       data-testid="navbar"
     >
       <a
-        class="_navbar_link_b440ab _default_465744 _active_465744"
+        class="_navbar_link_278c00 _default_a96827 _active_a96827"
         data-testid="navbar-link"
         href="/blog/posts"
       >
         <div
-          class="_icon_wrap_380964"
+          class="_icon_wrap_99674c"
           data-testid="icon-wrap"
         >
           <svg
@@ -107,7 +107,7 @@ exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
           </svg>
         </div>
         <span
-          class="_span_2cebcc"
+          class="_span_e2a634"
           data-testid="span"
           style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
         >
@@ -115,12 +115,12 @@ exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
         </span>
       </a>
       <a
-        class="_navbar_link_b440ab _default_465744 false"
+        class="_navbar_link_278c00 _default_a96827 false"
         data-testid="navbar-link"
         href="/about-us"
       >
         <div
-          class="_icon_wrap_380964"
+          class="_icon_wrap_99674c"
           data-testid="icon-wrap"
         >
           <svg
@@ -207,7 +207,7 @@ exports[`Header.widget set of tests > Should [match snapshot] on render 1`] = `
           </svg>
         </div>
         <span
-          class="_span_2cebcc"
+          class="_span_e2a634"
           data-testid="span"
           style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
         >

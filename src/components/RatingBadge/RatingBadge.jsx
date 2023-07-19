@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Text from 'components/UI/Text/Text';
 import AccurateRating from 'components/AccurateRating/AccurateRating';
 
-import styles from './RatingBadge.module.scss';
+import styles from './RatingBadge.module.css';
 
 const RatingBadge = ({children, device, votes, ...rest}) => {
   return (

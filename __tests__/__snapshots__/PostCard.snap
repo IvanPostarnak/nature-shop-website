@@ -2,40 +2,40 @@
 
 exports[`PostCard component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_post_card_0985db"
+  class="_post_card_726b6c"
   data-testid="post-card"
 >
   <a
     href="/blog/posts/undefined"
   >
     <img
-      class="_image_fa6dc1"
+      class="_image_4b67f3"
       data-testid="image"
       src="/src/assets/images/posts/undefined, undefined.webp"
       width="280"
     />
   </a>
   <div
-    class="_post_credentials_2acf8c"
+    class="_post_credentials_ef970d"
     data-testid="post-credentials"
   >
     <div
-      class="_author_badge_b4e4ec"
+      class="_author_badge_42d50c"
       data-testid="author-badge"
     >
       <img
-        class="_avatar_d11481"
+        class="_avatar_fa620d"
         data-testid="avatar"
         height="32"
         src="/src/assets/images/avatar-placeholder.jpg"
         width="32"
       />
       <div
-        class="_name_bf10d7"
+        class="_name_70eab5"
         data-testid="name"
       >
         <h5
-          class="_h5_9da68e"
+          class="_h5_225ae5"
           data-testid="h5"
         >
           undefined undefined
@@ -43,27 +43,27 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
       </div>
     </div>
     <div
-      class="_language_badge_85c315"
+      class="_language_badge_14f869"
       data-testid="language-badge"
     >
       <img
-        class="_image_fa6dc1"
+        class="_image_4b67f3"
         data-testid="image"
         src="/src/assets/images/usa-flag.png"
         width="28"
       />
       <p
-        class="_text_866a1a"
+        class="_text_6f056b"
         data-testid="text"
         style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
       />
     </div>
     <div
-      class="_visited_badge_48188f"
+      class="_visited_badge_1afd72"
       data-testid="visited-badge"
     >
       <div
-        class="_icon_wrap_380964"
+        class="_icon_wrap_99674c"
         data-testid="icon-wrap"
       >
         <svg
@@ -94,13 +94,13 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
         </svg>
       </div>
       <p
-        class="_text_866a1a"
+        class="_text_6f056b"
         data-testid="text"
         style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
       />
     </div>
     <div
-      class="_rating_badge_4d7ffa"
+      class="_rating_badge_5acebd"
       data-testid="rating-badge"
     >
       <form
@@ -108,21 +108,21 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
         data-testid="accurate-rating-form"
       >
         <div
-          class="_accurate_rating_ea8456"
+          class="_accurate_rating_be38dc"
           data-testid="accurate-rating"
         >
           <div
-            class="_accurate_rating__body_ea8456"
+            class="_accurate_rating__body_be38dc"
           >
             <div
-              class="_accurate_rating__active_ea8456"
+              class="_accurate_rating__active_be38dc"
               style="width: 0%;"
             />
             <div
-              class="_accurate_rating__items_ea8456"
+              class="_accurate_rating__items_be38dc"
             >
               <input
-                class="_accurate_rating__item_ea8456"
+                class="_accurate_rating__item_be38dc"
                 data-testid="accurate-rating-item"
                 id="5"
                 name="accurate-rating-item"
@@ -130,7 +130,7 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
                 value="5"
               />
               <input
-                class="_accurate_rating__item_ea8456"
+                class="_accurate_rating__item_be38dc"
                 data-testid="accurate-rating-item"
                 id="4"
                 name="accurate-rating-item"
@@ -138,7 +138,7 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
                 value="4"
               />
               <input
-                class="_accurate_rating__item_ea8456"
+                class="_accurate_rating__item_be38dc"
                 data-testid="accurate-rating-item"
                 id="3"
                 name="accurate-rating-item"
@@ -146,7 +146,7 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
                 value="3"
               />
               <input
-                class="_accurate_rating__item_ea8456"
+                class="_accurate_rating__item_be38dc"
                 data-testid="accurate-rating-item"
                 id="2"
                 name="accurate-rating-item"
@@ -154,7 +154,7 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
                 value="2"
               />
               <input
-                class="_accurate_rating__item_ea8456"
+                class="_accurate_rating__item_be38dc"
                 data-testid="accurate-rating-item"
                 id="1"
                 name="accurate-rating-item"
@@ -166,7 +166,7 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
         </div>
       </form>
       <p
-        class="_text_866a1a"
+        class="_text_6f056b"
         data-testid="text"
         style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
       >
@@ -174,11 +174,11 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
       </p>
     </div>
     <div
-      class="_time_ago_badge_4304f5"
+      class="_time_ago_badge_d08673"
       data-testid="time-ago-badge"
     >
       <div
-        class="_icon_wrap_380964"
+        class="_icon_wrap_99674c"
         data-testid="icon-wrap"
       >
         <svg

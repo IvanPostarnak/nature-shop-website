@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {memo} from 'react';
 import Footer from 'components/UI/Footer/Footer';
 
-import styles from './Footer.module.scss';
+import styles from './Footer.module.css';
 
 const FooterWidget = ({device, ...rest}) => {
   return (

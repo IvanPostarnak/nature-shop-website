@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Paragraph from './Paragraph';
-import styles from './Paragraph.module.scss';
+import styles from './Paragraph.module.css';
 
 describe('Paragraph component set of tests', () => {
   afterEach(cleanup);

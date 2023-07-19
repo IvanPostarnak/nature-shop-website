@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Main.module.scss';
+import styles from './Main.module.css';
 
 const Main = ({children, ...rest}) => {
   return (

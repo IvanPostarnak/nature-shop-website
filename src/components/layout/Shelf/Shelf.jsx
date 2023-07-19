@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {memo} from 'react';
 
-import styles from './Shelf.module.scss';
+import styles from './Shelf.module.css';
 
 const Shelf = ({children, layout = 'normal', ...rest}) => {
   return (

@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import H5 from 'components/UI/H5/H5';
 
-import styles from './Name.module.scss';
+import styles from './Name.module.css';
 
 const Name = ({first, last, ...rest}) => {
   return (

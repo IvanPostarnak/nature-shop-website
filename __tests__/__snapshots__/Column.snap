@@ -2,7 +2,7 @@
 
 exports[`Column component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_column_efe07f"
+  class="_column_1399ed"
   data-testid="app-column"
 >
   Column

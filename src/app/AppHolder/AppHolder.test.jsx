@@ -2,7 +2,7 @@ import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithProvider} from 'tests/helpers/renderWithProvider';
 import AppHolder from './AppHolder';
-import styles from './AppHolder.module.scss';
+import styles from './AppHolder.module.css';
 
 describe.todo('AppHolder set of tests', () => {
   // mock window.matchMedia !

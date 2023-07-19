@@ -2,7 +2,7 @@
 
 exports[`Paragraph component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_paragraph_789d68"
+  class="_paragraph_117e00"
   data-testid="paragraph"
 />
 `;

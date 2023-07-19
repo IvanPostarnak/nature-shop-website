@@ -2,7 +2,7 @@
 
 exports[`Section component set of tests > Should [match snapshot] on render 1`] = `
 <section
-  class="_section_59d44d"
+  class="_section_301cfd"
   data-testid="section"
 />
 `;

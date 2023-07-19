@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Content.module.scss';
+import styles from './Content.module.css';
 
 const Content = ({children}) => {
   return (

@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Shelf from './Shelf';
-import styles from './Shelf.module.scss';
+import styles from './Shelf.module.css';
 
 describe('Shelf component set of tests', () => {
   afterEach(cleanup);

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Modal from 'components/UI/Modal/Modal';
 import Loader from 'components/UI/Loader/Loader';
 
-import styles from './AbsoluteLoader.module.scss';
+import styles from './AbsoluteLoader.module.css';
 
 const AbsoluteLoader = () => {
   return (

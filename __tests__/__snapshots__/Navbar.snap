@@ -3,16 +3,16 @@
 exports[`Navbar component set of tests > Should [match snapshot] 'navbar' on render 1`] = `
 <nav
   aria-label="navigation bar"
-  class="_navbar_b440ab"
+  class="_navbar_278c00"
   data-testid="navbar"
 >
   <a
-    class="_navbar_link_b440ab _default_465744 _active_465744"
+    class="_navbar_link_278c00 _default_a96827 _active_a96827"
     data-testid="navbar-link"
     href="/blog/posts"
   >
     <div
-      class="_icon_wrap_380964"
+      class="_icon_wrap_99674c"
       data-testid="icon-wrap"
     >
       <svg
@@ -99,7 +99,7 @@ exports[`Navbar component set of tests > Should [match snapshot] 'navbar' on ren
       </svg>
     </div>
     <span
-      class="_span_2cebcc"
+      class="_span_e2a634"
       data-testid="span"
       style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
     >
@@ -107,12 +107,12 @@ exports[`Navbar component set of tests > Should [match snapshot] 'navbar' on ren
     </span>
   </a>
   <a
-    class="_navbar_link_b440ab _default_465744 false"
+    class="_navbar_link_278c00 _default_a96827 false"
     data-testid="navbar-link"
     href="/about-us"
   >
     <div
-      class="_icon_wrap_380964"
+      class="_icon_wrap_99674c"
       data-testid="icon-wrap"
     >
       <svg
@@ -199,7 +199,7 @@ exports[`Navbar component set of tests > Should [match snapshot] 'navbar' on ren
       </svg>
     </div>
     <span
-      class="_span_2cebcc"
+      class="_span_e2a634"
       data-testid="span"
       style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
     >

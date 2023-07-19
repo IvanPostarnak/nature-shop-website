@@ -2,11 +2,11 @@
 
 exports[`RatingBadge component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_rating_badge_4d7ffa"
+  class="_rating_badge_5acebd"
   data-testid="rating-badge"
 >
   <p
-    class="_text_866a1a"
+    class="_text_6f056b"
     data-testid="text"
     style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: initial;"
   >

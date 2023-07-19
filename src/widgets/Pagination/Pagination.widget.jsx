@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Nav from 'components/UI/Nav/Nav';
 import Button from 'components/UI/Button/Button';
 
-import styles from './Pagination.module.scss';
+import styles from './Pagination.module.css';
 
 const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) => {
   const [pages, setPages] = useState([]);

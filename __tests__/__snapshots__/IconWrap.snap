@@ -2,7 +2,7 @@
 
 exports[`IconWrap component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_icon_wrap_380964"
+  class="_icon_wrap_99674c"
   data-testid="icon-wrap"
 />
 `;

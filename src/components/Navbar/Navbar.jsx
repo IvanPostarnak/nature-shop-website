@@ -9,8 +9,8 @@ import {useDispatch} from 'react-redux';
 import {setActivePage} from 'store/actions';
 import Nav from 'components/UI/Nav/Nav';
 
-import styles from './Navbar.module.scss';
-import underlined from './underlined.module.scss';
+import styles from './Navbar.module.css';
+import underlined from './underlined.module.css';
 
 const Navbar = ({device, ...rest}) => {
   const [activePage, changeActivePage] = useState(() => NAVBAR[0].name);

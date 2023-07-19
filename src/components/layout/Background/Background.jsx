@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Background.module.scss';
+import styles from './Background.module.css';
 
 const Background = ({children, ...rest}) => {
   return (

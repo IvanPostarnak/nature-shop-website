@@ -2,14 +2,14 @@
 
 exports[`Shelf component set of tests > Should [match snapshot] on normal render 1`] = `
 <div
-  class="_shelf_f186ae _bottom_f186ae"
+  class="_shelf_bcfb92 _bottom_bcfb92"
   data-testid="app-shelf"
 />
 `;
 
 exports[`Shelf component set of tests > Should [match snapshot] on passing 'layout=bottom' 1`] = `
 <div
-  class="_shelf_f186ae _bottom_f186ae"
+  class="_shelf_bcfb92 _bottom_bcfb92"
   data-testid="app-shelf"
 />
 `;

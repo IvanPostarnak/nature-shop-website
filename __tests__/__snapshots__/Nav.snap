@@ -2,7 +2,7 @@
 
 exports[`Nav component set of tests > Should [match snapshot] on render 1`] = `
 <nav
-  class="_nav_7b0c73"
+  class="_nav_2379db"
   data-testid="nav"
 />
 `;

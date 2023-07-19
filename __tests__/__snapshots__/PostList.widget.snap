@@ -2,11 +2,11 @@
 
 exports[`PostList component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_post_list_498e7f"
+  class="_post_list_90938b"
   data-testid="post-list"
 >
   <section
-    class="_section_59d44d"
+    class="_section_301cfd"
     data-testid="section"
   />
 </div>

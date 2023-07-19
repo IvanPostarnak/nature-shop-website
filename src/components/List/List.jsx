@@ -5,7 +5,7 @@ import OrderedList from 'components/UI/OrderedList/OrderedList';
 import UnorderedList from 'components/UI/UnorderedList/UnorderedList';
 import H4 from 'components/UI/H4/H4';
 
-import styles from './List.module.scss';
+import styles from './List.module.css';
 
 const List = ({children, type = 'unordered', title, ...rest}) => {
   return (

@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Strong.module.scss';
+import styles from './Strong.module.css';
 
 const Strong = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (

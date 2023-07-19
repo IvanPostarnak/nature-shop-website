@@ -2,7 +2,7 @@
 
 exports[`Select component set of tests > Should [match snapshot] on render 1`] = `
 <select
-  class="_select_1deec2"
+  class="_select_e45cc4"
   data-testid="select"
 />
 `;

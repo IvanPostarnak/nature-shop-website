@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup, render} from '@testing-library/react';
 import AbsoluteLoader from './AbsoluteLoader';
-import styles from './AbsoluteLoader.module.scss';
+import styles from './AbsoluteLoader.module.css';
 
 describe('AbsoluteLoader component set of tests', () => {
   afterEach(cleanup);

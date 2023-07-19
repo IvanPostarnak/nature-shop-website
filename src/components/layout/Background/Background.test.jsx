@@ -1,7 +1,7 @@
 import {cleanup, render} from '@testing-library/react';
 import {describe, it, expect, afterEach} from 'vitest';
 import Background from './Background';
-import styles from './Background.module.scss';
+import styles from './Background.module.css';
 
 describe('Background set of tests', () => {
   afterEach(cleanup);

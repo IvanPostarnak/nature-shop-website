@@ -2,7 +2,7 @@ import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithMemoryRouter} from 'tests/helpers/renderWithMemoryRouter';
 import PostCredentials from './PostCredentials';
-import styles from './PostCredentials.module.scss';
+import styles from './PostCredentials.module.css';
 
 describe('PostCredentials component set of tests', () => {
   afterEach(cleanup);

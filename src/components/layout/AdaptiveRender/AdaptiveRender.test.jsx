@@ -2,7 +2,7 @@ import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithProvider} from 'tests/helpers/renderWithProvider';
 import AdaptiveRender from './AdaptiveRender';
-import styles from './AdaptiveRender.module.scss';
+import styles from './AdaptiveRender.module.css';
 
 describe('AdaptiveRender set of tests', () => {
   afterEach(cleanup);

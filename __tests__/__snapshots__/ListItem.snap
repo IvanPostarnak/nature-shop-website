@@ -2,11 +2,11 @@
 
 exports[`ListItem component set of tests > Should [match snapshot] on render 1`] = `
 <li
-  class="_list_item_8a654b"
+  class="_list_item_660d22"
   data-testid="list-item"
 >
   <strong
-    class="_strong_3ed264"
+    class="_strong_86c21f"
     data-testid="strong"
     style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
   />

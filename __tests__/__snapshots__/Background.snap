@@ -2,7 +2,7 @@
 
 exports[`Background set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_background_93aca7"
+  class="_background_faa953"
   data-testid="app-background"
 />
 `;

@@ -3,7 +3,7 @@ import Section from 'components/UI/Section/Section';
 import PostCard from 'components/PostCard/PostCard';
 import PropTypes from 'prop-types';
 
-import styles from './PostList.module.scss';
+import styles from './PostList.module.css';
 
 const PostList = ({data, device, ...rest}) => {
   return (

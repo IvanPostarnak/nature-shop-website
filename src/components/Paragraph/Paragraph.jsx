@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import H4 from 'components/UI/H4/H4';
 import Text from 'components/UI/Text/Text';
 
-import styles from './Paragraph.module.scss';
+import styles from './Paragraph.module.css';
 
 const Paragraph = ({title, body, ...rest}) => {
   return (

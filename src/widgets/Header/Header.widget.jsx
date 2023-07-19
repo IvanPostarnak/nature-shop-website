@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/UI/Header/Header';
 
-import styles from './Header.module.scss';
+import styles from './Header.module.css';
 
 const HeaderWidget = ({device, ...rest}) => {
   return (

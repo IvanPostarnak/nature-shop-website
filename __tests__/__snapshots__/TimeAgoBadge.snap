@@ -2,7 +2,7 @@
 
 exports[`TimeAgoBadge component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_time_ago_badge_4304f5"
+  class="_time_ago_badge_d08673"
   data-testid="time-ago-badge"
 />
 `;

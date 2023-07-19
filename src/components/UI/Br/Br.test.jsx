@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Br from './Br';
-import styles from './Br.module.scss';
+import styles from './Br.module.css';
 
 describe('Br component set of tests', () => {
   afterEach(cleanup);

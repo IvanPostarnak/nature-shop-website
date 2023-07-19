@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Nav from './Nav';
-import styles from './Nav.module.scss';
+import styles from './Nav.module.css';
 
 describe('Nav component set of tests', () => {
   afterEach(cleanup);

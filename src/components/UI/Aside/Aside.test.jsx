@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Aside from './Aside';
-import styles from './Aside.module.scss';
+import styles from './Aside.module.css';
 
 describe('Aside component set of tests', () => {
   afterEach(cleanup);

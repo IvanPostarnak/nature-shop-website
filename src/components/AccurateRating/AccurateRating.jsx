@@ -2,7 +2,7 @@ import {memo, useEffect, useState} from 'react';
 import Input from 'components/UI/Input/Input';
 import PropTypes from 'prop-types';
 
-import styles from './AccurateRating.module.scss';
+import styles from './AccurateRating.module.css';
 
 const AccurateRating = ({value, ...rest}) => {
   const [renderWidth, setRenderWidth] = useState(0);

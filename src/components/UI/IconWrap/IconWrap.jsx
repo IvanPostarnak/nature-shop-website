@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './IconWrap.module.scss';
+import styles from './IconWrap.module.css';
 
 const IconWrap = ({children, ...rest}) => {
   return (

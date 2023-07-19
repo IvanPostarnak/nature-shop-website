@@ -2,7 +2,7 @@
 
 exports[`Image component set of tests > Should [match snapshot] on render 1`] = `
 <img
-  class="_image_fa6dc1"
+  class="_image_4b67f3"
   data-testid="image"
 />
 `;

@@ -2,7 +2,7 @@
 
 exports[`LanguageBadge component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_language_badge_85c315"
+  class="_language_badge_14f869"
   data-testid="language-badge"
 />
 `;

@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import ListItem from 'components/UI/ListItem/ListItem';
 
-import styles from './UnorderedList.module.scss';
+import styles from './UnorderedList.module.css';
 
 const UnorderedList = ({children, ...rest}) => {
   return (

@@ -1,7 +1,7 @@
 import AppRouter from 'app/AppRouter/AppRouter';
 import AppHolder from 'app/AppHolder/AppHolder';
 
-import 'assets/scss/normalize.module.scss';
+import 'assets/styles/normalize.module.css';
 
 const App = () => {
   return (

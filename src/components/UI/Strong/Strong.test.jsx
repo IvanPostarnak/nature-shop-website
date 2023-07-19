@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Strong from './Strong';
-import styles from './Strong.module.scss';
+import styles from './Strong.module.css';
 
 describe('Strong component set of tests', () => {
   afterEach(cleanup);

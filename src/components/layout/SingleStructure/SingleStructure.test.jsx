@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import SingleStructure from './SingleStructure';
-import styles from './SingleStructure.module.scss';
+import styles from './SingleStructure.module.css';
 
 describe('SingleStructure component set of tests', () => {
   afterEach(cleanup);

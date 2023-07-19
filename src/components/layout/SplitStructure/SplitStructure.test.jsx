@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import SplitStructure from './SplitStructure';
-import styles from './SplitStructure.module.scss';
+import styles from './SplitStructure.module.css';
 
 describe('SplitStructure <parent> component set of tests', () => {
   afterEach(cleanup);

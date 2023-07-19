@@ -4,7 +4,7 @@ import Text from 'components/UI/Text/Text';
 import IconWrap from 'components/UI/IconWrap/IconWrap';
 import {getTimeAgo} from 'helpers/helpers';
 
-import styles from './TimeAgoBadge.module.scss';
+import styles from './TimeAgoBadge.module.css';
 
 const TimeAgoBadge = ({children, device, created, edited, ...rest}) => {
   return (

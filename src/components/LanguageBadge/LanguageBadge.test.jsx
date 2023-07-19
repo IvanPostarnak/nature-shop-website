@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import LanguageBadge from './LanguageBadge';
-import styles from './LanguageBadge.module.scss';
+import styles from './LanguageBadge.module.css';
 
 describe('LanguageBadge component set of tests', () => {
   afterEach(cleanup);

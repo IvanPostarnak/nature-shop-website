@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Br.module.scss';
+import styles from './Br.module.css';
 
 const Br = ({...rest}) => {
   return (

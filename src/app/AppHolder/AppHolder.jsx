@@ -10,7 +10,7 @@ import Shelf from 'components/layout/Shelf/Shelf';
 import HeaderWidget from 'widgets/Header/Header.widget';
 import FooterWidget from 'widgets/Footer/Footer.widget';
 
-import styles from './AppHolder.module.scss';
+import styles from './AppHolder.module.css';
 
 const AppHolder = ({children}) => {
   const device = useMatchMedia();

@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Span.module.scss';
+import styles from './Span.module.css';
 
 const Span = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (

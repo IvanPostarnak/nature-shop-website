@@ -2,11 +2,11 @@
 
 exports[`SearchBar component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_search_bar_3bb1d7"
+  class="_search_bar_ea9aeb"
   data-testid="search-bar"
 >
   <input
-    class="_input_d5cc80"
+    class="_input_e7e66c"
     data-testid="input"
   />
 </div>

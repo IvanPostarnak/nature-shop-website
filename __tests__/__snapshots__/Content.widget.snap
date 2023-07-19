@@ -2,7 +2,7 @@
 
 exports[`Content component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_content_ce19df"
+  class="_content_acf8f7"
   data-testid="content"
 >
   Content

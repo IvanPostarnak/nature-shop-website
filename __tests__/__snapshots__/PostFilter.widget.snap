@@ -2,37 +2,37 @@
 
 exports[`PostFilter component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_post_filter_741cf5"
+  class="_post_filter_286d12"
   data-testid="post-filter"
 >
   <h3
-    class="_h3_339a15"
+    class="_h3_f7140c"
     data-testid="h3"
   >
     Search
   </h3>
   <div
-    class="_search_bar_3bb1d7"
+    class="_search_bar_ea9aeb"
     data-testid="search-bar"
   >
     <input
-      class="_input_d5cc80"
+      class="_input_e7e66c"
       data-testid="input"
       value=""
     />
   </div>
   <br
-    class="_br_dca9fa"
+    class="_br_f98558"
     data-testid="br"
   />
   <h3
-    class="_h3_339a15"
+    class="_h3_f7140c"
     data-testid="h3"
   >
     Language
   </h3>
   <select
-    class="_select_1deec2"
+    class="_select_e45cc4"
     data-testid="select"
   />
 </div>

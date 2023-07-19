@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Avatar from 'components/UI/Avatar/Avatar';
 import Name from 'components/UI/Name/Name';
 
-import styles from './AuthorBadge.module.scss';
+import styles from './AuthorBadge.module.css';
 
 const AuthorBadge = ({children, device, authorId, ...rest}) => {
   return (

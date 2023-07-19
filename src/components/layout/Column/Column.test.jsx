@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Column from './Column';
-import styles from './Column.module.scss';
+import styles from './Column.module.css';
 
 describe('Column component set of tests', () => {
   afterEach(cleanup);

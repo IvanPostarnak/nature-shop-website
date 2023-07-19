@@ -6,7 +6,7 @@ import Image from 'components/UI/Image/Image';
 import {Link} from 'react-router-dom';
 import PostCredentials from 'components/PostCredentials/PostCredentials';
 
-import styles from './PostCard.module.scss';
+import styles from './PostCard.module.css';
 
 const PostCard = ({device, data, ...rest}) => {
   return (

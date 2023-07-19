@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Loader.module.scss';
+import styles from './Loader.module.css';
 
 const Loader = ({children, z}) => {
   return (

@@ -2,7 +2,7 @@
 
 exports[`SingleStructure component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_single_structure_2107ce"
+  class="_single_structure_adc2de"
   data-testid="single-structure"
 />
 `;

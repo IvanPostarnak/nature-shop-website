@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Option.module.scss';
+import styles from './Option.module.css';
 
 const Option = ({children, ...rest}) => {
   return (

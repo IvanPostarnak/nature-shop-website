@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup, render} from '@testing-library/react';
 import Modal from './Modal';
-import styles from './Modal.module.scss';
+import styles from './Modal.module.css';
 
 describe('Modal component set of tests', () => {
   afterEach(cleanup);

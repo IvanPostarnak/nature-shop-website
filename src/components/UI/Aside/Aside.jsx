@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Aside.module.scss';
+import styles from './Aside.module.css';
 
 const Aside = ({children, ...rest}) => {
   return (

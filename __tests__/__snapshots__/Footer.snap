@@ -2,7 +2,7 @@
 
 exports[`Footer component set of tests > Should [match snapshot] on render 1`] = `
 <footer
-  class="_footer_e4c780"
+  class="_footer_c63f3c"
   data-testid="footer"
 />
 `;

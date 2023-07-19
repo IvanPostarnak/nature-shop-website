@@ -2,7 +2,7 @@
 
 exports[`Article <parent> component set of tests > Should [match snapshot] on render 1`] = `
 <article
-  class="_article_eb4ee4"
+  class="_article_2ecb21"
   data-testid="article"
 />
 `;

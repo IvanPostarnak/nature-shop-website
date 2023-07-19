@@ -2,7 +2,7 @@
 
 exports[`Span component set of tests > Should [match snapshot] on render 1`] = `
 <span
-  class="_span_2cebcc"
+  class="_span_e2a634"
   data-testid="span"
   style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
 >

@@ -2,7 +2,7 @@
 
 exports[`OrderedList component set of tests > Should [match snapshot] on render 1`] = `
 <ol
-  class="_ordered_list_a6d616"
+  class="_ordered_list_97b47a"
   data-testid="ordered-list"
 />
 `;

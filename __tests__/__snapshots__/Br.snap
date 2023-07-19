@@ -2,7 +2,7 @@
 
 exports[`Br component set of tests > Should [match snapshot] on render 1`] = `
 <br
-  class="_br_dca9fa"
+  class="_br_f98558"
   data-testid="br"
 />
 `;

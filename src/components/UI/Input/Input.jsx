@@ -1,5 +1,5 @@
 import {memo} from 'react';
-import styles from './Input.module.scss';
+import styles from './Input.module.css';
 
 const Input = ({...rest}) => {
   return (

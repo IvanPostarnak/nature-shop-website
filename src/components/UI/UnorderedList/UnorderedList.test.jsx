@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import UnorderedList from './UnorderedList';
-import styles from './UnorderedList.module.scss';
+import styles from './UnorderedList.module.css';
 
 describe('UnorderedList component set of tests', () => {
   afterEach(cleanup);

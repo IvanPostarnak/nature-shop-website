@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import Aside from 'components/UI/Aside/Aside';
 
-import styles from './Sidebar.module.scss';
+import styles from './Sidebar.module.css';
 
 const Sidebar = ({children, ...rest}) => {
   return (

@@ -1,6 +1,6 @@
 import {memo} from 'react';
 
-import styles from './Image.module.scss';
+import styles from './Image.module.css';
 
 const Image = ({...rest}) => {
   return (

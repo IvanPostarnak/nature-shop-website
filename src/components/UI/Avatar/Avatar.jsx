@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import Image from 'components/UI/Image/Image';
 
-import styles from './Avatar.module.scss';
+import styles from './Avatar.module.css';
 
 const Avatar = ({size, ...rest}) => {
   return (

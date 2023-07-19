@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import {Children} from 'react';
 
-import styles from './SplitStructure.module.scss';
+import styles from './SplitStructure.module.css';
 
 const SplitStructure = ({children, ...rest}) => {
   return (

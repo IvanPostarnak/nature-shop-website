@@ -2,7 +2,7 @@
 
 exports[`AuthorBadge component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_author_badge_b4e4ec"
+  class="_author_badge_42d50c"
   data-testid="author-badge"
 />
 `;

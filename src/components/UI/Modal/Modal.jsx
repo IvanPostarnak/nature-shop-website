@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import {parseColorCode} from 'helpers/helpers';
 
-import styles from './Modal.module.scss';
+import styles from './Modal.module.css';
 
 const Modal = ({children, w, h, br, bc, bw, bs, bgc, bgo, events, z}) => {
   return (

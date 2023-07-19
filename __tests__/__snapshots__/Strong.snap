@@ -2,7 +2,7 @@
 
 exports[`Strong component set of tests > Should [match snapshot] on render 1`] = `
 <strong
-  class="_strong_3ed264"
+  class="_strong_86c21f"
   data-testid="strong"
   style="font-family: inherit; font-weight: inherit; font-style: inherit; color: rgb(0, 0, 0); cursor: inherit;"
 >

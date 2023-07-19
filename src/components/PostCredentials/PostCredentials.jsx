@@ -13,7 +13,7 @@ import RatingBadge from 'components/RatingBadge/RatingBadge';
 import AccurateRating from 'components/AccurateRating/AccurateRating';
 import TimeAgoBadge from 'components/TimeAgoBadge/TimeAgoBadge';
 
-import styles from './PostCredentials.module.scss';
+import styles from './PostCredentials.module.css';
 
 const PostCredentials = ({device, data, ...rest}) => {
   return (

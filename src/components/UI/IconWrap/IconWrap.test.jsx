@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import IconWrap from './IconWrap';
-import styles from './IconWrap.module.scss';
+import styles from './IconWrap.module.css';
 
 describe('IconWrap component set of tests', () => {
   afterEach(cleanup);

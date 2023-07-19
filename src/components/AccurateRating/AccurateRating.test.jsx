@@ -1,7 +1,7 @@
 import {cleanup, render} from '@testing-library/react';
 import {describe, it, expect, afterEach} from 'vitest';
-import styles from './AccurateRating.module.scss';
 import AccurateRating from './AccurateRating';
+import styles from './AccurateRating.module.css';
 
 describe('AccurateRating component set of tests', () => {
   afterEach(cleanup);

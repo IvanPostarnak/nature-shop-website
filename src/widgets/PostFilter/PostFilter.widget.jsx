@@ -15,7 +15,7 @@ import Select from 'components/UI/Select/Select';
 import Option from 'components/UI/Option/Option';
 import {getFromLocalStorage} from 'helpers/helpers';
 
-import styles from './PostFilter.module.scss';
+import styles from './PostFilter.module.css';
 
 const PostFilter = ({...rest}) => {
   const savedQuery = useSelector(getPostsFilterSearchQuery);

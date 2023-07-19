@@ -2,32 +2,32 @@
 
 exports[`AboutUs.page set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_about_us_840296"
+  class="_about_us_20a841"
   data-testid="about-us-page"
 >
   <div
-    class="_adaptive_render_648c2e"
+    class="_adaptive_render_3f7500"
     data-testid="adaptive-render"
   >
     <div
-      class="_split_structure_d78199"
+      class="_split_structure_bf3db2"
       data-testid="split-structure"
     >
       <div
-        class="_first_item_d78199"
+        class="_first_item_bf3db2"
         data-testid="split-structure-first-item"
       >
         <div
-          class="_content_ce19df"
+          class="_content_acf8f7"
           data-testid="content"
         >
           Content
           <main
-            class="_main_9694fd"
+            class="_main_b87cb0"
             data-testid="main"
           >
             <div
-              class="_loader_68fe6b"
+              class="_loader_0519e8"
               data-testid="loader"
               style="z-index: 9010;"
             >
@@ -37,7 +37,7 @@ exports[`AboutUs.page set of tests > Should [match snapshot] on render 1`] = `
         </div>
       </div>
       <div
-        class="_second_item_d78199"
+        class="_second_item_bf3db2"
         data-testid="split-structure-second-item"
       />
     </div>

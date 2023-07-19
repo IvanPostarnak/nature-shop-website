@@ -2,7 +2,7 @@
 
 exports[`Avatar component set of tests > Should [match snapshot] on render 1`] = `
 <img
-  class="_avatar_d11481"
+  class="_avatar_fa620d"
   data-testid="avatar"
 />
 `;

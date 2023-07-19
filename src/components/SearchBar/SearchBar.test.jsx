@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import SearchBar from './SearchBar';
-import styles from './SearchBar.module.scss';
+import styles from './SearchBar.module.css';
 
 describe('SearchBar component set of tests', () => {
   afterEach(cleanup);

@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Nav.module.scss';
+import styles from './Nav.module.css';
 
 const Nav = ({children, ...rest}) => {
   return (

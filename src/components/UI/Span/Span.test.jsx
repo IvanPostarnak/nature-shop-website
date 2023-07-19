@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Span from './Span';
-import styles from './Span.module.scss';
+import styles from './Span.module.css';
 
 describe('Span component set of tests', () => {
   afterEach(cleanup);

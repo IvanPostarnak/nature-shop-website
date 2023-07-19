@@ -2,19 +2,19 @@
 
 exports[`AdaptiveRender set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_adaptive_render_648c2e"
+  class="_adaptive_render_3f7500"
   data-testid="adaptive-render"
 >
   <div
-    class="_split_structure_d78199"
+    class="_split_structure_bf3db2"
     data-testid="split-structure"
   >
     <div
-      class="_first_item_d78199"
+      class="_first_item_bf3db2"
       data-testid="split-structure-first-item"
     />
     <div
-      class="_second_item_d78199"
+      class="_second_item_bf3db2"
       data-testid="split-structure-second-item"
     />
   </div>

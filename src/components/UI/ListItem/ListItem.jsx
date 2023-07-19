@@ -2,7 +2,7 @@ import {memo} from 'react';
 import PropTypes from 'prop-types';
 import Strong from 'components/UI/Strong/Strong';
 
-import styles from './ListItem.module.scss';
+import styles from './ListItem.module.css';
 
 const ListItem = ({title, body, ...rest}) => {
   return (

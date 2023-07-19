@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import H3 from './H3';
-import styles from './H3.module.scss';
+import styles from './H3.module.css';
 
 describe('H3 component set of tests', () => {
   afterEach(cleanup);

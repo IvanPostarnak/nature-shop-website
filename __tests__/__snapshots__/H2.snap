@@ -2,7 +2,7 @@
 
 exports[`H2 component set of tests > Should [match snapshot] on render 1`] = `
 <h2
-  class="_h2_d6c748"
+  class="_h2_d9d502"
   data-testid="h2"
 />
 `;

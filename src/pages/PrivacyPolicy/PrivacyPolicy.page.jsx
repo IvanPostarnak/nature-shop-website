@@ -12,7 +12,7 @@ import List from 'components/List/List';
 import ListItem from 'components/UI/ListItem/ListItem';
 import Header from 'components/UI/Header/Header';
 
-import styles from './PrivacyPolicy.module.scss';
+import styles from './PrivacyPolicy.module.css';
 
 const PrivacyPolicy = () => {
   const {isLoading, data} = useFetch(() => PagesService.getPrivacyPolicy());

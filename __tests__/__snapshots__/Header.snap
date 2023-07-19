@@ -2,7 +2,7 @@
 
 exports[`Header component set of tests > Should [match snapshot] on render 1`] = `
 <header
-  class="_header_a05500"
+  class="_header_8dbb83"
   data-testid="header"
 />
 `;

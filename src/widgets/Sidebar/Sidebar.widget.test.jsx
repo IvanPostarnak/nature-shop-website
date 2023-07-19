@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Sidebar from './Sidebar.widget';
-import styles from './Sidebar.module.scss';
+import styles from './Sidebar.module.css';
 
 describe('Sidebar component set of tests', () => {
   afterEach(cleanup);

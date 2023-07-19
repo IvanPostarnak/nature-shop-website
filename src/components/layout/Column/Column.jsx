@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Column.module.scss';
+import styles from './Column.module.css';
 
 const Column = ({children, ...rest}) => {
   return (

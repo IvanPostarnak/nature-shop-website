@@ -2,7 +2,7 @@ import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithProvider} from 'tests/helpers/renderWithProvider';
 import PostFilter from './PostFilter.widget';
-import styles from './PostFilter.module.scss';
+import styles from './PostFilter.module.css';
 
 describe('PostFilter component set of tests', () => {
   afterEach(cleanup);

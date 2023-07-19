@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {render, cleanup} from '@testing-library/react';
 import Avatar from './Avatar';
-import styles from './Avatar.module.scss';
+import styles from './Avatar.module.css';
 
 describe('Avatar component set of tests', () => {
   afterEach(cleanup);

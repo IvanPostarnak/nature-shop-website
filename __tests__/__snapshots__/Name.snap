@@ -2,11 +2,11 @@
 
 exports[`Name component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_name_bf10d7"
+  class="_name_70eab5"
   data-testid="name"
 >
   <h5
-    class="_h5_9da68e"
+    class="_h5_225ae5"
     data-testid="h5"
   >
     undefined undefined

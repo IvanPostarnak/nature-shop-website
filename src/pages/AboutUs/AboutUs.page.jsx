@@ -10,7 +10,7 @@ import AdaptiveRender from 'components/layout/AdaptiveRender/AdaptiveRender';
 import Paragraph from 'components/Paragraph/Paragraph';
 import Header from 'components/UI/Header/Header';
 
-import styles from './AboutUs.module.scss';
+import styles from './AboutUs.module.css';
 
 const AboutUs = () => {
   const {isLoading, data} = useFetch(() => PagesService.getAboutUs());

@@ -1,10 +1,10 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup} from '@testing-library/react';
 import {renderWithMemoryRouterAndProvider} from 'tests/helpers/renderWithMemoryRouterAndProvider';
-import Navbar from './Navbar';
-import styles from './Navbar.module.scss';
-import underlined from './underlined.module.scss';
 import {NAVBAR} from 'app/routes/routes';
+import Navbar from './Navbar';
+import styles from './Navbar.module.css';
+import underlined from './underlined.module.css';
 
 describe('Navbar component set of tests', () => {
   afterEach(cleanup);

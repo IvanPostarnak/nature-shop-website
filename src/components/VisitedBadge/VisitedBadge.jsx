@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import IconWrap from 'components/UI/IconWrap/IconWrap';
 import Text from 'components/UI/Text/Text';
 
-import styles from './VisitedBadge.module.scss';
+import styles from './VisitedBadge.module.css';
 
 const VisitedBadge = ({children, device, ...rest}) => {
   return (

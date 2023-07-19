@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup, render} from '@testing-library/react';
 import Loader from './Loader';
-import styles from './Loader.module.scss';
+import styles from './Loader.module.css';
 
 describe('Loader component set of tests', () => {
   afterEach(cleanup);

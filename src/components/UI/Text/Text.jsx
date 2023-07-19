@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Text.module.scss';
+import styles from './Text.module.css';
 
 const Text = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (

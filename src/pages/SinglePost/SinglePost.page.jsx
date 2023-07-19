@@ -16,7 +16,7 @@ import Article from 'components/UI/Article/Article';
 import Image from 'components/UI/Image/Image';
 import {setActivePost, setPostsLastVisited} from 'store/actions';
 
-import styles from './SinglePost.module.scss';
+import styles from './SinglePost.module.css';
 
 const SinglePost = () => {
   const firstId = Number(useParams().id);

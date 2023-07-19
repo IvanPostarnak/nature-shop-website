@@ -1,7 +1,7 @@
 import {describe, it, expect, afterEach} from 'vitest';
 import {cleanup, render} from '@testing-library/react';
 import FooterWidget from './Footer.widget';
-import styles from './Footer.module.scss';
+import styles from './Footer.module.css';
 
 describe('Footer.widget set of tests', () => {
   afterEach(cleanup);

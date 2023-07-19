@@ -2,7 +2,7 @@
 
 exports[`Loader component set of tests > Should [match snapshot] on render 1`] = `
 <div
-  class="_loader_68fe6b"
+  class="_loader_0519e8"
   data-testid="loader"
   style="z-index: 9010;"
 >
