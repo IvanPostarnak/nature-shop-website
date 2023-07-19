@@ -1,14 +1,13 @@
-import { describe, it, expect } from "vitest";
-import { getUniversalCities } from "./getUniversalCities";
+import {describe, it, expect} from 'vitest';
+import {getUniversalCities} from './getUniversalCities';
 
 describe('getUniversalCities() selector set of tests', () => {
-
   it('Should [return default] object on empty state', () => {
     expect(getUniversalCities({})).toEqual({
       status: 'idle',
       isInLocalStage: false,
       key: 'cities',
-      length: 0
+      length: 0,
     });
   });
 
@@ -17,7 +16,7 @@ describe('getUniversalCities() selector set of tests', () => {
       status: 'idle',
       isInLocalStage: false,
       key: 'cities',
-      length: 0
+      length: 0,
     });
   });
 
@@ -28,5 +27,4 @@ describe('getUniversalCities() selector set of tests', () => {
     expect(getUniversalCities({universal: {cities: '1'}})).toEqual('1');
     expect(getUniversalCities({universal: {cities: true}})).toEqual(true);
   });
-
 });

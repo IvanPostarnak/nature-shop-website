@@ -1,8 +1,7 @@
-import { describe, it, expect } from "vitest";
-import { parseColorCode } from "./parseColorCode";
+import {describe, it, expect} from 'vitest';
+import {parseColorCode} from './parseColorCode';
 
 describe('colorCodeParse() helper function set of tests', () => {
-
   it('Should [work] on passing 3-symbol #hashtaged string', () => {
     expect(parseColorCode('#fff')).toBe('255,255,255');
   });
@@ -19,15 +18,15 @@ describe('colorCodeParse() helper function set of tests', () => {
     expect(() => parseColorCode()).toThrowError(/string/i);
     expect(() => parseColorCode(12)).toThrowError(/string/i);
     expect(() => parseColorCode(false)).toThrowError(/string/i);
-    expect(() => parseColorCode(function(){})).toThrowError(/string/i);
-    expect(() => parseColorCode({a:1})).toThrowError(/string/i);
-    expect(() => parseColorCode([1,2])).toThrowError(/string/i);
+    expect(() => parseColorCode(function () {})).toThrowError(/string/i);
+    expect(() => parseColorCode({a: 1})).toThrowError(/string/i);
+    expect(() => parseColorCode([1, 2])).toThrowError(/string/i);
     expect(() => parseColorCode(null)).toThrowError(/string/i);
     expect(() => parseColorCode(undefined)).toThrowError(/string/i);
     expect(() => parseColorCode(NaN)).toThrowError(/string/i);
   });
 
-  it('Should [throw error] on passing \'\' empty string', () => {
+  it("Should [throw error] on passing '' empty string", () => {
     expect(() => parseColorCode('')).toThrowError(/colorString/i);
   });
 
@@ -38,5 +37,4 @@ describe('colorCodeParse() helper function set of tests', () => {
     expect(() => parseColorCode('12345')).toThrowError(/colorString/i);
     expect(() => parseColorCode('1234567')).toThrowError(/colorString/i);
   });
-
 });

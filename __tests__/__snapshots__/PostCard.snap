@@ -11,7 +11,7 @@ exports[`PostCard component set of tests > Should [match snapshot] on render 1`]
     <img
       class="_image_fa6dc1"
       data-testid="image"
-      src="/src/assets/images/post-placeholder-480-320.jpg"
+      src="/src/assets/images/posts/undefined, undefined.webp"
       width="280"
     />
   </a>

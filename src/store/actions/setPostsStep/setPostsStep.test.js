@@ -1,12 +1,11 @@
-import { describe, it, expect } from "vitest";
-import { setPostsStep } from "./setPostsStep";
+import {describe, it, expect} from 'vitest';
+import {setPostsStep} from './setPostsStep';
 
 describe('setPostsStep() action set of tests', () => {
-
   it('Should [succeed] on passing number', () => {
     expect(setPostsStep(13)).toEqual({
-      type: "posts/setStep",
-      payload: 13
+      type: 'posts/setStep',
+      payload: 13,
     });
   });
 
@@ -24,5 +23,4 @@ describe('setPostsStep() action set of tests', () => {
     expect(() => setPostsStep(-123)).toThrowError(/payload/i);
     expect(() => setPostsStep(0)).toThrowError(/payload/i);
   });
-
 });

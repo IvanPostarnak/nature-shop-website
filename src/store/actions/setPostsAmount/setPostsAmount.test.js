@@ -1,16 +1,15 @@
-import { describe, it, expect } from "vitest";
-import { setPostsAmount } from "./setPostsAmount";
+import {describe, it, expect} from 'vitest';
+import {setPostsAmount} from './setPostsAmount';
 
 describe('setPostsAmount() action set of tests', () => {
-
   it('Should [succeed] on passing positive or 0 number', () => {
     expect(setPostsAmount(13)).toEqual({
-      type: "posts/setAmount",
-      payload: 13
+      type: 'posts/setAmount',
+      payload: 13,
     });
     expect(setPostsAmount(0)).toEqual({
-      type: "posts/setAmount",
-      payload: 0
+      type: 'posts/setAmount',
+      payload: 0,
     });
   });
 
@@ -27,5 +26,4 @@ describe('setPostsAmount() action set of tests', () => {
   it('Should [throw error] on passing negative number', () => {
     expect(() => setPostsAmount(-123)).toThrowError(/payload/i);
   });
-
 });

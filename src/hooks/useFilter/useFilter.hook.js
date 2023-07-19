@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import {useMemo} from 'react';
 
 export const useFilter = (data, filterCallback, deps) => {
   const filteredData = useMemo(() => {
@@ -8,6 +8,6 @@ export const useFilter = (data, filterCallback, deps) => {
       return data;
     }
   }, [data, ...deps]);
-  
+
   return filteredData;
-}
+};

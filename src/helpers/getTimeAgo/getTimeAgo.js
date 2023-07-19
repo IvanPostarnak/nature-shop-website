@@ -1,4 +1,4 @@
-import { ValidationError } from "errors/errors";
+import {ValidationError} from 'errors/errors';
 
 // expected string in format YYYY-MM-DDTHH:mm:ss.mmmZ
 export const getTimeAgo = (dateAndTimeString, nowStringOrTimestamp) => {
@@ -25,7 +25,7 @@ export const getTimeAgo = (dateAndTimeString, nowStringOrTimestamp) => {
     day: difference.getUTCDate() - 1,
     hour: difference.getUTCHours(),
     minute: difference.getUTCMinutes(),
-    second: difference.getUTCSeconds()
+    second: difference.getUTCSeconds(),
   };
 
   for (let key in differenceObject) {
@@ -35,6 +35,5 @@ export const getTimeAgo = (dateAndTimeString, nowStringOrTimestamp) => {
     }
   }
 
-  return 'Just now'
-
-}
+  return 'Just now';
+};

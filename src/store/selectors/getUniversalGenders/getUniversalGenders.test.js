@@ -1,14 +1,13 @@
-import { describe, it, expect } from "vitest";
-import { getUniversalGenders } from "./getUniversalGenders";
+import {describe, it, expect} from 'vitest';
+import {getUniversalGenders} from './getUniversalGenders';
 
 describe('getUniversalGenders() selector set of tests', () => {
-
   it('Should [return default] object on empty state', () => {
     expect(getUniversalGenders({})).toEqual({
       status: 'idle',
       isInLocalStage: false,
       key: 'genders',
-      length: 0
+      length: 0,
     });
   });
 
@@ -17,7 +16,7 @@ describe('getUniversalGenders() selector set of tests', () => {
       status: 'idle',
       isInLocalStage: false,
       key: 'genders',
-      length: 0
+      length: 0,
     });
   });
 
@@ -28,5 +27,4 @@ describe('getUniversalGenders() selector set of tests', () => {
     expect(getUniversalGenders({universal: {genders: '1'}})).toEqual('1');
     expect(getUniversalGenders({universal: {genders: true}})).toEqual(true);
   });
-
 });

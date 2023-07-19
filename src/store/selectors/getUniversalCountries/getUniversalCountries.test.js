@@ -1,14 +1,13 @@
-import { describe, it, expect } from "vitest";
-import { getUniversalCountries } from "./getUniversalCountries";
+import {describe, it, expect} from 'vitest';
+import {getUniversalCountries} from './getUniversalCountries';
 
 describe('getUniversalCountries() selector set of tests', () => {
-
   it('Should [return default] object on empty state', () => {
     expect(getUniversalCountries({})).toEqual({
       status: 'idle',
       isInLocalStage: false,
       key: 'countries',
-      length: 0
+      length: 0,
     });
   });
 
@@ -17,7 +16,7 @@ describe('getUniversalCountries() selector set of tests', () => {
       status: 'idle',
       isInLocalStage: false,
       key: 'countries',
-      length: 0
+      length: 0,
     });
   });
 
@@ -28,5 +27,4 @@ describe('getUniversalCountries() selector set of tests', () => {
     expect(getUniversalCountries({universal: {countries: '1'}})).toEqual('1');
     expect(getUniversalCountries({universal: {countries: true}})).toEqual(true);
   });
-
 });

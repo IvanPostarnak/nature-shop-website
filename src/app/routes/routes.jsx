@@ -1,25 +1,28 @@
-import { lazy } from "react";
+import {lazy} from 'react';
 
-const Posts = lazy(() => import("pages/Posts/Posts.page"));
-const SinglePost = lazy(() => import("pages/SinglePost/SinglePost.page"));
-const AboutUs = lazy(() => import("pages/AboutUs/AboutUs.page"));
-const PrivacyPolicy = lazy(() => import("pages/PrivacyPolicy/PrivacyPolicy.page"));
+const Posts = lazy(() => import('pages/Posts/Posts.page'));
+const SinglePost = lazy(() => import('pages/SinglePost/SinglePost.page'));
+const AboutUs = lazy(() => import('pages/AboutUs/AboutUs.page'));
+const PrivacyPolicy = lazy(() => import('pages/PrivacyPolicy/PrivacyPolicy.page'));
 
 export const NAVBAR = [
-  {name: "Blog", path: "/blog/posts", element: <Posts/>, key: "posts-page"},
-  {name: "About Us", path: "/about-us", element: <AboutUs/>, key: "about-us-page"}
-]
+  {name: 'Blog', path: '/blog/posts', element: <Posts />, key: 'posts-page'},
+  {name: 'About Us', path: '/about-us', element: <AboutUs />, key: 'about-us-page'},
+];
 
 export const FOOTER = [
-  {name: "Privacy Policy", path: "/privacy-policy", element: <PrivacyPolicy/>, key: "privacy-policy-page"}
-]
+  {
+    name: 'Privacy Policy',
+    path: '/privacy-policy',
+    element: <PrivacyPolicy />,
+    key: 'privacy-policy-page',
+  },
+];
 
 export const PUBLIC_ROUTES = [
   ...NAVBAR,
   ...FOOTER,
-  {name: "", path: "/blog/posts/:id", element: <SinglePost/>, key: "single-post-page"}
+  {name: '', path: '/blog/posts/:id', element: <SinglePost />, key: 'single-post-page'},
 ];
 
-export const PRIVATE_ROUTES = [
-  ...PUBLIC_ROUTES
-];
+export const PRIVATE_ROUTES = [...PUBLIC_ROUTES];

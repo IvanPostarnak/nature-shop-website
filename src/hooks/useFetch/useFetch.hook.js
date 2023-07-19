@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from "react"
-import { prepareData } from "helpers/helpers";
+import {useCallback, useEffect, useRef, useState} from 'react';
+import {prepareData} from 'helpers/helpers';
 
 export const useFetch = (initialCallback, options) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,17 +17,17 @@ export const useFetch = (initialCallback, options) => {
     aborter.current = cancel;
 
     response
-    .then(res => {
-      setData(prepareData(res.data, options?.expect));
-      setHeaders(res.headers);
-      setIsLoading(false);
-    })
-    .catch(err => {
-      setError(err);
-      setIsLoading(false);
-    });
+      .then((res) => {
+        setData(prepareData(res.data, options?.expect));
+        setHeaders(res.headers);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setIsLoading(false);
+      });
   };
-  
+
   const abort = useCallback(() => {
     aborter.current && aborter.current();
   }, []);
@@ -45,4 +45,4 @@ export const useFetch = (initialCallback, options) => {
   }, options?.deps || []);
 
   return {isLoading, data, headers, error, abort, reset};
-}
+};

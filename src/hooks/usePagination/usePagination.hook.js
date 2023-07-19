@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setPostsStart, setPostsStep, setPostsLastActivePage } from "store/actions";
-import { getPostsStart, getPostsStep } from "store/selectors";
+import {useState, useEffect, useCallback} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {setPostsStart, setPostsStep, setPostsLastActivePage} from 'store/actions';
+import {getPostsStart, getPostsStep} from 'store/selectors';
 
 export const usePagination = (array, options) => {
   const savedStart = useSelector(getPostsStart);
@@ -24,9 +24,11 @@ export const usePagination = (array, options) => {
     if (!array) {
       return;
     }
-    setSinglePageData(array.filter((item, index) => {
-      return index >= start && index < start + step
-    }));
+    setSinglePageData(
+      array.filter((item, index) => {
+        return index >= start && index < start + step;
+      }),
+    );
   }, [array, start, step]);
 
   const onChangePage = useCallback((pageId, newStart) => {
@@ -34,5 +36,5 @@ export const usePagination = (array, options) => {
     setStart(newStart);
   }, []);
 
-  return {start, step, onChangePage, singlePageData}
-}
+  return {start, step, onChangePage, singlePageData};
+};

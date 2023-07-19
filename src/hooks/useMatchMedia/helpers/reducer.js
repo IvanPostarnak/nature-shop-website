@@ -1,22 +1,21 @@
-import { CompareError, InvalidTypeError, NoDataError, UnknownDataError } from "errors/errors";
+import {CompareError, InvalidTypeError, NoDataError, UnknownDataError} from 'errors/errors';
 
 export const reducer = (state, action) => {
-
   if (!action.payload) {
     throw new NoDataError('action.payload property');
-  };
+  }
 
   if (action.payload instanceof Array !== true) {
     throw new InvalidTypeError('action.payload', 'Array');
-  };
+  }
 
   if (Object.keys(state).length != action.payload.length) {
-    throw new CompareError('state.length', 'action.payload.length')
-  };
+    throw new CompareError('state.length', 'action.payload.length');
+  }
 
   if (typeof action.type !== 'string') {
     throw new InvalidTypeError('action.type', 'string');
-  };
+  }
 
   let newState = {};
 
@@ -26,8 +25,7 @@ export const reducer = (state, action) => {
         newState[key] = action.payload[index];
       });
       return newState;
-  };
-  
-  
+  }
+
   throw new UnknownDataError('action.type');
 };

@@ -1,6 +1,7 @@
-export const getUniversalLanguages = (state) => state?.universal?.languages || {
-  status: 'idle',
-  isInLocalStage: false,
-  key: 'languages',
-  length: 0
-}
+export const getUniversalLanguages = (state) =>
+  state?.universal?.languages || {
+    status: 'idle',
+    isInLocalStage: false,
+    key: 'languages',
+    length: 0,
+  };

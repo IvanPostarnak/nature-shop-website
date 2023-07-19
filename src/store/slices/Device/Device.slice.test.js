@@ -1,9 +1,8 @@
-import { describe, it, expect } from "vitest";
+import {describe, it, expect} from 'vitest';
 import deviceReducer from './Device.slice';
-import { setDevice } from "store/actions/setDevice/setDevice";
+import {setDevice} from 'store/actions/setDevice/setDevice';
 
 describe('Device.slice set of tests', () => {
-
   it('Should [set anyProperty: true] from false', () => {
     const initialState = {anyProperty: false};
     const action = setDevice({anyProperty: true});
@@ -17,5 +16,4 @@ describe('Device.slice set of tests', () => {
     const expectedState = {anyProperty: false, two: true};
     expect(deviceReducer(initialState, action)).toEqual(expectedState);
   });
-
 });

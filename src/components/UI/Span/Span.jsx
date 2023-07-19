@@ -1,4 +1,4 @@
-import { memo } from "react";
+import {memo} from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Span.module.scss';
@@ -7,20 +7,20 @@ const Span = ({children, ff, fz, fw, fs, c, cursor, ...rest}) => {
   return (
     <span
       className={styles.span}
-      data-testid="span"
+      data-testid='span'
       style={{
-        fontFamily: ff || "inherit",
-        fontSize: fz || "inherit",
-        fontWeight: fw || "inherit",
-        fontStyle: fs || "inherit",
-        color: c || "#000000",
-        cursor: cursor || 'inherit'
+        fontFamily: ff || 'inherit',
+        fontSize: fz || 'inherit',
+        fontWeight: fw || 'inherit',
+        fontStyle: fs || 'inherit',
+        color: c || '#000000',
+        cursor: cursor || 'inherit',
       }}
       {...rest}
     >
-      {typeof children === "string" ? children.trim() : ""}
+      {typeof children === 'string' ? children.trim() : ''}
     </span>
-  )
+  );
 };
 
 Span.propTypes = {
@@ -30,7 +30,7 @@ Span.propTypes = {
   fw: PropTypes.string,
   fs: PropTypes.string,
   c: PropTypes.string,
-  cursor: PropTypes.string
+  cursor: PropTypes.string,
 };
 
 export default memo(Span);

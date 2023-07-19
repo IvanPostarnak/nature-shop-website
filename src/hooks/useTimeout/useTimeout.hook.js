@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useRef } from "react"
+import {useCallback, useEffect, useRef} from 'react';
 
-export const useTimeout = (initialCallback, delay=1000) => {
+export const useTimeout = (initialCallback, delay = 1000) => {
   const initialCallbackRef = useRef(initialCallback);
   const timeoutRef = useRef();
 
@@ -24,4 +24,4 @@ export const useTimeout = (initialCallback, delay=1000) => {
   }, []);
 
   return {reset, clear};
-}
+};

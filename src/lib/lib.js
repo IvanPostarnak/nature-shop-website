@@ -1,1 +1,1 @@
-export { fetchData } from './fetchData/fetchData.lib';
+export {fetchData} from './fetchData/fetchData.lib';

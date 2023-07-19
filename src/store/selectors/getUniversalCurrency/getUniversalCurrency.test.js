@@ -1,14 +1,13 @@
-import { describe, it, expect } from "vitest";
-import { getUniversalCurrency } from "./getUniversalCurrency";
+import {describe, it, expect} from 'vitest';
+import {getUniversalCurrency} from './getUniversalCurrency';
 
 describe('getUniversalCurrency() selector set of tests', () => {
-
   it('Should [return default] object on empty state', () => {
     expect(getUniversalCurrency({})).toEqual({
       status: 'idle',
       isInLocalStage: false,
       key: 'currency',
-      length: 0
+      length: 0,
     });
   });
 
@@ -17,7 +16,7 @@ describe('getUniversalCurrency() selector set of tests', () => {
       status: 'idle',
       isInLocalStage: false,
       key: 'currency',
-      length: 0
+      length: 0,
     });
   });
 
@@ -28,5 +27,4 @@ describe('getUniversalCurrency() selector set of tests', () => {
     expect(getUniversalCurrency({universal: {currency: '1'}})).toEqual('1');
     expect(getUniversalCurrency({universal: {currency: true}})).toEqual(true);
   });
-
 });

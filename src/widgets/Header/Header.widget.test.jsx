@@ -1,11 +1,10 @@
-import { describe, it, expect, afterEach } from 'vitest';
-import { cleanup } from '@testing-library/react';
+import {describe, it, expect, afterEach} from 'vitest';
+import {cleanup} from '@testing-library/react';
 import HeaderWidget from './Header.widget';
 import styles from './Header.module.scss';
-import { renderWithMemoryRouterAndProvider } from 'tests/helpers/renderWithMemoryRouterAndProvider';
+import {renderWithMemoryRouterAndProvider} from 'tests/helpers/renderWithMemoryRouterAndProvider';
 
 describe('Header.widget set of tests', () => {
-
   afterEach(cleanup);
 
   it('Should [be in DOM] on render', () => {
@@ -13,10 +12,10 @@ describe('Header.widget set of tests', () => {
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <HeaderWidget device={device}/>
+      ['/'],
+      <HeaderWidget device={device} />,
     );
-    expect(container.getByTestId("header-widget")).toBeInTheDocument();
+    expect(container.getByTestId('header-widget')).toBeInTheDocument();
   });
 
   it('Should [be visible] on render', () => {
@@ -24,21 +23,21 @@ describe('Header.widget set of tests', () => {
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <HeaderWidget device={device}/>
+      ['/'],
+      <HeaderWidget device={device} />,
     );
-    expect(container.getByTestId("header-widget")).toBeVisible();
+    expect(container.getByTestId('header-widget')).toBeVisible();
   });
 
-  it('Should [have CSS class] \'header_widget\' on render', () => {
+  it("Should [have CSS class] 'header_widget' on render", () => {
     const device = {isMobile: false, isTablet: false, isDesktop: true};
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <HeaderWidget device={device}/>
+      ['/'],
+      <HeaderWidget device={device} />,
     );
-    expect(container.getByTestId("header-widget")).toHaveClass(styles.header_widget);
+    expect(container.getByTestId('header-widget')).toHaveClass(styles.header_widget);
   });
 
   it('Should [match snapshot] on render', () => {
@@ -46,10 +45,9 @@ describe('Header.widget set of tests', () => {
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <HeaderWidget device={device}/>
+      ['/'],
+      <HeaderWidget device={device} />,
     );
-    expect(container.getByTestId("header-widget")).toMatchSnapshot();
+    expect(container.getByTestId('header-widget')).toMatchSnapshot();
   });
-
 });

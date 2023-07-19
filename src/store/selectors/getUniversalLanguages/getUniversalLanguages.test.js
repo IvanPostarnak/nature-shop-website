@@ -1,14 +1,13 @@
-import { describe, it, expect } from "vitest";
-import { getUniversalLanguages } from "./getUniversalLanguages";
+import {describe, it, expect} from 'vitest';
+import {getUniversalLanguages} from './getUniversalLanguages';
 
 describe('getUniversalLanguages() selector set of tests', () => {
-
   it('Should [return default] object on empty state', () => {
     expect(getUniversalLanguages({})).toEqual({
       status: 'idle',
       isInLocalStage: false,
       key: 'languages',
-      length: 0
+      length: 0,
     });
   });
 
@@ -17,7 +16,7 @@ describe('getUniversalLanguages() selector set of tests', () => {
       status: 'idle',
       isInLocalStage: false,
       key: 'languages',
-      length: 0
+      length: 0,
     });
   });
 
@@ -28,5 +27,4 @@ describe('getUniversalLanguages() selector set of tests', () => {
     expect(getUniversalLanguages({universal: {languages: '1'}})).toEqual('1');
     expect(getUniversalLanguages({universal: {languages: true}})).toEqual(true);
   });
-
 });

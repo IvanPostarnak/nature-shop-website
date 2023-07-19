@@ -1,20 +1,19 @@
-import { describe, it, expect } from 'vitest';
+import {describe, it, expect} from 'vitest';
 import postsReducer from './Posts.slice';
-import { setPostsStart } from 'store/actions/setPostsStart/setPostsStart';
-import { setPostsAmount } from 'store/actions/setPostsAmount/setPostsAmount';
-import { setPostsStep } from 'store/actions/setPostsStep/setPostsStep';
-import { setPostsLastActivePage } from 'store/actions/setPostsLastActivePage/setPostsLastActivePage';
-import { setActivePost } from 'store/actions/setActivePost/setActivePost';
-import { setNextPost } from 'store/actions/setNextPost/setNextPost';
-import { setPostsLastVisited } from 'store/actions/setPostsLastVisited/setPostsLastVisited';
-import { setPostsFilterSearchQuery } from 'store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery';
-import { setPrevPost } from 'store/actions/setPrevPost/setPrevPost';
-import { setPostsFilterLanguageId } from 'store/actions/setPostsFilterLanguageId/setPostsFilterLanguageId';
+import {setPostsStart} from 'store/actions/setPostsStart/setPostsStart';
+import {setPostsAmount} from 'store/actions/setPostsAmount/setPostsAmount';
+import {setPostsStep} from 'store/actions/setPostsStep/setPostsStep';
+import {setPostsLastActivePage} from 'store/actions/setPostsLastActivePage/setPostsLastActivePage';
+import {setActivePost} from 'store/actions/setActivePost/setActivePost';
+import {setNextPost} from 'store/actions/setNextPost/setNextPost';
+import {setPostsLastVisited} from 'store/actions/setPostsLastVisited/setPostsLastVisited';
+import {setPostsFilterSearchQuery} from 'store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery';
+import {setPrevPost} from 'store/actions/setPrevPost/setPrevPost';
+import {setPostsFilterLanguageId} from 'store/actions/setPostsFilterLanguageId/setPostsFilterLanguageId';
 
-import { initialState } from './posts.slice.config';
+import {initialState} from './posts.slice.config';
 
 describe('Posts.slice set of tests', () => {
-
   it('Should [succeed] on setAmount', () => {
     const state = initialState;
     const action = setPostsAmount(100);
@@ -44,7 +43,7 @@ describe('Posts.slice set of tests', () => {
     const action = setActivePost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.active).toEqual({
       id: action.payload.post_id,
-      title: action.payload.title
+      title: action.payload.title,
     });
   });
 
@@ -53,7 +52,7 @@ describe('Posts.slice set of tests', () => {
     const action = setNextPost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.next).toEqual({
       id: action.payload.post_id,
-      title: action.payload.title
+      title: action.payload.title,
     });
   });
 
@@ -62,7 +61,7 @@ describe('Posts.slice set of tests', () => {
     const action = setPrevPost({post_id: 1, title: 'title'});
     expect(postsReducer(state, action).trident.prev).toEqual({
       id: action.payload.post_id,
-      title: action.payload.title
+      title: action.payload.title,
     });
   });
 
@@ -71,7 +70,9 @@ describe('Posts.slice set of tests', () => {
     const action1 = setPostsLastVisited(12);
     expect(postsReducer(state, action1).session.lastVisited).toEqual([12]);
     const action2 = setPostsLastVisited(13);
-    expect(postsReducer(postsReducer(state, action1), action2).session.lastVisited).toEqual([13,12]);
+    expect(postsReducer(postsReducer(state, action1), action2).session.lastVisited).toEqual([
+      13, 12,
+    ]);
   });
 
   it.todo('Add test case for sync thunk fetchPostsAmount');
@@ -91,5 +92,4 @@ describe('Posts.slice set of tests', () => {
     const action2 = setPostsFilterLanguageId(12);
     expect(postsReducer(state, action2).filter.languageId).toEqual(12);
   });
-
 });

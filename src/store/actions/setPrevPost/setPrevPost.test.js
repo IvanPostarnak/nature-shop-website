@@ -1,13 +1,12 @@
-import { describe, it, expect } from 'vitest';
-import { setPrevPost } from './setPrevPost';
+import {describe, it, expect} from 'vitest';
+import {setPrevPost} from './setPrevPost';
 
 describe('setPrevPost() redux-action set of tests', () => {
-
   it('Shoud [succeed] on payload={id: title: } object', () => {
     const payload = {post_id: 1, title: 'title'};
     expect(setPrevPost(payload)).toEqual({
       type: 'posts/setPrevPost',
-      payload: payload
+      payload: payload,
     });
   });
 
@@ -18,16 +17,15 @@ describe('setPrevPost() redux-action set of tests', () => {
     expect(() => setPrevPost(NaN)).toThrowError(/payload/i);
   });
 
-  it('Shoud [throw error] on payload != \'object\'', () => {
+  it("Shoud [throw error] on payload != 'object'", () => {
     expect(() => setPrevPost(123)).toThrowError(/object/i);
     expect(() => setPrevPost('123')).toThrowError(/object/i);
     expect(() => setPrevPost(true)).toThrowError(/object/i);
     expect(() => setPrevPost([1])).toThrowError(/object/i);
-    expect(() => setPrevPost(function(){})).toThrowError(/object/i);
+    expect(() => setPrevPost(function () {})).toThrowError(/object/i);
   });
 
   it('Shoud [throw error] on payload={} empty object', () => {
     expect(() => setPrevPost({})).toThrowError(/payload/i);
   });
-
 });

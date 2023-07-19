@@ -1,3 +1,3 @@
-import { describe } from "vitest";
+import {describe} from 'vitest';
 
 describe.todo('Add set of tests for useDebounce() hook');

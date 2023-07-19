@@ -1,24 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { setPostsStart } from "store/actions/setPostsStart/setPostsStart";
-import { setPostsStep } from "store/actions/setPostsStep/setPostsStep";
-import { setPostsAmount } from "store/actions/setPostsAmount/setPostsAmount";
-import { setPostsLastActivePage } from "store/actions/setPostsLastActivePage/setPostsLastActivePage";
-import { fetchPostsAmount } from "store/asyncThunks/fetchPostsAmount/fetchPostsAmount";
-import { setActivePost } from "store/actions/setActivePost/setActivePost";
-import { setNextPost } from "store/actions/setNextPost/setNextPost";
-import { setPrevPost } from "store/actions/setPrevPost/setPrevPost";
-import { setPostsLastVisited } from "store/actions/setPostsLastVisited/setPostsLastVisited";
-import { setPostsFilterSearchQuery } from "store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery";
-import { setPostsFilterLanguageId } from "store/actions/setPostsFilterLanguageId/setPostsFilterLanguageId";
+import {createSlice} from '@reduxjs/toolkit';
+import {setPostsStart} from 'store/actions/setPostsStart/setPostsStart';
+import {setPostsStep} from 'store/actions/setPostsStep/setPostsStep';
+import {setPostsAmount} from 'store/actions/setPostsAmount/setPostsAmount';
+import {setPostsLastActivePage} from 'store/actions/setPostsLastActivePage/setPostsLastActivePage';
+import {fetchPostsAmount} from 'store/asyncThunks/fetchPostsAmount/fetchPostsAmount';
+import {setActivePost} from 'store/actions/setActivePost/setActivePost';
+import {setNextPost} from 'store/actions/setNextPost/setNextPost';
+import {setPrevPost} from 'store/actions/setPrevPost/setPrevPost';
+import {setPostsLastVisited} from 'store/actions/setPostsLastVisited/setPostsLastVisited';
+import {setPostsFilterSearchQuery} from 'store/actions/setPostsFilterSearchQuery/setPostsFilterSearchQuery';
+import {setPostsFilterLanguageId} from 'store/actions/setPostsFilterLanguageId/setPostsFilterLanguageId';
 
-import { initialState } from "./posts.slice.config";
+import {initialState} from './posts.slice.config';
 
 const postsSlice = createSlice({
   name: 'posts',
   initialState: initialState,
-  reducers: {
-
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       // pagination.amount
@@ -27,19 +25,19 @@ const postsSlice = createSlice({
           ...state,
           amount: {
             value: action.payload,
-            status: 'success'
-          }
+            status: 'success',
+          },
         };
       })
-      
+
       // paginations.start
       .addCase(setPostsStart, (state, action) => {
         return {
           ...state,
           pagination: {
             ...state.pagination,
-            start: action.payload
-          }
+            start: action.payload,
+          },
         };
       })
 
@@ -49,8 +47,8 @@ const postsSlice = createSlice({
           ...state,
           pagination: {
             ...state.pagination,
-            step: action.payload
-          }
+            step: action.payload,
+          },
         };
       })
 
@@ -60,8 +58,8 @@ const postsSlice = createSlice({
           ...state,
           pagination: {
             ...state.pagination,
-            lastActivePage: action.payload
-          }
+            lastActivePage: action.payload,
+          },
         };
       })
 
@@ -71,8 +69,8 @@ const postsSlice = createSlice({
           ...state,
           amount: {
             ...state.amount,
-            status: 'pending'
-          }
+            status: 'pending',
+          },
         };
       })
       .addCase(fetchPostsAmount.fulfilled, (state, action) => {
@@ -80,8 +78,8 @@ const postsSlice = createSlice({
           ...state,
           amount: {
             value: action.payload,
-            status: 'success'
-          }
+            status: 'success',
+          },
         };
       })
 
@@ -93,9 +91,9 @@ const postsSlice = createSlice({
             ...state.trident,
             active: {
               id: action.payload.post_id,
-              title: action.payload.title
-            }
-          }
+              title: action.payload.title,
+            },
+          },
         };
       })
 
@@ -107,9 +105,9 @@ const postsSlice = createSlice({
             ...state.trident,
             next: {
               id: action.payload.post_id,
-              title: action.payload.title
-            }
-          }
+              title: action.payload.title,
+            },
+          },
         };
       })
 
@@ -121,9 +119,9 @@ const postsSlice = createSlice({
             ...state.trident,
             prev: {
               id: action.payload.post_id,
-              title: action.payload.title
-            }
-          }
+              title: action.payload.title,
+            },
+          },
         };
       })
 
@@ -134,14 +132,17 @@ const postsSlice = createSlice({
           return state;
         } else {
           const currentLength = state.session.lastVisited.length;
-          const savedArray = currentLength === 10 ? state.session.lastVisited.slice(0, -1) : state.session.lastVisited;
+          const savedArray =
+            currentLength === 10
+              ? state.session.lastVisited.slice(0, -1)
+              : state.session.lastVisited;
           return {
             ...state,
             session: {
               ...state.session,
-              lastVisited: [action.payload, ...savedArray]
-            }
-          }
+              lastVisited: [action.payload, ...savedArray],
+            },
+          };
         }
       })
 
@@ -151,9 +152,9 @@ const postsSlice = createSlice({
           ...state,
           filter: {
             ...state.filter,
-            searchQuery: action.payload
-          }
-        }
+            searchQuery: action.payload,
+          },
+        };
       })
 
       // filter.languageId
@@ -162,11 +163,11 @@ const postsSlice = createSlice({
           ...state,
           filter: {
             ...state.filter,
-            languageId: action.payload
-          }
-        }
-      })
-  }
+            languageId: action.payload,
+          },
+        };
+      });
+  },
 });
 
 export default postsSlice.reducer;

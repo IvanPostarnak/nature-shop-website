@@ -1,7 +1,7 @@
-import { memo, useCallback, useEffect, useState } from "react";
+import {memo, useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import Nav from "components/UI/Nav/Nav";
-import Button from "components/UI/Button/Button";
+import Nav from 'components/UI/Nav/Nav';
+import Button from 'components/UI/Button/Button';
 
 import styles from './Pagination.module.scss';
 
@@ -18,10 +18,13 @@ const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) 
     setPages(array);
   };
 
-  const handleClick = useCallback((activeId) => () => {
-    setActivePage(activeId);
-    onChangePage(activeId, step * (activeId - 1));
-  }, []);
+  const handleClick = useCallback(
+    (activeId) => () => {
+      setActivePage(activeId);
+      onChangePage(activeId, step * (activeId - 1));
+    },
+    [],
+  );
 
   useEffect(() => {
     resolvePages();
@@ -30,8 +33,8 @@ const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) 
   return (
     <Nav
       className={styles.pagination}
-      aria-label="pages navigation"
-      data-testid="pagination"
+      aria-label='pages navigation'
+      data-testid='pagination'
       {...rest}
     >
       <Button
@@ -40,20 +43,18 @@ const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) 
       >
         {'<- Prev'}
       </Button>
-      {
-        pages.map((page) => {
-          return(
-            <Button
-              key={page}
-              data-testid="pagination-button"
-              onClick={handleClick(page)}
-              className={page === activePage && styles.active}
-            >
-              {`${page}`}
-            </Button>
-          )
-        })
-      }
+      {pages.map((page) => {
+        return (
+          <Button
+            key={page}
+            data-testid='pagination-button'
+            onClick={handleClick(page)}
+            className={page === activePage && styles.active}
+          >
+            {`${page}`}
+          </Button>
+        );
+      })}
       <Button
         data-testid='pagination-button-next'
         onClick={handleClick(activePage + 1)}
@@ -61,19 +62,19 @@ const Pagination = ({device, totalAmount, step, active, onChangePage, ...rest}) 
         {'Next ->'}
       </Button>
     </Nav>
-  )
+  );
 };
 
 Pagination.propTypes = {
   device: PropTypes.exact({
     isMobile: PropTypes.bool.isRequired,
     isTablet: PropTypes.bool.isRequired,
-    isDesktop: PropTypes.bool.isRequired
+    isDesktop: PropTypes.bool.isRequired,
   }).isRequired,
   totalAmount: PropTypes.number.isRequired,
   step: PropTypes.number.isRequired,
   onChangePage: PropTypes.func.isRequired,
-  active: PropTypes.number.isRequired
+  active: PropTypes.number.isRequired,
 };
 
 export default memo(Pagination);

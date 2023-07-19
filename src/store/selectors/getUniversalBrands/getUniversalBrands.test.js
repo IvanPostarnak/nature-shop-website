@@ -1,14 +1,13 @@
-import { describe, it, expect } from "vitest";
-import { getUniversalBrands } from "./getUniversalBrands";
+import {describe, it, expect} from 'vitest';
+import {getUniversalBrands} from './getUniversalBrands';
 
 describe('getUniversalBrands() selector set of tests', () => {
-
   it('Should [return default] object on empty state', () => {
     expect(getUniversalBrands({})).toEqual({
       status: 'idle',
       isInLocalStage: false,
       key: 'brands',
-      length: 0
+      length: 0,
     });
   });
 
@@ -17,7 +16,7 @@ describe('getUniversalBrands() selector set of tests', () => {
       status: 'idle',
       isInLocalStage: false,
       key: 'brands',
-      length: 0
+      length: 0,
     });
   });
 
@@ -28,5 +27,4 @@ describe('getUniversalBrands() selector set of tests', () => {
     expect(getUniversalBrands({universal: {brands: '1'}})).toEqual('1');
     expect(getUniversalBrands({universal: {brands: true}})).toEqual(true);
   });
-
 });

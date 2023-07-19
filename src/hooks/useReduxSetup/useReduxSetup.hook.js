@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import {useEffect} from 'react';
+import {useDispatch} from 'react-redux';
 import {
   fetchPostsAmount,
   fetchUniversalBrands,
@@ -14,8 +14,8 @@ import {
   fetchUniversalLanguages,
   fetchUniversalMeasureUnits,
   fetchUniversalPackingMaterials,
-  fetchUniversalPaymentTypes
-} from "store/asyncThunks";
+  fetchUniversalPaymentTypes,
+} from 'store/asyncThunks';
 
 export const useReduxSetup = () => {
   const dispatch = useDispatch();
@@ -36,5 +36,4 @@ export const useReduxSetup = () => {
     dispatch(fetchUniversalPackingMaterials());
     dispatch(fetchUniversalPaymentTypes());
   }, []);
-  
-}
+};

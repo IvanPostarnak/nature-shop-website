@@ -1,13 +1,12 @@
-import { describe, it, expect } from 'vitest';
-import { setNextPost } from './setNextPost';
+import {describe, it, expect} from 'vitest';
+import {setNextPost} from './setNextPost';
 
 describe('setNextPost() redux-action set of tests', () => {
-
   it('Shoud [succeed] on payload={id: title: } object', () => {
     const payload = {post_id: 1, title: 'title'};
     expect(setNextPost(payload)).toEqual({
       type: 'posts/setNextPost',
-      payload: payload
+      payload: payload,
     });
   });
 
@@ -18,16 +17,15 @@ describe('setNextPost() redux-action set of tests', () => {
     expect(() => setNextPost(NaN)).toThrowError(/payload/i);
   });
 
-  it('Shoud [throw error] on payload != \'object\'', () => {
+  it("Shoud [throw error] on payload != 'object'", () => {
     expect(() => setNextPost(123)).toThrowError(/object/i);
     expect(() => setNextPost('123')).toThrowError(/object/i);
     expect(() => setNextPost(true)).toThrowError(/object/i);
     expect(() => setNextPost([1])).toThrowError(/object/i);
-    expect(() => setNextPost(function(){})).toThrowError(/object/i);
+    expect(() => setNextPost(function () {})).toThrowError(/object/i);
   });
 
   it('Shoud [throw error] on payload={} empty object', () => {
     expect(() => setNextPost({})).toThrowError(/payload/i);
   });
-
 });

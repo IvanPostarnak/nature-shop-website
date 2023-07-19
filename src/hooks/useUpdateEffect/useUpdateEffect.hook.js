@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import {useEffect, useRef} from 'react';
 
 export const useUpdateEffect = (callback, deps) => {
   const isMountStage = useRef(true);
@@ -10,4 +10,4 @@ export const useUpdateEffect = (callback, deps) => {
     }
     return callback();
   }, deps);
-}
+};

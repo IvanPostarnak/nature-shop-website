@@ -1,12 +1,11 @@
-import { describe, it, expect } from "vitest";
-import { setPostsLastActivePage } from "./setPostsLastActivePage";
+import {describe, it, expect} from 'vitest';
+import {setPostsLastActivePage} from './setPostsLastActivePage';
 
 describe('setPostsLastActivePage() action set of tests', () => {
-
   it('Should [succeed] on passing positive number', () => {
     expect(setPostsLastActivePage(13)).toEqual({
-      type: "posts/setLastActivePage",
-      payload: 13
+      type: 'posts/setLastActivePage',
+      payload: 13,
     });
   });
 
@@ -24,5 +23,4 @@ describe('setPostsLastActivePage() action set of tests', () => {
     expect(() => setPostsLastActivePage(-123)).toThrowError(/payload/i);
     expect(() => setPostsLastActivePage(0)).toThrowError(/payload/i);
   });
-
 });

@@ -1,8 +1,7 @@
-import { describe, it, expect } from "vitest";
-import { getPostsStart } from "./getPostsStart";
+import {describe, it, expect} from 'vitest';
+import {getPostsStart} from './getPostsStart';
 
 describe('getPostsStart() selector set of tests', () => {
-
   it('Should [return 0] on empty state', () => {
     expect(getPostsStart({})).toBe(0);
   });
@@ -19,5 +18,4 @@ describe('getPostsStart() selector set of tests', () => {
     expect(getPostsStart({posts: {pagination: {start: 1}}})).toBe(1);
     expect(getPostsStart({posts: {pagination: {start: '1'}}})).toBe('1');
   });
-
 });

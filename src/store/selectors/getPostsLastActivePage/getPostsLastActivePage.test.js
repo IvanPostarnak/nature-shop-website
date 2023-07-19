@@ -1,8 +1,7 @@
-import { describe, it, expect } from "vitest";
-import { getPostsLastActivePage } from "./getPostsLastActivePage";
+import {describe, it, expect} from 'vitest';
+import {getPostsLastActivePage} from './getPostsLastActivePage';
 
 describe('getPostsLastActivePage() selector set of tests', () => {
-
   it('Should [return 1] on empty state', () => {
     expect(getPostsLastActivePage({})).toBe(1);
   });
@@ -19,5 +18,4 @@ describe('getPostsLastActivePage() selector set of tests', () => {
     expect(getPostsLastActivePage({posts: {pagination: {lastActivePage: 1}}})).toBe(1);
     expect(getPostsLastActivePage({posts: {pagination: {lastActivePage: '1'}}})).toBe('1');
   });
-
 });

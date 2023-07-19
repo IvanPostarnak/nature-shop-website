@@ -1,13 +1,12 @@
-import { describe, it, expect } from "vitest";
-import { setDevice } from "./setDevice";
+import {describe, it, expect} from 'vitest';
+import {setDevice} from './setDevice';
 
 describe('setDevice() action set of tests', () => {
-
   it('Should [succeed] on passing good object', () => {
     const payload = {first: false, second: true};
     expect(setDevice(payload)).toEqual({
-      type: "device/setDevice",
-      payload: payload
+      type: 'device/setDevice',
+      payload: payload,
     });
   });
 
@@ -31,5 +30,4 @@ describe('setDevice() action set of tests', () => {
     const payload = {first: false, second: false};
     expect(() => setDevice(payload)).toThrowError(/payload/i);
   });
-
 });

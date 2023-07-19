@@ -1,8 +1,7 @@
-import { describe, it, expect } from 'vitest';
-import { getPostsLastVisited } from './getPostsLastVisited';
+import {describe, it, expect} from 'vitest';
+import {getPostsLastVisited} from './getPostsLastVisited';
 
 describe('getPostsLastVisited() redux-selector set of tests', () => {
-
   it('Should [return empty array] on empty state', () => {
     expect(getPostsLastVisited({})).toEqual([]);
   });
@@ -22,5 +21,4 @@ describe('getPostsLastVisited() redux-selector set of tests', () => {
     expect(getPostsLastVisited({posts: {session: {lastVisited: false}}})).toEqual([]);
     expect(getPostsLastVisited({posts: {session: {lastVisited: [1, 2, 3]}}})).toEqual([1, 2, 3]);
   });
-
 });

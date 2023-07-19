@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import Controller from "./Controller";
+import {describe, expect, it} from 'vitest';
+import Controller from './Controller';
 
 describe.todo('Add set of tests for Controller.fetch()');
 

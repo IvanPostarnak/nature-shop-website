@@ -1,28 +1,27 @@
-import Controller from "entity/Controller/Controller";
-import { Service } from "entity/Service/Service";
+import Controller from 'entity/Controller/Controller';
+import {Service} from 'entity/Service/Service';
 
 class PostsService extends Service {
-
   constructor(controller) {
     super(controller);
   }
 
   getAll() {
-    const response = this.getData("/posts/all");
+    const response = this.getData('/posts/all');
     return response;
   }
 
   getTotalCount() {
-    const response = this.getData("/posts/total_count");
+    const response = this.getData('/posts/total_count');
     return response;
   }
 
   getOnePage(startFrom, howMany) {
-    const response = this.getData("/posts/", {
+    const response = this.getData('/posts/', {
       params: {
         start: startFrom,
-        limit: howMany
-      }
+        limit: howMany,
+      },
     });
     return response;
   }
@@ -36,15 +35,14 @@ class PostsService extends Service {
     if (!titleQuery) {
       return this.getAll();
     }
-    const response = this.getData("/posts/search", {
+    const response = this.getData('/posts/search', {
       params: {
         title: titleQuery,
-        content: contentQuery || titleQuery
-      }
+        content: contentQuery || titleQuery,
+      },
     });
     return response;
   }
-  
 }
 
 export default new PostsService(Controller);

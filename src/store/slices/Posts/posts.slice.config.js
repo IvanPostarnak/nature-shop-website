@@ -1,7 +1,7 @@
 export const initialState = {
   amount: {
     value: 0,
-    status: 'idle'
+    status: 'idle',
   },
   pagination: {
     start: 0,
@@ -11,22 +11,22 @@ export const initialState = {
   trident: {
     active: {
       id: null,
-      title: null
+      title: null,
     },
     next: {
       id: null,
-      title: null
+      title: null,
     },
     prev: {
       id: null,
-      title: null
-    }
+      title: null,
+    },
   },
   session: {
-    lastVisited: []
+    lastVisited: [],
   },
   filter: {
     searchQuery: '',
-    languageId: 1
-  }
-}
+    languageId: 1,
+  },
+};

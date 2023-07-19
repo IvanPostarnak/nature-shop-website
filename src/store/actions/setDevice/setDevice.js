@@ -1,16 +1,14 @@
-import { createAction } from "@reduxjs/toolkit";
-import { InvalidTypeError, ValidationError } from "errors/errors";
+import {createAction} from '@reduxjs/toolkit';
+import {InvalidTypeError, ValidationError} from 'errors/errors';
 
-export const setDevice = createAction("device/setDevice", (payload) => {
-
+export const setDevice = createAction('device/setDevice', (payload) => {
   if (payload instanceof Object === false) {
     throw new InvalidTypeError('setDevice(): payload', 'object');
-  };
+  }
 
   let hasOnlyOneTrue = false;
 
   for (let key in payload) {
-
     // check that each property has boolean type
     if (typeof payload[key] != 'boolean') {
       throw new InvalidTypeError('setDevice(): payload');
@@ -24,7 +22,7 @@ export const setDevice = createAction("device/setDevice", (payload) => {
         throw new ValidationError('setDevice(): payload');
       }
     }
-  };
+  }
 
   // there are 0 truths - error
   if (hasOnlyOneTrue === false) {
@@ -32,7 +30,6 @@ export const setDevice = createAction("device/setDevice", (payload) => {
   }
 
   return {
-    payload: payload 
-  }
-
+    payload: payload,
+  };
 });

@@ -1,5 +1,5 @@
-import { useCallback, useState } from "react"
-import { setInitialValue } from "helpers/helpers";
+import {useCallback, useState} from 'react';
+import {setInitialValue} from 'helpers/helpers';
 
 export const useInput = (initialValue) => {
   const [value, setValue] = useState(() => setInitialValue(initialValue));
@@ -9,4 +9,4 @@ export const useInput = (initialValue) => {
   }, []);
 
   return {value, onInput};
-}
+};

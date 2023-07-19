@@ -1,7 +1,6 @@
-import Controller from "entity/Controller/Controller";
+import Controller from 'entity/Controller/Controller';
 
 class Service {
-
   constructor(controller) {
     this.controller = controller;
   }
@@ -10,8 +9,7 @@ class Service {
     const response = this.controller.fetch(url, options);
     return response;
   }
-  
 }
 
-export { Service };
+export {Service};
 export default new Service(Controller);

@@ -1,19 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchUniversalBrands } from "store/asyncThunks/fetchUniversalBrands/fetchUniversalBrands";
-import { setInLocalStorage } from "helpers/helpers";
-import { fetchUniversalCities } from "store/asyncThunks/fetchUniversalCities/fetchUniversalCities";
-import { fetchUniversalCompanies } from 'store/asyncThunks/fetchUniversalCompanies/fetchUniversalCompanies';
-import { fetchUniversalColorSchemas } from "store/asyncThunks/fetchUniversalColorSchemas/fetchUniversalColorSchemas";
-import { fetchUniversalCountries } from "store/asyncThunks/fetchUniversalCountries/fetchUniversalCountries";
-import { fetchUniversalCurrency } from "store/asyncThunks/fetchUniversalCurrency/fetchUniversalCurrency";
-import { fetchUniversalExchangeRates } from "store/asyncThunks/fetchUniversalExchangeRates/fetchUniversalExchangeRates";
-import { fetchUniversalFamilyStatuses } from "store/asyncThunks/fetchUniversalFamilyStatuses/fetchUniversalFamilyStatuses";
-import { fetchUniversalGenders } from "store/asyncThunks/fetchUniversalGenders/fetchUniversalGenders";
-import { fetchUniversalLanguages } from "store/asyncThunks/fetchUniversalLanguages/fetchUniversalLanguages";
-import { fetchUniversalMeasureUnits } from "store/asyncThunks/fetchUniversalMeasureUnits/fetchUniversalMeasureUnits";
-import { fetchUniversalPackingMaterials } from "store/asyncThunks/fetchUniversalPackingMaterials/fetchUniversalPackingMaterials";
-import { fetchUniversalPaymentTypes } from "store/asyncThunks/fetchUniversalPaymentTypes/fetchUniversalPaymentTypes";
-import { initialState } from "./universal.config";
+import {createSlice} from '@reduxjs/toolkit';
+import {fetchUniversalBrands} from 'store/asyncThunks/fetchUniversalBrands/fetchUniversalBrands';
+import {setInLocalStorage} from 'helpers/helpers';
+import {fetchUniversalCities} from 'store/asyncThunks/fetchUniversalCities/fetchUniversalCities';
+import {fetchUniversalCompanies} from 'store/asyncThunks/fetchUniversalCompanies/fetchUniversalCompanies';
+import {fetchUniversalColorSchemas} from 'store/asyncThunks/fetchUniversalColorSchemas/fetchUniversalColorSchemas';
+import {fetchUniversalCountries} from 'store/asyncThunks/fetchUniversalCountries/fetchUniversalCountries';
+import {fetchUniversalCurrency} from 'store/asyncThunks/fetchUniversalCurrency/fetchUniversalCurrency';
+import {fetchUniversalExchangeRates} from 'store/asyncThunks/fetchUniversalExchangeRates/fetchUniversalExchangeRates';
+import {fetchUniversalFamilyStatuses} from 'store/asyncThunks/fetchUniversalFamilyStatuses/fetchUniversalFamilyStatuses';
+import {fetchUniversalGenders} from 'store/asyncThunks/fetchUniversalGenders/fetchUniversalGenders';
+import {fetchUniversalLanguages} from 'store/asyncThunks/fetchUniversalLanguages/fetchUniversalLanguages';
+import {fetchUniversalMeasureUnits} from 'store/asyncThunks/fetchUniversalMeasureUnits/fetchUniversalMeasureUnits';
+import {fetchUniversalPackingMaterials} from 'store/asyncThunks/fetchUniversalPackingMaterials/fetchUniversalPackingMaterials';
+import {fetchUniversalPaymentTypes} from 'store/asyncThunks/fetchUniversalPaymentTypes/fetchUniversalPaymentTypes';
+import {initialState} from './universal.config';
 
 const universalSlice = createSlice({
   name: 'universal',
@@ -27,9 +27,9 @@ const universalSlice = createSlice({
           ...state,
           brands: {
             ...state.brands,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalBrands.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.brands.key, action.payload);
@@ -39,9 +39,9 @@ const universalSlice = createSlice({
             ...state.brands,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // cities
@@ -50,9 +50,9 @@ const universalSlice = createSlice({
           ...state,
           cities: {
             ...state.cities,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalCities.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.cities.key, action.payload);
@@ -62,9 +62,9 @@ const universalSlice = createSlice({
             ...state.cities,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // color_schemas
@@ -73,9 +73,9 @@ const universalSlice = createSlice({
           ...state,
           color_schemas: {
             ...state.color_schemas,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalColorSchemas.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.color_schemas.key, action.payload);
@@ -85,9 +85,9 @@ const universalSlice = createSlice({
             ...state.color_schemas,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // companies
@@ -96,9 +96,9 @@ const universalSlice = createSlice({
           ...state,
           companies: {
             ...state.companies,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalCompanies.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.companies.key, action.payload);
@@ -108,9 +108,9 @@ const universalSlice = createSlice({
             ...state.companies,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // countries
@@ -119,9 +119,9 @@ const universalSlice = createSlice({
           ...state,
           countries: {
             ...state.countries,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalCountries.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.countries.key, action.payload);
@@ -131,9 +131,9 @@ const universalSlice = createSlice({
             ...state.countries,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // currency
@@ -142,9 +142,9 @@ const universalSlice = createSlice({
           ...state,
           currency: {
             ...state.currency,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalCurrency.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.currency.key, action.payload);
@@ -154,9 +154,9 @@ const universalSlice = createSlice({
             ...state.currency,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // exchange_rates
@@ -165,9 +165,9 @@ const universalSlice = createSlice({
           ...state,
           exchange_rates: {
             ...state.exchange_rates,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalExchangeRates.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.exchange_rates.key, action.payload);
@@ -177,9 +177,9 @@ const universalSlice = createSlice({
             ...state.exchange_rates,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // family_statuses
@@ -188,9 +188,9 @@ const universalSlice = createSlice({
           ...state,
           family_statuses: {
             ...state.family_statuses,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalFamilyStatuses.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.family_statuses.key, action.payload);
@@ -200,9 +200,9 @@ const universalSlice = createSlice({
             ...state.family_statuses,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // genders
@@ -211,9 +211,9 @@ const universalSlice = createSlice({
           ...state,
           genders: {
             ...state.genders,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalGenders.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.genders.key, action.payload);
@@ -223,9 +223,9 @@ const universalSlice = createSlice({
             ...state.genders,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // languages
@@ -234,9 +234,9 @@ const universalSlice = createSlice({
           ...state,
           languages: {
             ...state.languages,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalLanguages.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.languages.key, action.payload);
@@ -246,9 +246,9 @@ const universalSlice = createSlice({
             ...state.languages,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // measure_units
@@ -257,9 +257,9 @@ const universalSlice = createSlice({
           ...state,
           measure_units: {
             ...state.measure_units,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalMeasureUnits.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.measure_units.key, action.payload);
@@ -269,9 +269,9 @@ const universalSlice = createSlice({
             ...state.measure_units,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // packing_materials
@@ -280,9 +280,9 @@ const universalSlice = createSlice({
           ...state,
           packing_materials: {
             ...state.packing_materials,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalPackingMaterials.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.packing_materials.key, action.payload);
@@ -292,9 +292,9 @@ const universalSlice = createSlice({
             ...state.packing_materials,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
+            length: action.payload.length,
+          },
+        };
       })
 
       // payment_types
@@ -303,9 +303,9 @@ const universalSlice = createSlice({
           ...state,
           payment_types: {
             ...state.payment_types,
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        };
       })
       .addCase(fetchUniversalPaymentTypes.fulfilled, (state, action) => {
         const result = setInLocalStorage(state.payment_types.key, action.payload);
@@ -315,11 +315,11 @@ const universalSlice = createSlice({
             ...state.payment_types,
             status: 'success',
             isInLocalStorage: result ? true : false,
-            length: action.payload.length
-          }
-        }
-      })
-  }
-})
+            length: action.payload.length,
+          },
+        };
+      });
+  },
+});
 
 export default universalSlice.reducer;

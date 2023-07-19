@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from 'react';
+import {memo, useEffect, useState} from 'react';
 import Input from 'components/UI/Input/Input';
 import PropTypes from 'prop-types';
 
@@ -8,22 +8,22 @@ const AccurateRating = ({value, ...rest}) => {
   const [renderWidth, setRenderWidth] = useState(0);
 
   const calculateRatingBar = (value) => {
-    return value / 5.0 * 100;
-  }
+    return (value / 5.0) * 100;
+  };
 
   useEffect(() => {
-    setRenderWidth(calculateRatingBar(value))
-  }, [value])
+    setRenderWidth(calculateRatingBar(value));
+  }, [value]);
 
   return (
     <>
       <form
         action='#'
-        data-testid="accurate-rating-form"
+        data-testid='accurate-rating-form'
       >
         <div
           className={styles.accurate_rating}
-          data-testid="accurate-rating"
+          data-testid='accurate-rating'
           {...rest}
         >
           <div className={styles.accurate_rating__body}>
@@ -38,7 +38,7 @@ const AccurateRating = ({value, ...rest}) => {
                 value='5'
                 name='accurate-rating-item'
                 id='5'
-                data-testid="accurate-rating-item"
+                data-testid='accurate-rating-item'
               />
               <Input
                 className={styles.accurate_rating__item}
@@ -46,7 +46,7 @@ const AccurateRating = ({value, ...rest}) => {
                 value='4'
                 name='accurate-rating-item'
                 id='4'
-                data-testid="accurate-rating-item"
+                data-testid='accurate-rating-item'
               />
               <Input
                 className={styles.accurate_rating__item}
@@ -54,7 +54,7 @@ const AccurateRating = ({value, ...rest}) => {
                 value='3'
                 name='accurate-rating-item'
                 id='3'
-                data-testid="accurate-rating-item"
+                data-testid='accurate-rating-item'
               />
               <Input
                 className={styles.accurate_rating__item}
@@ -62,7 +62,7 @@ const AccurateRating = ({value, ...rest}) => {
                 value='2'
                 name='accurate-rating-item'
                 id='2'
-                data-testid="accurate-rating-item"
+                data-testid='accurate-rating-item'
               />
               <Input
                 className={styles.accurate_rating__item}
@@ -70,18 +70,18 @@ const AccurateRating = ({value, ...rest}) => {
                 value='1'
                 name='accurate-rating-item'
                 id='1'
-                data-testid="accurate-rating-item"
+                data-testid='accurate-rating-item'
               />
             </div>
           </div>
         </div>
       </form>
     </>
-  )
+  );
 };
 
 AccurateRating.propTypes = {
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 export default memo(AccurateRating);

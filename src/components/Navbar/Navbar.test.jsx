@@ -1,13 +1,12 @@
-import { describe, it, expect, afterEach } from 'vitest';
-import { cleanup } from '@testing-library/react';
-import { renderWithMemoryRouterAndProvider } from 'tests/helpers/renderWithMemoryRouterAndProvider';
+import {describe, it, expect, afterEach} from 'vitest';
+import {cleanup} from '@testing-library/react';
+import {renderWithMemoryRouterAndProvider} from 'tests/helpers/renderWithMemoryRouterAndProvider';
 import Navbar from './Navbar';
 import styles from './Navbar.module.scss';
 import underlined from './underlined.module.scss';
-import { NAVBAR } from 'app/routes/routes';
+import {NAVBAR} from 'app/routes/routes';
 
 describe('Navbar component set of tests', () => {
-
   afterEach(cleanup);
 
   it('Should [have at least 1] navbar route', () => {
@@ -19,10 +18,10 @@ describe('Navbar component set of tests', () => {
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <Navbar device={device}/>
+      ['/'],
+      <Navbar device={device} />,
     );
-    expect(container.getByTestId("navbar")).toBeInTheDocument();
+    expect(container.getByTestId('navbar')).toBeInTheDocument();
   });
 
   it('Should [be visible] on render', () => {
@@ -30,48 +29,48 @@ describe('Navbar component set of tests', () => {
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <Navbar device={device}/>
+      ['/'],
+      <Navbar device={device} />,
     );
-    expect(container.getByTestId("navbar")).toBeVisible();
+    expect(container.getByTestId('navbar')).toBeVisible();
   });
 
-  it('Should [have CSS class] \'navbar\' on render', () => {
+  it("Should [have CSS class] 'navbar' on render", () => {
     const device = {isMobile: false, isTablet: false, isDesktop: true};
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <Navbar device={device}/>
+      ['/'],
+      <Navbar device={device} />,
     );
-    expect(container.getByTestId("navbar")).toHaveClass(styles.navbar);
+    expect(container.getByTestId('navbar')).toHaveClass(styles.navbar);
   });
 
-  it('Should [have CSS class] \'default\' on render', () => {
+  it("Should [have CSS class] 'default' on render", () => {
     const device = {isMobile: false, isTablet: false, isDesktop: true};
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <Navbar device={device}/>
+      ['/'],
+      <Navbar device={device} />,
     );
-    const atLeastOneDefault = container.getAllByTestId("navbar-link").some((item) => {
+    const atLeastOneDefault = container.getAllByTestId('navbar-link').some((item) => {
       return item.classList.contains(underlined.default);
-    })
+    });
     expect(atLeastOneDefault).toBe(true);
   });
 
-  it('Should [have CSS class] \'active\' on render', () => {
+  it("Should [have CSS class] 'active' on render", () => {
     const device = {isMobile: false, isTablet: false, isDesktop: true};
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <Navbar device={device}/>
+      ['/'],
+      <Navbar device={device} />,
     );
-    const atLeastOneActive = container.getAllByTestId("navbar-link").some((item) => {
+    const atLeastOneActive = container.getAllByTestId('navbar-link').some((item) => {
       return item.classList.contains(underlined.active);
-    })
+    });
     expect(atLeastOneActive).toBe(true);
   });
 
@@ -80,21 +79,20 @@ describe('Navbar component set of tests', () => {
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <Navbar device={device}/>
+      ['/'],
+      <Navbar device={device} />,
     );
-    expect(container.getAllByTestId("navbar-link").length).toBeGreaterThanOrEqual(1);
+    expect(container.getAllByTestId('navbar-link').length).toBeGreaterThanOrEqual(1);
   });
 
-  it('Should [match snapshot] \'navbar\' on render', () => {
+  it("Should [match snapshot] 'navbar' on render", () => {
     const device = {isMobile: false, isTablet: false, isDesktop: true};
     const pages = {acitve: 'Home'};
     const container = renderWithMemoryRouterAndProvider(
       {device, pages},
-      ["/"],
-      <Navbar device={device}/>
+      ['/'],
+      <Navbar device={device} />,
     );
-    expect(container.getByTestId("navbar")).toMatchSnapshot();
+    expect(container.getByTestId('navbar')).toMatchSnapshot();
   });
-
 });
