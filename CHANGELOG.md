@@ -14,4 +14,4 @@ All notable changes to this project will be documented in this file.
 ### Special
 - CSS styles are empty
 
-[0.0.1]: https://github.com/your/project/releases/tag/1.0.0
+[0.0.1]: https://github.com/IvanPostarnak/nature-shop-website/releases/tag/v0.0.1
